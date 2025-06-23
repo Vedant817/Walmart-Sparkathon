@@ -95,7 +95,7 @@ export default function ChatInterface() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     message: userMessage,
-                    mediaUrl: messages.find(m => m.mediaUrl)?.mediaUrl, // Reuse initial media URL
+                    mediaUrl: messages.find(m => m.mediaUrl)?.mediaUrl,
                 }),
             });
 

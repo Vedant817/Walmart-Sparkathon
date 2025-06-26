@@ -54,7 +54,7 @@ export interface CustomerInfo {
   }
 }
 
-export type OrderStatus = 
+export type OrderStatus =
   | 'pending'
   | 'confirmed'
   | 'processing'
@@ -64,6 +64,16 @@ export type OrderStatus =
   | 'cancelled'
   | 'refunded'
 
+export interface DeliveryAddress {
+  fullName: string,
+  phone: number | null,
+  addressLine1: string,
+  addressLine2: string,
+  city: string,
+  state: string,
+  zipCode: number | null,
+  country: 'India'
+}
 export interface TrackingInfo {
   status: string
   message: string

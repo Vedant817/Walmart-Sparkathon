@@ -3,12 +3,16 @@ import ChatInterface from '@/components/customer/QueryChat'
 
 const CustomerQuery = () => {
     return (
-        <main className="h-screen flex items-center justify-center bg-gray-100 w-screen p-4">
-            <div className="bg-white p-4 rounded-lg shadow-md w-full h-full">
-                <h1 className="text-2xl font-bold mb-6 text-center">Delivery Support Chatbot</h1>
-                <ChatInterface />
+        <div className="min-h-screen bg-gray-50">
+            <div className="ml-64 p-4 min-h-screen overflow-y-auto">
+                <div className="max-w-7xl mx-auto">
+                    <div className="bg-white p-4 rounded-lg shadow-md h-full">
+                        <h1 className="text-2xl font-bold mb-6 text-center">Delivery Support Chatbot</h1>
+                        <ChatInterface />
+                    </div>
+                </div>
             </div>
-        </main>
+        </div>
     )
 }
 

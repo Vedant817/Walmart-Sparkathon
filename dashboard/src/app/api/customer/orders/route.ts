@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { Order, OrderStatus } from '@/types'
 
-// Mock order data - In a real application, this would be stored in a database
-let mockOrders: any[] = []
+const mockOrders: Order[] = []
 
 export async function GET(request: NextRequest) {
   try {
@@ -45,10 +45,8 @@ export async function POST(request: NextRequest) {
       customerInfo 
     } = body
 
-    // Generate order ID
     const orderId = `ORDER-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
 
-    // Create new order
     const newOrder = {
       id: orderId,
       userId,
@@ -56,7 +54,7 @@ export async function POST(request: NextRequest) {
       deliveryType,
       totalPrice,
       customerInfo,
-      status: 'confirmed',
+      status: 'confirmed' as OrderStatus,
       orderDate: new Date().toISOString(),
       estimatedDelivery: deliveryType === 'urgent' ? 
         new Date(Date.now() + 4 * 60 * 60 * 1000).toISOString() : // 4 hours
@@ -101,7 +99,6 @@ export async function PUT(request: NextRequest) {
       )
     }
 
-    // Update order
     mockOrders[orderIndex] = {
       ...mockOrders[orderIndex],
       status: status || mockOrders[orderIndex].status,
@@ -154,7 +151,6 @@ export async function DELETE(request: NextRequest) {
       )
     }
 
-    // Remove order
     mockOrders.splice(orderIndex, 1)
 
     return NextResponse.json({

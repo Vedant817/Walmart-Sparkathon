@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Markdown from 'react-markdown';
+import { Button } from '../ui/button';
 
 interface Message {
     role: 'user' | 'bot';
@@ -32,7 +33,6 @@ export default function ChatInterface() {
 
         setUploading(true);
         setError(null);
-
         try {
             const formData = new FormData();
             formData.append('file', file);
@@ -90,7 +90,7 @@ export default function ChatInterface() {
         if (!userMessage) return;
 
         try {
-            const chatResponse = await fetch('/api/chat', {
+            const chatResponse = await fetch('/api/customer/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -118,7 +118,7 @@ export default function ChatInterface() {
     };
 
     return (
-        <div className="space-y-4">
+        <div className="space-y-4 min-h-full">
             <div className="h-96 overflow-y-auto border p-4 rounded bg-gray-50">
                 {messages.map((msg, index) => (
                     <div
@@ -159,15 +159,15 @@ export default function ChatInterface() {
                         onChange={(e) => setUserMessage(e.target.value)}
                         placeholder="Describe the issue with your delivery..."
                         className="w-full p-2 border rounded"
-                        rows={4}
+                        rows={3}
                     />
-                    <button
+                    <Button
                         type="submit"
                         disabled={uploading}
                         className="w-full py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
                     >
                         {uploading ? 'Processing...' : 'Start Chat'}
-                    </button>
+                    </Button>
                     </div>
                 </form>
             ) : (
@@ -177,16 +177,16 @@ export default function ChatInterface() {
                         onChange={(e) => setUserMessage(e.target.value)}
                         placeholder="Continue the conversation..."
                         className="w-full p-2 border rounded"
-                        rows={4}
+                        rows={2}
                         disabled={uploading}
                     />
-                    <button
+                    <Button
                         type="submit"
                         className="w-full py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
                         disabled={uploading || userMessage.trim() === ""}
                     >
                         {uploading ? 'Sending...' : 'Send'}
-                    </button>
+                    </Button>
                 </form>
             )}
 

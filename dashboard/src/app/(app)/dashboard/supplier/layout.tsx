@@ -2,10 +2,12 @@ import SupplierSidebar from "@/components/supplier/Sidebar";
 
 export default function SupplierLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-muted/40">
+    <div className="flex min-h-screen w-full bg-gray-50">
       <SupplierSidebar />
-      <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
-        {children}
+      <div className="flex-1 flex flex-col ml-64">
+        <main className="flex-1 p-6">
+          {children}
+        </main>
       </div>
     </div>
   );

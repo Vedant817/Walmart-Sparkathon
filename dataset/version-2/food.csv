@@ -1,0 +1,125 @@
+"Item Name",Company,Quantity,"Cargo Size (cm x cm)","Weight (g)",SKU,"Location (WH-Aisle-Bin)","Lead Time (Days)","Reorder Point (Units)","Unit Cost ($)",Suppliers,"Lot/Batch Number","Expiry Date","Storage Conditions"
+"Great Value Milk (1 Gallon, 2%)",Great Value,500,"20 x 15",3800,GV-MILK2-GAL,"DF001-D01-C01",2,100,2.50,"FOD-002,FOD-001",MILK250601ABC,"2025-07-05",Refrigerated
+"Chobani Greek Yogurt (Plain, 32 oz)",Chobani,300,"10 x 10",900,CHO-YOG-32OZ,"DF001-D02-C02",3,60,3.00,"FOD-003,FOD-001",CHY250602DEF,"2025-07-10",Refrigerated
+"Tyson Boneless Skinless Chicken Breasts (2.5 lbs)",Tyson,150,"25 x 20",1130,TYS-CHKBST-2.5LB,"FR001-M01-A01",4,30,8.50,"FOD-001,FOD-002",TYC250603GHI,"2025-07-08",Refrigerated
+"Oscar Mayer Deli Fresh Turkey Breast (9 oz)",Oscar Mayer,200,"20 x 15",255,OM-TURKEY-9OZ,"DF001-D03-C03",3,40,3.80,"FOD-002,FOD-003",OMT250604JKL,"2025-07-12",Refrigerated
+"Kraft Macaroni & Cheese (7.25 oz Box)",Kraft Heinz,1200,"18 x 12",206,KF-MACN-7.25OZ,"WH001-F01-S01",7,240,0.75,"FOD-001,FOD-003",KMC250605MNO,"2026-11-01",Cool & Dry
+"Coca-Cola Soda (12-pack Cans)",Coca-Cola,800,"35 x 25",4500,COKE-12PK-CAN,"WH001-B01-D01",5,160,5.50,"FOD-002,FOD-001",COC250606PQR,"2026-03-01",Cool & Dry
+"Lay's Classic Potato Chips (Large Bag)",Lay's,600,"30 x 20",300,LAYS-CLASSIC-LG,"WH001-S01-P01",6,120,3.00,"FOD-003,FOD-002",LAY250607STU,"2025-10-15",Cool & Dry
+"Skippy Creamy Peanut Butter (40 oz)",Skippy,400,"15 x 15",1134,SKIP-PB-40OZ,"WH001-F02-S02",8,80,4.50,"FOD-001,FOD-003",SKP250608VWX,"2026-08-01",Cool & Dry
+"Kellogg's Frosted Flakes Cereal (23 oz)",Kellogg's,350,"30 x 20",652,KELF-FLAKE-23OZ,"WH001-B02-C01",7,70,4.00,"FOD-002,FOD-001",KFF250609YZA,"2026-09-01",Cool & Dry
+"Folgers Classic Roast Coffee (25.3 oz)",Folgers,250,"20 x 15",717,FOL-COF-25.3OZ,"WH001-B03-C02",9,50,7.00,"FOD-003,FOD-002",FOL250610BCD,"2026-07-01",Cool & Dry
+"Great Value Large Eggs (1 Dozen)",Great Value,700,"25 x 15",650,GV-EGGS-DZ,"DF001-D04-C04",2,140,2.00,"FOD-001,FOD-003",GVE250611EFG,"2025-07-03",Refrigerated
+"Dole Shredded Lettuce (8 oz)",Dole,180,"20 x 15",227,DOL-LETTUCE-8OZ,"PR001-V01-A01",1,36,1.80,"FOD-002,FOD-001",DOL250612HIJ,"2025-06-27",Refrigerated
+"Fresh Strawberries (1 lb)",Generic,120,"20 x 15",454,FRESH-STRB-1LB,"PR001-F02-A02",1,24,3.00,"FOD-003,FOD-002",FRS250613KLM,"2025-06-28",Refrigerated
+"Bananas (by the pound)",Generic,900,"30 x 20",400,BANANA-LB-001,"PR001-F03-A03",1,180,0.50,"FOD-001,FOD-003",BAN250614NOP,"2025-06-29",Cool & Dry
+"Frito-Lay Variety Pack (20 ct)",Frito-Lay,400,"40 x 30",1200,FRL-VAPCK-20CT,"WH001-S02-P02",6,80,10.00,"FOD-002,FOD-001",FRL250615QRS,"2025-11-01",Cool & Dry
+"Barilla Pasta (Spaghetti, 16 oz)",Barilla,700,"25 x 10",454,BAR-SPAGH-16OZ,"WH001-F03-S03",8,140,1.50,"FOD-003,FOD-002",BAR250616TUV,"2027-01-01",Cool & Dry
+"Progresso Chicken Noodle Soup (19 oz Can)",Progresso,500,"12 x 10",539,PROG-CNS-19OZ,"WH001-F04-S04",9,100,2.00,"FOD-001,FOD-003",PRO250617VWX,"2027-06-01",Cool & Dry
+"Hunt's Tomato Ketchup (20 oz)",Hunt's,600,"20 x 8",567,HUN-KET-20OZ,"WH001-C01-J01",7,120,2.00,"FOD-002,FOD-001",HUN250618YZA,"2026-10-01",Cool & Dry
+"Hellmann's Real Mayonnaise (30 oz)",Hellmann's,300,"15 x 15",850,HLM-MAY-30OZ,"WH001-C02-J02",8,60,4.00,"FOD-003,FOD-002",HLM250619BCD,"2026-09-01",Cool & Dry
+"Philadelphia Cream Cheese (8 oz)",Philadelphia,250,"10 x 10",227,PHI-CRMCH-8OZ,"DF001-D05-C05",3,50,2.50,"FOD-001,FOD-003",PHC250620EFG,"2025-07-15",Refrigerated
+"Hot Pockets Pepperoni Pizza (5 ct)",Hot Pockets,100,"25 x 15",500,HP-PEP-PIZ-5CT,"FZ001-P01-Z01",5,20,5.00,"FOD-002,FOD-001",HPP250621HIJ,"2026-01-01",Frozen
+"DiGiorno Pepperoni Pizza (Large)",DiGiorno,80,"35 x 35",900,DIG-PEP-PIZ-LG,"FZ001-P02-Z02",6,16,6.50,"FOD-003,FOD-002",DGP250622KLM,"2026-02-01",Frozen
+"Stouffer's Macaroni & Cheese (Large)",Stouffer's,90,"25 x 20",1000,STO-MACN-LG,"FZ001-P03-Z03",6,18,6.00,"FOD-001,FOD-003",STM250623NOP,"2026-03-01",Frozen
+"Breyers Vanilla Ice Cream (48 oz)",Breyers,150,"20 x 15",1360,BRY-VAN-IC-48OZ,"FZ001-D04-Z04",4,30,4.50,"FOD-002,FOD-001",BRV250624QRS,"2025-12-01",Frozen
+"Green Giant Cut Green Beans (14.5 oz Can)",Green Giant,600,"12 x 8",411,GG-GRNB-14.5OZ,"WH001-F05-S05",9,120,1.00,"FOD-003,FOD-002",GGC250625TUV,"2027-05-01",Cool & Dry
+"Campbell's Condensed Tomato Soup (10.75 oz Can)",Campbell's,700,"10 x 8",305,CAM-TOM-SOUP-10.75,"WH001-F06-S06",8,140,0.90,"FOD-001,FOD-003",CMS250626VWX,"2027-04-01",Cool & Dry
+"Great Value All-Purpose Flour (5 lb)",Great Value,400,"25 x 15",2268,GV-FLOUR-5LB,"WH001-F07-S07",10,80,2.20,"FOD-002,FOD-001",GVF250627YZA,"2026-10-01",Cool & Dry
+"Domino Granulated Sugar (4 lb)",Domino,350,"20 x 12",1814,DOM-SUGAR-4LB,"WH001-F08-S08",9,70,3.00,"FOD-003,FOD-002",DOM250628BCD,"2027-03-01",Cool & Dry
+"Crisco All-Vegetable Shortening (16 oz)",Crisco,200,"10 x 10",453,CRI-SHRTN-16OZ,"WH001-F09-S09",10,40,3.50,"FOD-001,FOD-003",CRI250629EFG,"2026-12-01",Cool & Dry
+"Nestle Toll House Chocolate Chips (12 oz)",Nestle,300,"15 x 10",340,NES-CHOCCH-12OZ,"WH001-F10-S10",8,60,3.00,"FOD-002,FOD-001",NTC250630HIJ,"2026-11-01",Cool & Dry
+"Dunkin' Donuts K-Cup Coffee Pods (22 ct)","Dunkin' Donuts",200,"20 x 15",400,DUN-KCUP-22CT,"WH001-B04-C03",9,40,12.00,"FOD-003,FOD-002",DNK250631KLM,"2026-05-01",Cool & Dry
+"Arizona Green Tea with Ginseng (128 oz Jug)",Arizona,300,"25 x 15",3800,ARZ-GRNT-128OZ,"WH001-B05-D02",7,60,3.50,"FOD-001,FOD-003",ARG250632NOP,"2026-04-01",Cool & Dry
+"Snapple Peach Tea (6-pack Bottles)",Snapple,250,"25 x 15",3000,SNA-PEACH-6PK,"WH001-B06-D03",8,50,4.80,"FOD-002,FOD-001",SNP250633QRS,"2026-02-01",Cool & Dry
+"Gatorade Thirst Quencher (Lemon-Lime, 32 oz)",Gatorade,400,"25 x 10",950,GAT-LL-32OZ,"WH001-B07-D04",6,80,1.50,"FOD-003,FOD-002",GAT250634TUV,"2026-01-01",Cool & Dry
+"Capri Sun Juice Pouches (10 ct)","Capri Sun",350,"20 x 10",1200,CAP-SUN-10CT,"WH001-B08-D05",7,70,3.00,"FOD-001,FOD-003",CAP250635VWX,"2026-06-01",Cool & Dry
+"Oreo Cookies (Family Size)",Oreo,450,"25 x 15",561,OREO-FAM-SIZE,"WH001-S03-P03",6,90,4.00,"FOD-002,FOD-001",ORE250636YZA,"2026-04-01",Cool & Dry
+"Cheez-It Baked Snack Crackers (Large Box)",Cheez-It,380,"25 x 18",382,CHZ-CRKR-LG,"WH001-S04-P04",7,76,3.50,"FOD-003,FOD-002",CHZ250637BCD,"2026-03-01",Cool & Dry
+"Pop-Tarts Frosted Strawberry (12 ct)","Pop-Tarts",300,"25 x 15",650,PPT-STRB-12CT,"WH001-B09-C04",8,60,3.50,"FOD-001,FOD-003",PPT250638EFG,"2026-07-01",Cool & Dry
+"Quaker Old Fashioned Oats (42 oz)",Quaker,280,"20 x 15",1190,QKR-OAT-42OZ,"WH001-B10-C05",9,56,4.00,"FOD-002,FOD-001",QKO250639HIJ,"2027-01-01",Cool & Dry
+"Smucker's Strawberry Preserves (32 oz)","Smucker's",250,"15 x 12",907,SMK-STRBP-32OZ,"WH001-F11-S11",8,50,4.00,"FOD-003,FOD-002",SMK250640KLM,"2026-10-01",Cool & Dry
+"Heinz Sweet Relish (12.7 oz)",Heinz,350,"15 x 10",360,HEINZ-REL-12.7OZ,"WH001-C03-J03",7,70,2.50,"FOD-001,FOD-003",HZR250641NOP,"2026-09-01",Cool & Dry
+"Vlasic Dill Pickle Spears (24 oz Jar)",Vlasic,280,"20 x 10",680,VLA-PICKLE-24OZ,"WH001-C04-J04",8,56,3.00,"FOD-002,FOD-001",VLA250642QRS,"2027-02-01",Cool & Dry
+"Daisy Sour Cream (16 oz)",Daisy,350,"15 x 10",454,DAI-SCR-16OZ,"DF001-D06-C06",3,70,2.00,"FOD-003,FOD-002",DAI250643TUV,"2025-07-10",Refrigerated
+"Sargento Shredded Mild Cheddar Cheese (8 oz)",Sargento,280,"20 x 12",227,SAR-CHED-8OZ,"DF001-D07-C07",4,56,3.50,"FOD-001,FOD-003",SAR250644VWX,"2025-07-14",Refrigerated
+"Pillsbury Grands! Biscuits (8 ct)",Pillsbury,200,"15 x 10",400,PIL-BISCUIT-8CT,"DF001-D08-C08",3,40,2.50,"FOD-002,FOD-001",PIL250645YZA,"2025-07-07",Refrigerated
+"Frozen Mixed Vegetables (12 oz Bag)","Great Value",300,"20 x 15",340,GV-FROZVEG-12OZ,"FZ001-V05-Z05",5,60,1.50,"FOD-003,FOD-002",GVF250646BCD,"2026-04-01",Frozen
+"Frozen Pizza Rolls (50 ct)","Totino's",150,"30 x 20",850,TOT-PZRL-50CT,"FZ001-P06-Z06",6,30,5.00,"FOD-001,FOD-003",TOT250647EFG,"2026-05-01",Frozen
+"Birds Eye Steamfresh Broccoli Florets (10.8 oz)","Birds Eye",250,"20 x 15",306,BIRD-BROC-10.8OZ,"FZ001-V07-Z07",5,50,2.00,"FOD-002,FOD-001",BIR250648HIJ,"2026-03-01",Frozen
+"Marie Callender's Chicken Pot Pie (16 oz)","Marie Callender's",80,"20 x 15",454,MAR-CPP-16OZ,"FZ001-P08-Z08",7,16,3.50,"FOD-003,FOD-002",MCP250649KLM,"2026-06-01",Frozen
+"Ben & Jerry's Half Baked Ice Cream (16 oz)","Ben & Jerry's",120,"15 x 10",450,BNJ-HALFBAKED-16,"FZ001-D09-Z09",4,24,5.50,"FOD-001,FOD-003",BNJ250650NOP,"2025-11-01",Frozen
+"Tide Pods Laundry Detergent (42 ct)",Tide,300,"25 x 20",1200,TIDE-PODS-42CT,"WH002-H01-A01",7,60,12.00,"FOD-002,FOD-001",TDP250651QRS,"2027-01-01",Cool & Dry
+"Dawn Dish Soap (28 oz)",Dawn,500,"25 x 10",800,DAWN-DISH-28OZ,"WH002-H02-A02",6,100,3.00,"FOD-003,FOD-002",DWD250652TUV,"2027-03-01",Cool & Dry
+"Charmin Ultra Soft Toilet Paper (12 Mega Rolls)",Charmin,200,"60 x 30",3000,CHR-US-12MR,"WH002-H03-A03",8,40,15.00,"FOD-001,FOD-003",CHU250653VWX,"2028-01-01",Cool & Dry
+"Bounty Paper Towels (8 Family Rolls)",Bounty,180,"50 x 25",2500,BOU-PT-8FR,"WH002-H04-A04",8,36,12.00,"FOD-002,FOD-001",BOU250654YZA,"2028-01-01",Cool & Dry
+"Clorox Disinfecting Wipes (3-pack)",Clorox,350,"20 x 15",1000,CLX-WIPES-3PK,"WH002-H05-A05",7,70,8.00,"FOD-003,FOD-002",CLX250655BCD,"2026-10-01",Cool & Dry
+"Lysol Disinfectant Spray (19 oz)",Lysol,300,"25 x 8",500,LYS-SPRY-19OZ,"WH002-H06-A06",7,60,5.00,"FOD-001,FOD-003",LYS250656EFG,"2026-11-01",Cool & Dry
+"Hefty Ultra Strong Kitchen Bags (100 ct, 13 gal)",Hefty,250,"30 x 20",800,HEFTY-KBAG-100CT,"WH002-H07-A07",9,50,15.00,"FOD-002,FOD-001",HEF250657HIJ,"2028-01-01",Cool & Dry
+"Glad Tall Kitchen Bags (80 ct, 13 gal)",Glad,280,"30 x 20",700,GLAD-KBAG-80CT,"WH002-H08-A08",8,56,12.00,"FOD-003,FOD-002",GLA250658KLM,"2028-01-01",Cool & Dry
+"Scotch-Brite Heavy Duty Scour Pads (6-pack)","Scotch-Brite",400,"15 x 10",100,SCB-PAD-6PK,"WH002-H09-A09",6,80,3.00,"FOD-001,FOD-003",SCB250659NOP,"2028-01-01",Cool & Dry
+"Softsoap Liquid Hand Soap (11.25 oz)",Softsoap,700,"18 x 8",330,SOF-HNDS-11.25OZ,"WH002-P01-B01",5,140,2.00,"FOD-002,FOD-001",SOF250660QRS,"2027-05-01",Cool & Dry
+"Colgate Optic White Toothpaste (4.2 oz)","Colgate-Palmolive",600,"18 x 5",180,COL-OW-TP-4.2OZ,"WH002-P02-B02",6,120,3.50,"FOD-003,FOD-002",COW250661TUV,"2027-04-01",Cool & Dry
+"Dove Bar Soap (Sensitive Skin, 6-pack)",Dove,500,"20 x 15",900,DOV-BAR-SS-6PK,"WH002-P03-B03",7,100,7.00,"FOD-001,FOD-003",DOV250662VWX,"2028-01-01",Cool & Dry
+"Pantene Pro-V Daily Moisture Renewal Shampoo (20 oz)",Pantene,400,"25 x 10",600,PAN-SHMP-20OZ,"WH002-P04-B04",8,80,5.00,"FOD-002,FOD-001",PAN250663YZA,"2027-09-01",Cool & Dry
+"Old Spice Swagger Deodorant (3 oz)","Old Spice",300,"15 x 5",100,OS-SWAG-DEO-3OZ,"WH002-P05-B05",7,60,4.00,"FOD-003,FOD-002",OSS250664BCD,"2027-10-01",Cool & Dry
+"Gillette Mach3 Razor Refills (8 ct)",Gillette,150,"15 x 10",100,GIL-MACH3-8RE,"WH002-P06-B06",9,30,18.00,"FOD-001,FOD-003",GIL250665EFG,"2028-01-01",Cool & Dry
+"Oral-B CrossAction Toothbrush (2-pack)","Oral-B",500,"20 x 10",100,ORB-XACT-2PK,"WH002-P07-B07",6,100,5.00,"FOD-002,FOD-001",ORB250666HIJ,"2028-01-01",Cool & Dry
+"Great Value White Bread","Great Value",400,"30 x 15",600,GV-WHBRD-001,"FR001-B02-C01",1,80,1.20,"FOD-003,FOD-002",GVW250667KLM,"2025-07-01",Cool & Dry
+"Pepperidge Farm Goldfish Crackers (30 oz)","Pepperidge Farm",350,"30 x 20",850,PPR-GOLDF-30OZ,"WH001-S05-P05",7,70,6.00,"FOD-001,FOD-003",PPG250668NOP,"2026-03-01",Cool & Dry
+"Nabisco Ritz Crackers (13.7 oz)",Nabisco,400,"25 x 15",388,NAB-RITZ-13.7OZ,"WH001-S06-P06",6,80,3.00,"FOD-002,FOD-001",NAB250669QRS,"2026-02-01",Cool & Dry
+"Great Value Purified Water (24-pack Bottles)","Great Value",1000,"40 x 30",12000,GV-WATER-24PK,"WH001-B11-D06",5,200,3.50,"FOD-003,FOD-002",GVW250670TUV,"2026-12-01",Cool & Dry
+"Minute Maid Orange Juice (59 oz)","Minute Maid",250,"15 x 10",1800,MM-OJ-59OZ,"DF001-D09-C09",4,50,3.00,"FOD-001,FOD-003",MMO250671VWX,"2025-08-01",Refrigerated
+"Simply Lemonade (52 oz)",Simply,200,"15 x 10",1500,SIM-LEM-52OZ,"DF001-D10-C10",4,40,3.50,"FOD-002,FOD-001",SIL250672YZA,"2025-08-05",Refrigerated
+"Yoplait Original Yogurt (8 ct, Assorted)",Yoplait,280,"20 x 15",1200,YOP-YOG-8CT,"DF001-D11-C11",3,56,4.00,"FOD-003,FOD-002",YOP250673BCD,"2025-07-08",Refrigerated
+"International Delight Coffee Creamer (32 oz)","International Delight",220,"10 x 10",950,ID-CRM-32OZ,"DF001-D12-C12",4,44,3.00,"FOD-001,FOD-003",IDC250674EFG,"2025-07-20",Refrigerated
+"Pillsbury Refrigerated Cookie Dough (Chocolate Chip, 16 oz)",Pillsbury,180,"15 x 10",454,PIL-COOK-DGH-16,"DF001-D13-C13",3,36,3.00,"FOD-002,FOD-001",PIC250675HIJ,"2025-07-06",Refrigerated
+"Hot Dogs (12 ct)","Ball Park",200,"25 x 10",500,BP-HDOG-12CT,"FR001-M02-A02",4,40,4.00,"FOD-003,FOD-002",BPH250676KLM,"2025-07-10",Refrigerated
+"Ground Beef (80/20, 1 lb)",Generic,150,"20 x 15",454,GEN-GBEEF-1LB,"FR001-M03-A03",3,30,5.00,"FOD-001,FOD-003",GMB250677NOP,"2025-07-02",Refrigerated
+"Frozen French Fries (32 oz Bag)","Great Value",250,"25 x 20",907,GV-FRIES-32OZ,"FZ001-P09-Z10",5,50,2.50,"FOD-002,FOD-001",GVF250678QRS,"2026-03-01",Frozen
+"Frozen Pizza Bagels (20 ct)","Bagel Bites",100,"20 x 15",500,BAGEL-BITES-20CT,"FZ001-P10-Z11",6,20,4.00,"FOD-003,FOD-002",BGB250679TUV,"2026-04-01",Frozen
+"Frozen Chicken Nuggets (25 oz Bag)",Tyson,120,"30 x 20",708,TYS-CHKNUG-25OZ,"FZ001-M11-Z12",6,24,6.00,"FOD-001,FOD-003",TYN250680VWX,"2026-05-01",Frozen
+"Tropicana Pure Premium Orange Juice (52 oz)",Tropicana,220,"15 x 10",1500,TROP-OJ-52OZ,"DF001-D14-C14",4,44,3.80,"FOD-002,FOD-001",TRO250681YZA,"2025-08-01",Refrigerated
+"Starbucks Frappuccino Coffee Drink (4-pack)",Starbucks,180,"20 x 15",1600,SBUX-FRP-4PK,"DF001-D15-C15",5,36,6.00,"FOD-003,FOD-002",SBF250682BCD,"2025-11-01",Refrigerated
+"Pringles Original Potato Crisps (Large Can)",Pringles,300,"20 x 8",158,PRI-ORIG-CRISP,"WH001-S07-P07",6,60,2.50,"FOD-001,FOD-003",PRI250683EFG,"2026-04-01",Cool & Dry
+"Cheetos Crunchy Cheese Flavored Snacks (Large Bag)",Cheetos,280,"30 x 20",255,CHEETOS-CRUNCHY,"WH001-S08-P08",6,56,3.00,"FOD-002,FOD-001",CHT250684HIJ,"2025-10-01",Cool & Dry
+"Doritos Nacho Cheese Flavored Tortilla Chips (Large Bag)",Doritos,320,"30 x 20",283,DOR-NACHO-LG,"WH001-S09-P09",6,64,3.20,"FOD-003,FOD-002",DOR250685KLM,"2025-11-01",Cool & Dry
+"Wonder Classic White Bread",Wonder,350,"30 x 15",600,WND-WHBRD-001,"FR001-B03-C02",1,70,1.50,"FOD-001,FOD-003",WND250686NOP,"2025-07-02",Cool & Dry
+"Sara Lee Classic White Bread","Sara Lee",300,"30 x 15",600,SL-WHBRD-001,"FR001-B04-C03",1,60,2.00,"FOD-002,FOD-001",SAR250687QRS,"2025-07-03",Cool & Dry
+"Pepperidge Farm Farmhouse Hearty White Bread","Pepperidge Farm",250,"30 x 15",680,PPF-HWBRD-001,"FR001-B05-C04",2,50,2.50,"FOD-003,FOD-002",PPF250688TUV,"2025-07-04",Cool & Dry
+"Quaker Chewy Granola Bars (Variety Pack, 18 ct)",Quaker,280,"20 x 15",450,QKR-GRNB-18CT,"WH001-S10-P10",7,56,4.00,"FOD-001,FOD-003",QCG250689VWX,"2026-01-01",Cool & Dry
+"Fiber One Oats & Chocolate Chewy Bars (15 ct)","Fiber One",200,"20 x 15",350,FIB-OCHOC-15CT,"WH001-S11-P11",8,40,4.50,"FOD-002,FOD-001",FIO250690YZA,"2026-02-01",Cool & Dry
+"Nature Valley Crunchy Granola Bars (Oats 'n Honey, 12 ct)","Nature Valley",250,"20 x 15",400,NV-CRNCH-12CT,"WH001-S12-P12",7,50,4.00,"FOD-003,FOD-002",NVC250691BCD,"2026-03-01",Cool & Dry
+"Keebler Fudge Stripes Cookies (11.5 oz)",Keebler,300,"20 x 15",326,KEEB-FUDG-11.5OZ,"WH001-S13-P13",6,60,3.00,"FOD-001,FOD-003",KEE250692EFG,"2026-05-01",Cool & Dry
+"Entenmann's Little Bites Muffins (Chocolate Chip, 5 ct)","Entenmann's",200,"20 x 10",250,ENT-LB-CC-5CT,"WH001-S14-P14",5,40,3.50,"FOD-002,FOD-001",ENL250693HIJ,"2025-08-01",Cool & Dry
+"Betty Crocker Super Moist Cake Mix (Yellow)","Betty Crocker",400,"20 x 15",432,BET-CAKE-YELLOW,"WH001-F12-S12",9,80,1.80,"FOD-003,FOD-002",BTC250694KLM,"2027-01-01",Cool & Dry
+"Pillsbury Creamy Supreme Frosting (Vanilla)",Pillsbury,350,"10 x 10",453,PIL-FROST-VAN,"WH001-F13-S13",8,70,2.50,"FOD-001,FOD-003",PIL250695NOP,"2026-12-01",Cool & Dry
+"Crisco Pure Vegetable Oil (48 oz)",Crisco,280,"25 x 15",1360,CRI-OIL-48OZ,"WH001-F14-S14",10,56,4.00,"FOD-002,FOD-001",CRO250696QRS,"2027-06-01",Cool & Dry
+"Diamond Crystal Salt (26 oz)","Diamond Crystal",600,"10 x 8",737,DIM-SALT-26OZ,"WH001-F15-S15",7,120,1.00,"FOD-003,FOD-002",DIM250697TUV,"2028-01-01",Cool & Dry
+"McCormick Ground Black Pepper (4 oz)",McCormick,400,"10 x 8",113,MCC-PEP-4OZ,"WH001-F16-S16",8,80,3.00,"FOD-001,FOD-003",MCC250698VWX,"2027-09-01",Cool & Dry
+"Kraft Shredded Parmesan Cheese (8 oz)","Kraft Heinz",200,"20 x 12",227,KF-PARM-8OZ,"DF001-D16-C16",4,40,4.00,"FOD-002,FOD-001",KFP250699YZA,"2025-08-01",Refrigerated
+"Red Baron Classic Crust Pepperoni Pizza (Large)","Red Baron",90,"30 x 30",800,RDB-PIZ-PEP-LG,"FZ001-P12-Z13",6,18,5.50,"FOD-003,FOD-002",RBP250600BCD,"2026-01-01",Frozen
+"Tombstone Original Pepperoni Pizza (Large)",Tombstone,85,"30 x 30",850,TOM-PIZ-PEP-LG,"FZ001-P13-Z14",6,17,5.00,"FOD-001,FOD-003",TMP250601EFG,"2026-02-01",Frozen
+"ORE-IDA Golden Crinkles Fries (32 oz)","ORE-IDA",280,"25 x 20",907,ORI-FRIES-32OZ,"FZ001-P14-Z15",5,56,2.80,"FOD-002,FOD-001",ORF250602HIJ,"2026-03-01",Frozen
+"Pillsbury Toaster Strudel (Strawberry, 6 ct)",Pillsbury,220,"20 x 15",340,PIL-TST-STRB-6CT,"FZ001-B15-Z16",5,44,2.50,"FOD-003,FOD-002",PTS250603KLM,"2025-10-01",Frozen
+"Eggo Homestyle Waffles (10 ct)",Eggo,200,"20 x 15",296,EGG-WAFFLE-10CT,"FZ001-B16-Z17",5,40,2.50,"FOD-001,FOD-003",EGG250604NOP,"2025-11-01",Frozen
+"Jimmy Dean Sausage, Egg & Cheese Croissant (4 ct)","Jimmy Dean",100,"25 x 15",450,JD-SEC-CRO-4CT,"FZ001-B17-Z18",6,20,6.00,"FOD-002,FOD-001",JDC250605QRS,"2025-12-01",Frozen
+"Hot Pockets Croissant Crust Ham & Cheese (5 ct)","Hot Pockets",90,"25 x 15",500,HP-HC-CRO-5CT,"FZ001-P18-Z19",6,18,5.50,"FOD-003,FOD-002",HPH250606TUV,"2026-01-01",Frozen
+"Lean Cuisine Macaroni & Cheese (9.5 oz)","Lean Cuisine",120,"20 x 15",269,LNC-MACN-9.5OZ,"FZ001-P19-Z20",7,24,3.00,"FOD-001,FOD-003",LNM250607VWX,"2026-02-01",Frozen
+"Red Baron Singles Deep Dish Pepperoni Pizza (2 ct)","Red Baron",150,"20 x 15",400,RDB-DD-PEP-2CT,"FZ001-P20-Z21",6,30,4.00,"FOD-002,FOD-001",RBS250608YZA,"2026-03-01",Frozen
+"Totino's Party Pizza Pepperoni (10.2 oz)","Totino's",180,"25 x 20",289,TOT-PP-PEP-10.2OZ,"FZ001-P21-Z22",6,36,2.00,"FOD-003,FOD-002",TPP250609BCD,"2026-04-01",Frozen
+"Jack's Original Pepperoni Pizza (14.5 oz)","Jack's",100,"30 x 25",411,JCK-ORIG-PEP-14.5OZ,"FZ001-P22-Z23",7,20,3.50,"FOD-001,FOD-003",JOP250610EFG,"2026-05-01",Frozen
+"TGI Fridays Mozzarella Sticks (11 oz)","TGI Fridays",80,"20 x 15",312,TGI-MOZ-STK-11OZ,"FZ001-A23-Z24",7,16,6.00,"FOD-002,FOD-001",TFM250611HIJ,"2026-06-01",Frozen
+"Ore-Ida Extra Crispy Tater Tots (32 oz)","ORE-IDA",200,"25 x 20",907,ORI-TOTT-32OZ,"FZ001-P24-Z25",5,40,3.00,"FOD-003,FOD-002",ORT250612KLM,"2026-04-01",Frozen
+"Birds Eye Steamfresh Green Beans (10.8 oz)","Birds Eye",280,"20 x 15",306,BIRD-GB-10.8OZ,"FZ001-V25-Z26",5,56,1.80,"FOD-001,FOD-003",BIG250613NOP,"2026-03-01",Frozen
+"Smart Ones Smart Made Turkey with Stuffing (9.5 oz)","Smart Ones",100,"20 x 15",269,SMRT-TURKEY-STF,"FZ001-P26-Z27",7,20,3.50,"FOD-002,FOD-001",SMS250614QRS,"2026-02-01",Frozen
+"Weight Watchers Smart Ones Frozen Entree (Assorted)","Smart Ones",150,"20 x 15",280,SMRT-WW-ENTREE,"FZ001-P27-Z28",7,30,2.80,"FOD-003,FOD-002",SMW250615TUV,"2026-01-01",Frozen
+"Edy's Slow Churned Vanilla Ice Cream (48 oz)","Edy's",130,"20 x 15",1360,EDY-VAN-IC-48OZ,"FZ001-D28-Z29",4,26,4.00,"FOD-001,FOD-003",EDV250616VWX,"2025-12-01",Frozen
+"Halo Top Light Ice Cream (Pint)","Halo Top",100,"12 x 10",280,HALO-TOP-PINT,"FZ001-D29-Z30",5,20,4.50,"FOD-002,FOD-001",HLT250617YZA,"2025-11-01",Frozen
+"Popsicle Firecracker Ice Pops (18 ct)",Popsicle,200,"25 x 15",600,POP-FIRECRACKER,"FZ001-D30-Z31",5,40,3.00,"FOD-003,FOD-002",PFP250618BCD,"2025-10-01",Frozen
+"Cool Whip Whipped Topping (8 oz)","Cool Whip",250,"15 x 10",227,COOL-WHIP-8OZ,"FZ001-D31-Z32",4,50,2.00,"FOD-001,FOD-003",CWH250619EFG,"2025-09-01",Frozen
+"Pillsbury Pie Crusts (2 ct)",Pillsbury,150,"25 x 15",390,PIL-PIECRUST-2CT,"DF001-D32-C16",3,30,3.50,"FOD-002,FOD-001",PIP250620HIJ,"2025-07-05",Refrigerated
+"Simply Potatoes Shredded Hash Browns (20 oz)","Simply Potatoes",200,"20 x 15",567,SIM-HASHB-20OZ,"DF001-D33-C17",3,40,2.50,"FOD-003,FOD-002",SIH250621KLM,"2025-07-07",Refrigerated
+"Johnsonville Bratwurst (5 ct)",Johnsonville,150,"25 x 10",480,JOH-BRAT-5CT,"FR001-M04-A04",4,30,5.00,"FOD-001,FOD-003",JOH250622NOP,"2025-07-12",Refrigerated
+"Eckrich Smoked Sausage (14 oz)",Eckrich,180,"20 x 10",400,ECK-SAUS-14OZ,"FR001-M05-A05",4,36,3.50,"FOD-002,FOD-001",ECK250623QRS,"2025-07-15",Refrigerated
+"Hormel Pepperoni (6 oz)",Hormel,250,"15 x 10",170,HOR-PEP-6OZ,"FR001-M06-A06",5,50,3.00,"FOD-003,FOD-002",HOR250624TUV,"2025-08-01",Refrigerated

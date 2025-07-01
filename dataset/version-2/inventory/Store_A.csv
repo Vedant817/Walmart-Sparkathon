@@ -1,0 +1,31 @@
+Store_ID,Category,Product_Name,Quantity_in_Stock,Unit_Cost,Total_Inventory_Value,Reorder_Point,Max_Stock_Level,Stock_Status,Last_Updated,Location
+Store_A,Electronics,Phone Charger,21,5,105,5,32,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Electronics,Portable Speaker,30,35,1050,7,47,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Electronics,Smart Watch,35,80,2800,8,50,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Electronics,Tablet Case,56,10,560,14,86,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Electronics,USB Flash Drive,36,8,288,9,51,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Electronics,Wireless Mouse,27,15,405,6,56,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Food,Breakfast Cereal,60,2.5,150,15,89,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Food,Chicken Breast (1kg),34,6,204,8,51,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Food,Fresh Apples (1kg),19,2.5,47.5,5,43,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Food,Greek Yogurt,59,1.8,106.2,14,73,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Food,Olive Oil (500ml),31,4,124,7,44,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Food,Organic Milk (1L),56,2,112,14,71,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Food,Pasta Pack,36,1,36,9,66,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Food,Whole Wheat Bread,16,1.5,24,5,39,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Pharmaceuticals,Allergy Medicine,36,6,216,9,56,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Pharmaceuticals,Bandages Pack,58,2,116,14,70,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Pharmaceuticals,Cough Syrup,45,3,135,11,70,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Pharmaceuticals,First Aid Kit,17,8,136,5,40,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Pharmaceuticals,Hand Sanitizer,15,1.5,22.5,5,36,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Pharmaceuticals,Pain Relief Tablets,30,2.5,75,7,51,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Pharmaceuticals,Thermometer,22,12,264,5,45,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Pharmaceuticals,Vitamin C Supplements,26,5,130,6,53,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Textiles,Athletic Shorts,48,6,288,12,63,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Textiles,Bath Towel,24,4,96,6,48,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Textiles,Cotton Bedsheet Set,50,15,750,12,73,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Textiles,Dress Shirt,24,10,240,6,50,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Textiles,Kids' Jeans,31,12,372,7,41,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Textiles,Men's Basic T-Shirt,38,3.5,133,9,50,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Textiles,Winter Jacket,50,25,1250,12,61,Normal,2025-07-02,Store_A_Warehouse
+Store_A,Textiles,Women's Blouse,31,8,248,7,44,Normal,2025-07-02,Store_A_Warehouse

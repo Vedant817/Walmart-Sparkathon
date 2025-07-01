@@ -1,0 +1,25 @@
+Store_ID,Category,Product_Name,Quantity_in_Stock,Unit_Cost,Total_Inventory_Value,Reorder_Point,Max_Stock_Level,Stock_Status,Last_Updated,Location
+Store_C,Electronics,Bluetooth Headphones,31,25,775,7,60,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Electronics,Portable Speaker,34,35,1190,8,47,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Electronics,Power Bank,33,20,660,8,50,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Electronics,Smart Watch,35,80,2800,8,61,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Electronics,Tablet Case,25,10,250,6,50,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Electronics,USB Flash Drive,27,8,216,6,42,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Electronics,Wireless Mouse,16,15,240,5,35,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Food,Fresh Apples (1kg),35,2.5,87.5,8,62,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Food,Greek Yogurt,16,1.8,28.8,5,31,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Food,Organic Milk (1L),35,2,70,8,48,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Food,Pasta Pack,21,1,21,5,43,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Food,Whole Wheat Bread,24,1.5,36,6,43,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Pharmaceuticals,Cough Syrup,6,3,18,5,26,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Pharmaceuticals,First Aid Kit,23,8,184,5,53,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Pharmaceuticals,Hand Sanitizer,23,1.5,34.5,5,42,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Pharmaceuticals,Thermometer,27,12,324,6,45,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Pharmaceuticals,Vitamin C Supplements,31,5,155,7,53,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Textiles,Athletic Shorts,23,6,138,5,46,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Textiles,Bath Towel,33,4,132,8,59,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Textiles,Cotton Bedsheet Set,31,15,465,7,60,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Textiles,Dress Shirt,23,10,230,5,37,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Textiles,Kids' Jeans,27,12,324,6,40,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Textiles,Men's Basic T-Shirt,34,3.5,119,8,52,Normal,2025-07-02,Store_C_Warehouse
+Store_C,Textiles,Winter Jacket,35,25,875,8,61,Normal,2025-07-02,Store_C_Warehouse

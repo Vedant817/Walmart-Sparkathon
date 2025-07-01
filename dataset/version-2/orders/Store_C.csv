@@ -1,0 +1,1097 @@
+Order Date,Category,Item Name,Supplier,Quantity,Unit Cost,Total Cost
+2023-01-02,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,9,5.4,48.58
+2023-01-02,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-003,6,22.89,137.35
+2023-01-02,Electronics,Roku Express HD Streaming Media Player,ELC-001,9,21,188.97
+2023-01-02,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,12,37.15,445.83
+2023-01-02,Food,Great Value Large Eggs (1 Dozen),FOD-003,18,2.69,48.47
+2023-01-02,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,23,3.77,86.69
+2023-01-02,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,25,4.13,103.28
+2023-01-02,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,21,3.85,80.75
+2023-01-02,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,30,8.99,269.55
+2023-01-02,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,26,3.04,79.01
+2023-01-02,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,9,13.64,122.8
+2023-01-02,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,31,3.16,97.89
+2023-01-02,Textiles,Men's Regular Fit Jeans,TXT-001,31,15.84,490.93
+2023-01-02,Textiles,Twin Size Sheet Set,TXT-001,18,10.1,181.86
+2023-01-02,Textiles,Women's Skinny Jeans,TXT-003,12,13.74,164.94
+2023-01-02,Textiles,Women's V-Neck T-Shirt,TXT-002,29,2.95,85.5
+2023-01-09,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-003,8,86.68,693.45
+2023-01-09,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,16,268.83,4301.33
+2023-01-09,Food,Great Value Large Eggs (1 Dozen),FOD-002,30,2.43,73
+2023-01-09,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,27,3.21,86.63
+2023-01-09,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,25,8.33,208.29
+2023-01-09,Pharmaceuticals,Advil Tablets (100 ct),PRM-002,23,4.78,109.89
+2023-01-09,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-003,11,3.18,35.01
+2023-01-09,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,17,3.03,51.48
+2023-01-09,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,10,14.34,143.4
+2023-01-09,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,13,6.52,84.77
+2023-01-16,Food,Fresh Strawberries (1 lb),FOD-001,17,2.83,48.06
+2023-01-16,Food,Great Value Large Eggs (1 Dozen),FOD-003,17,2.72,46.21
+2023-01-16,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,29,3.83,111.21
+2023-01-16,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,26,3.55,92.24
+2023-01-16,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,31,7.9,244.82
+2023-01-16,Pharmaceuticals,Advil Tablets (100 ct),PRM-003,10,5.01,50.1
+2023-01-16,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,21,16.92,355.28
+2023-01-16,Textiles,Bath Towel Set (2-pack),TXT-001,14,7.56,105.8
+2023-01-16,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,24,3.26,78.26
+2023-01-16,Textiles,Men's Fleece Hoodie,TXT-001,14,11.64,162.92
+2023-01-16,Textiles,Women's Skinny Jeans,TXT-002,16,15.52,248.38
+2023-01-16,Textiles,Women's V-Neck T-Shirt,TXT-003,29,3.46,100.23
+2023-01-23,Food,Bananas (by the pound),FOD-003,26,0.69,17.99
+2023-01-23,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,24,3.51,84.35
+2023-01-23,Food,Skippy Creamy Peanut Butter (40 oz),FOD-002,30,4.89,146.71
+2023-01-23,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,21,4.66,97.87
+2023-01-23,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,8,6.07,48.58
+2023-01-23,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-003,25,8.3,207.55
+2023-01-23,Textiles,Kids' Graphic Tee,TXT-001,20,2.62,52.46
+2023-01-23,Textiles,Men's Athletic Shorts,TXT-003,26,8.59,223.45
+2023-01-23,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,14,3.78,52.87
+2023-01-23,Textiles,Women's Skinny Jeans,TXT-002,20,14.22,284.49
+2023-01-23,Textiles,Women's V-Neck T-Shirt,TXT-003,22,3.5,76.92
+2023-01-30,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-003,14,21.05,294.65
+2023-01-30,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-002,12,132.47,1589.61
+2023-01-30,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,10,7.66,76.56
+2023-01-30,Food,Bananas (by the pound),FOD-003,19,0.75,14.24
+2023-01-30,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,36,7.68,276.41
+2023-01-30,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,24,3.28,78.83
+2023-01-30,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,21,5.82,122.26
+2023-01-30,Textiles,Bath Towel Set (2-pack),TXT-001,21,8.63,181.33
+2023-01-30,Textiles,Kids' Graphic Tee,TXT-001,25,2.91,72.75
+2023-01-30,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,23,3.72,85.55
+2023-01-30,Textiles,Queen Size Comforter,TXT-002,31,24.39,756.02
+2023-01-30,Textiles,Women's V-Neck T-Shirt,TXT-003,18,3.49,62.81
+2023-02-06,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,5,5.34,26.68
+2023-02-06,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,7,89.71,627.95
+2023-02-06,Electronics,Roku Express HD Streaming Media Player,ELC-001,5,18.77,93.86
+2023-02-06,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,10,8.65,86.53
+2023-02-06,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,4,38.08,152.31
+2023-02-13,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,17,59.62,1013.61
+2023-02-13,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,7,7.35,51.44
+2023-02-13,Food,Bananas (by the pound),FOD-002,35,0.78,27.34
+2023-02-13,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,34,1.22,41.5
+2023-02-13,Pharmaceuticals,Advil Tablets (100 ct),PRM-003,24,4.84,116.27
+2023-02-13,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,12,4.9,58.75
+2023-02-13,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,13,4.71,61.19
+2023-02-13,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-003,9,3.18,28.63
+2023-02-13,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,11,15.63,171.93
+2023-02-13,Textiles,Men's Athletic Shorts,TXT-003,13,7.22,93.92
+2023-02-13,Textiles,Men's Fleece Hoodie,TXT-001,22,11.21,246.6
+2023-02-13,Textiles,Twin Size Sheet Set,TXT-001,23,10.68,245.68
+2023-02-13,Textiles,Women's Skinny Jeans,TXT-002,12,15.66,187.93
+2023-02-20,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,11,5.88,64.67
+2023-02-20,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,18,234.03,4212.56
+2023-02-20,Pharmaceuticals,Advil Tablets (100 ct),PRM-002,11,5.16,56.73
+2023-02-20,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,20,18.97,379.47
+2023-02-20,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,16,2.75,44
+2023-02-20,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,8,3.08,24.66
+2023-02-20,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-003,14,8.06,112.79
+2023-02-27,Electronics,Roku Express HD Streaming Media Player,ELC-001,7,21.46,150.2
+2023-02-27,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,12,35.08,420.99
+2023-02-27,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,18,3.66,65.87
+2023-02-27,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,18,1.21,21.82
+2023-02-27,Food,Skippy Creamy Peanut Butter (40 oz),FOD-002,24,4.3,103.11
+2023-02-27,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,11,19.71,216.85
+2023-02-27,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,23,4.95,113.74
+2023-02-27,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,13,3.01,39.17
+2023-02-27,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,13,6.19,80.49
+2023-02-27,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,18,3.63,65.36
+2023-02-27,Textiles,Queen Size Comforter,TXT-003,14,24.93,349.06
+2023-03-06,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,9,5.94,53.44
+2023-03-06,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,11,20.54,225.89
+2023-03-06,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,12,80.8,969.62
+2023-03-06,Electronics,Roku Express HD Streaming Media Player,ELC-001,8,20.41,163.24
+2023-03-06,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,10,7.52,75.2
+2023-03-06,Textiles,Men's Athletic Shorts,TXT-002,20,8.74,174.78
+2023-03-06,Textiles,Queen Size Comforter,TXT-003,18,23.75,427.51
+2023-03-06,Textiles,Twin Size Sheet Set,TXT-001,30,10.59,317.59
+2023-03-06,Textiles,Women's Skinny Jeans,TXT-003,17,15.35,261
+2023-03-13,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-002,13,85.2,1107.65
+2023-03-13,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,14,62.02,868.32
+2023-03-13,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,5,86.04,430.18
+2023-03-13,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,13,32.99,428.81
+2023-03-13,Food,Bananas (by the pound),FOD-003,29,0.69,20.09
+2023-03-13,Food,Coca-Cola Soda (12-pack Cans),FOD-001,31,5,155.05
+2023-03-13,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,21,3.57,74.99
+2023-03-13,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,23,4.31,99.24
+2023-03-13,Pharmaceuticals,Advil Tablets (100 ct),PRM-002,14,5.36,75.09
+2023-03-13,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,12,19.01,228.08
+2023-03-13,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,8,4.63,37.01
+2023-03-13,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,18,5.66,101.82
+2023-03-13,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,13,5.34,69.47
+2023-03-20,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,17,5.36,91.14
+2023-03-20,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,11,8.56,94.14
+2023-03-20,Food,Coca-Cola Soda (12-pack Cans),FOD-001,20,5.07,101.31
+2023-03-20,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,29,3.31,95.94
+2023-03-20,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,18,5.04,90.78
+2023-03-20,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,10,15.17,151.69
+2023-03-20,Textiles,Queen Size Comforter,TXT-002,24,22.69,544.44
+2023-03-20,Textiles,Women's Skinny Jeans,TXT-002,22,14.92,328.24
+2023-03-27,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-002,15,72.33,1084.99
+2023-03-27,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-003,4,20.73,82.94
+2023-03-27,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,11,78.28,861.05
+2023-03-27,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,11,37.23,409.53
+2023-03-27,Food,Great Value Large Eggs (1 Dozen),FOD-003,28,2.74,76.65
+2023-03-27,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,29,3.96,114.97
+2023-03-27,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,28,1.17,32.82
+2023-03-27,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,20,3.3,66.06
+2023-03-27,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,23,5.26,120.92
+2023-03-27,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,24,3.02,72.4
+2023-03-27,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,23,5.67,130.43
+2023-03-27,Textiles,Bath Towel Set (2-pack),TXT-001,15,7.28,109.15
+2023-03-27,Textiles,Kids' Graphic Tee,TXT-001,30,2.78,83.34
+2023-03-27,Textiles,Men's Athletic Shorts,TXT-003,20,8.32,166.36
+2023-03-27,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,14,3.33,46.68
+2023-04-03,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,5,61.14,305.69
+2023-04-03,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,5,5.19,25.96
+2023-04-03,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-002,18,117.93,2122.7
+2023-04-03,Food,Fresh Strawberries (1 lb),FOD-001,23,3.23,74.28
+2023-04-03,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,28,8.32,232.9
+2023-04-03,Pharmaceuticals,Advil Tablets (100 ct),PRM-003,9,5.14,46.25
+2023-04-03,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,11,4.09,45.04
+2023-04-03,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,24,14.79,355.02
+2023-04-03,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-003,21,7.54,158.33
+2023-04-03,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,21,5.16,108.43
+2023-04-03,Textiles,Kids' Graphic Tee,TXT-001,15,2.65,39.82
+2023-04-03,Textiles,Queen Size Comforter,TXT-003,17,23.83,405.17
+2023-04-10,Food,Bananas (by the pound),FOD-003,19,0.68,12.95
+2023-04-10,Food,Great Value Large Eggs (1 Dozen),FOD-003,23,2.51,57.79
+2023-04-10,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,34,3.63,123.29
+2023-04-10,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,20,4.48,89.68
+2023-04-10,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,25,9.02,225.42
+2023-04-10,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,13,18.65,242.39
+2023-04-10,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,13,6.57,85.4
+2023-04-10,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-002,23,7.88,181.35
+2023-04-10,Textiles,Kids' Graphic Tee,TXT-001,21,3,62.95
+2023-04-10,Textiles,Men's Regular Fit Jeans,TXT-001,12,13.78,165.39
+2023-04-10,Textiles,Queen Size Comforter,TXT-002,23,25.68,590.74
+2023-04-10,Textiles,Twin Size Sheet Set,TXT-001,17,9.63,163.71
+2023-04-17,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-002,11,141.11,1552.19
+2023-04-17,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,8,7.38,59.01
+2023-04-17,Food,Fresh Strawberries (1 lb),FOD-001,31,2.87,89.06
+2023-04-17,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,25,1.33,33.28
+2023-04-17,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,16,3.47,55.48
+2023-04-17,Pharmaceuticals,Advil Tablets (100 ct),PRM-003,18,5.09,91.56
+2023-04-17,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,26,4.52,117.47
+2023-04-17,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-003,24,2.8,67.32
+2023-04-17,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,16,5.77,92.34
+2023-04-17,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-002,16,8.6,137.65
+2023-04-17,Textiles,Bath Towel Set (2-pack),TXT-001,21,8.34,175.06
+2023-04-17,Textiles,Men's Athletic Shorts,TXT-002,16,8.77,140.25
+2023-04-17,Textiles,Men's Fleece Hoodie,TXT-001,23,11.9,273.72
+2023-04-17,Textiles,Men's Regular Fit Jeans,TXT-001,16,14.57,233.15
+2023-04-17,Textiles,Women's Skinny Jeans,TXT-003,15,13.83,207.49
+2023-04-24,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-003,5,73.29,366.45
+2023-04-24,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,15,56.8,851.95
+2023-04-24,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,12,5.15,61.82
+2023-04-24,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-003,11,126.21,1388.3
+2023-04-24,Food,Coca-Cola Soda (12-pack Cans),FOD-001,20,5.39,107.86
+2023-04-24,Food,Fresh Strawberries (1 lb),FOD-001,20,3.07,61.45
+2023-04-24,Food,Great Value Large Eggs (1 Dozen),FOD-002,20,2.56,51.15
+2023-04-24,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,23,3.56,81.79
+2023-04-24,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,17,4.47,75.94
+2023-04-24,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,26,4.18,108.56
+2023-04-24,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,13,4.86,63.2
+2023-04-24,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,16,3.25,52.03
+2023-04-24,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,16,2.78,44.5
+2023-04-24,Textiles,Kids' Graphic Tee,TXT-001,18,2.76,49.72
+2023-04-24,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,21,3.7,77.69
+2023-04-24,Textiles,Men's Fleece Hoodie,TXT-001,21,11.33,237.83
+2023-04-24,Textiles,Twin Size Sheet Set,TXT-001,14,10.43,145.97
+2023-04-24,Textiles,Women's Skinny Jeans,TXT-002,13,13.78,179.13
+2023-05-01,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,10,54.83,548.26
+2023-05-01,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,17,80.49,1368.39
+2023-05-01,Electronics,Roku Express HD Streaming Media Player,ELC-001,8,19.61,156.87
+2023-05-01,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-003,17,132.93,2259.84
+2023-05-01,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,17,36.11,613.82
+2023-05-01,Food,Bananas (by the pound),FOD-003,28,0.73,20.52
+2023-05-01,Food,Coca-Cola Soda (12-pack Cans),FOD-001,31,5.27,163.34
+2023-05-01,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,34,1.25,42.44
+2023-05-01,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,10,2.7,27
+2023-05-01,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,27,15.56,420.21
+2023-05-01,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,24,5.06,121.36
+2023-05-01,Textiles,Kids' Graphic Tee,TXT-001,18,2.81,50.56
+2023-05-01,Textiles,Men's Athletic Shorts,TXT-003,13,7.39,96.13
+2023-05-01,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,22,3.57,78.45
+2023-05-01,Textiles,Men's Fleece Hoodie,TXT-001,16,11.34,181.38
+2023-05-01,Textiles,Women's V-Neck T-Shirt,TXT-003,30,3.19,95.64
+2023-05-08,Food,Bananas (by the pound),FOD-003,28,0.82,22.94
+2023-05-08,Food,Fresh Strawberries (1 lb),FOD-001,36,3.13,112.73
+2023-05-08,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,24,1.32,31.71
+2023-05-08,Food,Skippy Creamy Peanut Butter (40 oz),FOD-003,28,4.11,115.12
+2023-05-08,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,30,8.87,265.97
+2023-05-08,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,8,18.29,146.32
+2023-05-08,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,19,4.5,85.51
+2023-05-08,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-003,16,2.71,43.29
+2023-05-08,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,12,14.9,178.84
+2023-05-08,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,27,5.44,146.85
+2023-05-15,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-003,9,83.11,747.96
+2023-05-15,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-002,5,140.39,701.97
+2023-05-15,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,21,3.37,70.87
+2023-05-15,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,17,4.54,77.26
+2023-05-15,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,22,1.19,26.14
+2023-05-15,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,28,3.24,90.81
+2023-05-15,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,30,8.95,268.43
+2023-05-15,Textiles,Bath Towel Set (2-pack),TXT-001,30,8.19,245.64
+2023-05-15,Textiles,Men's Athletic Shorts,TXT-002,22,8.14,179.13
+2023-05-15,Textiles,Women's Skinny Jeans,TXT-003,14,13.18,184.52
+2023-05-22,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-002,5,78.98,394.9
+2023-05-22,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,16,59.2,947.26
+2023-05-22,Food,Coca-Cola Soda (12-pack Cans),FOD-001,21,6.01,126.31
+2023-05-22,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,28,3.64,101.98
+2023-05-22,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,28,4.35,121.82
+2023-05-22,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,33,3.55,117.24
+2023-05-22,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,26,4.79,124.67
+2023-05-22,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,10,2.96,29.63
+2023-05-22,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,19,6.14,116.7
+2023-05-22,Textiles,Bath Towel Set (2-pack),TXT-001,30,8.07,242.24
+2023-05-22,Textiles,Kids' Graphic Tee,TXT-001,12,2.72,32.66
+2023-05-22,Textiles,Men's Athletic Shorts,TXT-002,18,7.25,130.56
+2023-05-22,Textiles,Men's Regular Fit Jeans,TXT-001,14,15.25,213.45
+2023-05-29,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,9,24.12,217.05
+2023-05-29,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,11,77.74,855.13
+2023-05-29,Electronics,Roku Express HD Streaming Media Player,ELC-001,13,20.95,272.31
+2023-05-29,Textiles,Men's Athletic Shorts,TXT-003,12,7.25,87.02
+2023-05-29,Textiles,Queen Size Comforter,TXT-003,20,23.5,470.05
+2023-06-05,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,4,83.08,332.32
+2023-06-05,Electronics,Roku Express HD Streaming Media Player,ELC-001,12,18.54,222.5
+2023-06-05,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,15,7.4,111.01
+2023-06-05,Food,Bananas (by the pound),FOD-002,16,0.81,12.9
+2023-06-05,Food,Coca-Cola Soda (12-pack Cans),FOD-001,23,5.4,124.3
+2023-06-05,Food,Fresh Strawberries (1 lb),FOD-001,17,2.75,46.68
+2023-06-05,Food,Skippy Creamy Peanut Butter (40 oz),FOD-002,23,4.26,97.95
+2023-06-05,Pharmaceuticals,Advil Tablets (100 ct),PRM-002,8,5.65,45.19
+2023-06-05,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,23,15.02,345.52
+2023-06-05,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,21,5.48,114.98
+2023-06-12,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,8,54.03,432.21
+2023-06-12,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,4,5.33,21.33
+2023-06-12,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,9,88.36,795.26
+2023-06-12,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,15,38.15,572.31
+2023-06-12,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,15,4.45,66.74
+2023-06-12,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,23,15.62,359.16
+2023-06-12,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,21,3.24,68.06
+2023-06-12,Textiles,Men's Fleece Hoodie,TXT-001,27,12.38,334.21
+2023-06-12,Textiles,Women's Skinny Jeans,TXT-003,31,14.95,463.45
+2023-06-19,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,10,5.44,54.38
+2023-06-19,Electronics,Roku Express HD Streaming Media Player,ELC-001,11,18.07,198.73
+2023-06-19,Food,Bananas (by the pound),FOD-003,29,0.79,22.98
+2023-06-19,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,24,3.72,89.21
+2023-06-19,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,35,4.47,156.32
+2023-06-19,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,33,1.32,43.42
+2023-06-19,Food,Skippy Creamy Peanut Butter (40 oz),FOD-002,16,4.36,69.71
+2023-06-19,Pharmaceuticals,Advil Tablets (100 ct),PRM-002,23,5.55,127.64
+2023-06-19,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,16,18.32,293.08
+2023-06-19,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,9,4.93,44.37
+2023-06-19,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-003,22,3.27,71.98
+2023-06-26,Food,Fresh Strawberries (1 lb),FOD-001,21,3.28,68.8
+2023-06-26,Food,Great Value Large Eggs (1 Dozen),FOD-003,23,2.32,53.27
+2023-06-26,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,24,4.5,108.11
+2023-06-26,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,18,3.85,69.28
+2023-07-03,Food,Bananas (by the pound),FOD-003,35,0.76,26.52
+2023-07-03,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,30,7.96,238.67
+2023-07-03,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,22,16.23,357.1
+2023-07-03,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,26,15.48,402.54
+2023-07-03,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,19,5.98,113.55
+2023-07-03,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-003,13,7.91,102.83
+2023-07-03,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,27,4.96,134.02
+2023-07-10,Pharmaceuticals,Advil Tablets (100 ct),PRM-002,9,5.67,51.03
+2023-07-10,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,15,16.61,249.18
+2023-07-10,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,13,3.11,40.44
+2023-07-10,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,26,2.89,75.15
+2023-07-10,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,16,13.55,216.77
+2023-07-17,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,5,22.48,112.4
+2023-07-17,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,8,271.52,2172.12
+2023-07-17,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,21,5.18,108.81
+2023-07-17,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,17,2.79,47.36
+2023-07-17,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-003,27,8.46,228.45
+2023-07-17,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,23,5.99,137.69
+2023-07-17,Textiles,Men's Athletic Shorts,TXT-003,15,7.32,109.86
+2023-07-17,Textiles,Men's Regular Fit Jeans,TXT-001,15,15.03,225.5
+2023-07-24,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,9,56.28,506.49
+2023-07-24,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-003,18,123.34,2220.21
+2023-07-24,Food,Coca-Cola Soda (12-pack Cans),FOD-001,23,5.44,125.11
+2023-07-24,Food,Fresh Strawberries (1 lb),FOD-001,30,3.17,95.15
+2023-07-24,Food,Great Value Large Eggs (1 Dozen),FOD-003,27,2.29,61.83
+2023-07-24,Food,Skippy Creamy Peanut Butter (40 oz),FOD-002,27,4.64,125.23
+2023-07-24,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,30,3.5,105.07
+2023-07-24,Textiles,Men's Fleece Hoodie,TXT-001,29,12.56,364.22
+2023-07-24,Textiles,Men's Regular Fit Jeans,TXT-001,24,15.79,378.91
+2023-07-24,Textiles,Twin Size Sheet Set,TXT-001,14,10.92,152.84
+2023-07-31,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,5,245.93,1229.66
+2023-07-31,Electronics,Roku Express HD Streaming Media Player,ELC-001,17,19.72,335.17
+2023-07-31,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-003,15,119.63,1794.39
+2023-07-31,Food,Fresh Strawberries (1 lb),FOD-001,33,2.84,93.88
+2023-07-31,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-003,29,1.21,35.19
+2023-07-31,Textiles,Bath Towel Set (2-pack),TXT-001,31,7.62,236.11
+2023-07-31,Textiles,Men's Regular Fit Jeans,TXT-001,22,14.44,317.71
+2023-07-31,Textiles,Twin Size Sheet Set,TXT-001,25,9.84,246.05
+2023-08-07,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,12,238.91,2866.95
+2023-08-07,Electronics,Roku Express HD Streaming Media Player,ELC-001,5,19.38,96.9
+2023-08-07,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,5,33.51,167.57
+2023-08-07,Food,Fresh Strawberries (1 lb),FOD-001,16,3.06,48.94
+2023-08-07,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,23,1.29,29.71
+2023-08-07,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,19,3.29,62.6
+2023-08-07,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,11,4.54,49.97
+2023-08-07,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-003,17,2.89,49.19
+2023-08-07,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,24,6.27,150.41
+2023-08-07,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-003,18,7.28,130.99
+2023-08-07,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,16,3.66,58.61
+2023-08-07,Textiles,Men's Fleece Hoodie,TXT-001,26,12.99,337.63
+2023-08-07,Textiles,Queen Size Comforter,TXT-002,16,26.98,431.65
+2023-08-07,Textiles,Women's V-Neck T-Shirt,TXT-003,25,3.07,76.63
+2023-08-14,Food,Bananas (by the pound),FOD-002,26,0.81,21.03
+2023-08-14,Food,Great Value Large Eggs (1 Dozen),FOD-003,19,2.73,51.95
+2023-08-14,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,30,4.36,130.83
+2023-08-14,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,23,3.66,84.16
+2023-08-14,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,21,8.51,178.75
+2023-08-14,Textiles,Men's Athletic Shorts,TXT-003,21,8.67,182.04
+2023-08-14,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,18,3.35,60.25
+2023-08-14,Textiles,Queen Size Comforter,TXT-003,26,25.1,652.72
+2023-08-21,Food,Fresh Strawberries (1 lb),FOD-001,35,2.93,102.49
+2023-08-21,Food,Great Value Large Eggs (1 Dozen),FOD-002,21,2.27,47.66
+2023-08-21,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,23,3.19,73.33
+2023-08-21,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,17,13.9,236.22
+2023-08-21,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,24,6.43,154.29
+2023-08-21,Textiles,Bath Towel Set (2-pack),TXT-001,29,8.26,239.48
+2023-08-21,Textiles,Men's Fleece Hoodie,TXT-001,12,11.39,136.68
+2023-08-28,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,4,59.73,238.94
+2023-08-28,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,18,5.89,105.95
+2023-08-28,Food,Bananas (by the pound),FOD-003,31,0.78,24.31
+2023-08-28,Food,Coca-Cola Soda (12-pack Cans),FOD-001,30,5.4,162.02
+2023-08-28,Food,Great Value Large Eggs (1 Dozen),FOD-003,36,2.66,95.73
+2023-08-28,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,24,4.6,110.41
+2023-08-28,Pharmaceuticals,Advil Tablets (100 ct),PRM-003,20,5.41,108.26
+2023-08-28,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,23,18.36,422.37
+2023-08-28,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,18,4.95,89.18
+2023-08-28,Textiles,Bath Towel Set (2-pack),TXT-001,24,8.16,195.76
+2023-08-28,Textiles,Kids' Graphic Tee,TXT-001,21,2.57,54.06
+2023-08-28,Textiles,Men's Athletic Shorts,TXT-002,21,7.87,165.3
+2023-08-28,Textiles,Queen Size Comforter,TXT-002,21,25.84,542.64
+2023-09-04,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,12,79.87,958.48
+2023-09-04,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,17,35.25,599.25
+2023-09-04,Textiles,Bath Towel Set (2-pack),TXT-001,16,8.17,130.69
+2023-09-04,Textiles,Men's Regular Fit Jeans,TXT-001,12,15.91,190.89
+2023-09-04,Textiles,Women's V-Neck T-Shirt,TXT-002,22,3.46,76.2
+2023-09-11,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,16,56.92,910.72
+2023-09-11,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-003,10,21.08,210.81
+2023-09-11,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,8,238.7,1909.62
+2023-09-11,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,5,80.99,404.96
+2023-09-11,Electronics,Roku Express HD Streaming Media Player,ELC-001,7,21.32,149.21
+2023-09-11,Food,Fresh Strawberries (1 lb),FOD-001,28,2.71,75.89
+2023-09-11,Food,Great Value Large Eggs (1 Dozen),FOD-002,30,2.36,70.86
+2023-09-11,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,28,1.32,36.9
+2023-09-11,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,28,3.82,106.85
+2023-09-11,Food,Skippy Creamy Peanut Butter (40 oz),FOD-003,27,4.48,120.94
+2023-09-11,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,20,3.09,61.86
+2023-09-11,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,15,13.6,204.02
+2023-09-11,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,16,5.9,94.37
+2023-09-11,Textiles,Men's Athletic Shorts,TXT-002,13,8.55,111.19
+2023-09-11,Textiles,Men's Fleece Hoodie,TXT-001,29,12.56,364.24
+2023-09-11,Textiles,Twin Size Sheet Set,TXT-001,28,9.8,274.28
+2023-09-18,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-002,6,74.22,445.31
+2023-09-18,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,6,59.24,355.41
+2023-09-18,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,10,20.36,203.6
+2023-09-18,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,11,88.55,974.06
+2023-09-18,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-002,18,119.73,2155.16
+2023-09-18,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,8,14.3,114.44
+2023-09-18,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,9,5.79,52.07
+2023-09-18,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,17,5.76,98
+2023-09-18,Textiles,Kids' Graphic Tee,TXT-001,30,2.66,79.8
+2023-09-18,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,28,3.66,102.37
+2023-09-18,Textiles,Men's Fleece Hoodie,TXT-001,18,12.88,231.76
+2023-09-18,Textiles,Women's V-Neck T-Shirt,TXT-002,24,3.27,78.59
+2023-09-25,Food,Coca-Cola Soda (12-pack Cans),FOD-001,19,5.02,95.33
+2023-09-25,Food,Great Value Large Eggs (1 Dozen),FOD-003,36,2.53,91.06
+2023-09-25,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,35,7.92,277.06
+2023-09-25,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,18,4.88,87.92
+2023-09-25,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,12,2.98,35.79
+2023-09-25,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,13,15.07,195.95
+2023-09-25,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,8,5.78,46.25
+2023-09-25,Textiles,Kids' Graphic Tee,TXT-001,25,3.08,76.94
+2023-09-25,Textiles,Men's Athletic Shorts,TXT-003,28,7.72,216.04
+2023-09-25,Textiles,Men's Fleece Hoodie,TXT-001,21,12.06,253.17
+2023-09-25,Textiles,Queen Size Comforter,TXT-003,24,22.55,541.11
+2023-09-25,Textiles,Women's V-Neck T-Shirt,TXT-003,30,3.3,98.88
+2023-10-02,Food,Coca-Cola Soda (12-pack Cans),FOD-001,18,5.97,107.51
+2023-10-02,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,26,3.2,83.32
+2023-10-02,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,20,4.26,85.2
+2023-10-02,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,20,1.17,23.32
+2023-10-02,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,29,8.78,254.63
+2023-10-02,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,11,4.71,51.78
+2023-10-02,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,12,3.18,38.14
+2023-10-02,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,13,2.86,37.15
+2023-10-02,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,18,5.58,100.5
+2023-10-02,Textiles,Men's Regular Fit Jeans,TXT-001,25,15.25,381.34
+2023-10-02,Textiles,Women's Skinny Jeans,TXT-003,23,14.86,341.8
+2023-10-09,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-003,6,71.5,429
+2023-10-09,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,10,21.45,214.47
+2023-10-09,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,17,84.42,1435.2
+2023-10-09,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,15,7.88,118.18
+2023-10-09,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-003,25,2.96,74.12
+2023-10-09,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,16,3.13,50.03
+2023-10-09,Textiles,Bath Towel Set (2-pack),TXT-001,23,7.7,177.07
+2023-10-09,Textiles,Men's Regular Fit Jeans,TXT-001,24,15.82,379.72
+2023-10-16,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,18,4.13,74.42
+2023-10-16,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-003,16,3,48.03
+2023-10-16,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,23,14.69,337.98
+2023-10-16,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,27,5.25,141.76
+2023-10-23,Textiles,Men's Athletic Shorts,TXT-003,31,8.21,254.56
+2023-10-23,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,17,3.48,59.18
+2023-10-30,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-003,10,23.49,234.86
+2023-10-30,Electronics,Roku Express HD Streaming Media Player,ELC-001,12,18.05,216.57
+2023-10-30,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,5,7.51,37.54
+2023-10-30,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,18,36.47,656.37
+2023-10-30,Textiles,Kids' Graphic Tee,TXT-001,13,2.77,35.99
+2023-10-30,Textiles,Men's Athletic Shorts,TXT-002,16,7.33,117.32
+2023-11-06,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,14,243.73,3412.17
+2023-11-06,Electronics,Roku Express HD Streaming Media Player,ELC-001,18,20.89,375.96
+2023-11-06,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,22,3.34,73.5
+2023-11-06,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-003,25,1.17,29.24
+2023-11-06,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,34,3.37,114.61
+2023-11-06,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,11,3.25,35.76
+2023-11-06,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,10,5.62,56.23
+2023-11-06,Textiles,Kids' Graphic Tee,TXT-001,17,2.88,48.89
+2023-11-06,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,15,3.39,50.84
+2023-11-06,Textiles,Queen Size Comforter,TXT-002,21,23.87,501.25
+2023-11-06,Textiles,Women's V-Neck T-Shirt,TXT-003,31,3.01,93.22
+2023-11-13,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-002,10,78.61,786.13
+2023-11-13,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-003,17,23.76,404
+2023-11-13,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-003,21,1.24,26.08
+2023-11-13,Food,Skippy Creamy Peanut Butter (40 oz),FOD-002,16,4.45,71.12
+2023-11-13,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,23,16.7,384.18
+2023-11-13,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-003,9,3.25,29.28
+2023-11-13,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,19,3.04,57.73
+2023-11-13,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,16,14.15,226.48
+2023-11-13,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-003,10,8.02,80.21
+2023-11-13,Textiles,Men's Athletic Shorts,TXT-002,13,8.72,113.35
+2023-11-13,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,16,3.53,56.43
+2023-11-13,Textiles,Queen Size Comforter,TXT-003,28,24.75,692.95
+2023-11-13,Textiles,Women's Skinny Jeans,TXT-003,23,14.73,338.75
+2023-11-20,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-002,14,79.87,1118.24
+2023-11-20,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,5,61.64,308.22
+2023-11-20,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,7,5.89,41.25
+2023-11-20,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,10,4.33,43.28
+2023-11-20,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,19,2.98,56.53
+2023-11-20,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,12,3.1,37.18
+2023-11-20,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,22,13.5,297.06
+2023-11-20,Textiles,Kids' Graphic Tee,TXT-001,20,3.05,61.08
+2023-11-20,Textiles,Men's Fleece Hoodie,TXT-001,30,10.87,326.06
+2023-11-20,Textiles,Men's Regular Fit Jeans,TXT-001,28,13.82,387.06
+2023-11-20,Textiles,Queen Size Comforter,TXT-003,21,22.7,476.71
+2023-11-20,Textiles,Twin Size Sheet Set,TXT-001,31,9.68,299.95
+2023-11-27,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,9,59.02,531.15
+2023-11-27,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,9,5.49,49.38
+2023-11-27,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,16,80.5,1287.96
+2023-11-27,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,7,8.62,60.32
+2023-11-27,Food,Bananas (by the pound),FOD-003,17,0.71,12.14
+2023-11-27,Food,Coca-Cola Soda (12-pack Cans),FOD-001,26,5.37,139.68
+2023-11-27,Food,Fresh Strawberries (1 lb),FOD-001,28,3.11,86.94
+2023-11-27,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,29,1.16,33.72
+2023-11-27,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,22,8.16,179.59
+2023-11-27,Textiles,Men's Fleece Hoodie,TXT-001,18,12.99,233.83
+2023-11-27,Textiles,Queen Size Comforter,TXT-002,24,23.14,555.42
+2023-11-27,Textiles,Women's V-Neck T-Shirt,TXT-003,26,3.33,86.63
+2023-12-04,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-003,15,76.39,1145.91
+2023-12-04,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-003,12,23.14,277.71
+2023-12-04,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-003,5,137.42,687.11
+2023-12-04,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,6,7.21,43.27
+2023-12-04,Pharmaceuticals,Advil Tablets (100 ct),PRM-003,8,4.85,38.78
+2023-12-04,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,11,4.64,51.04
+2023-12-04,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,8,4.79,38.29
+2023-12-04,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,26,6.01,156.22
+2023-12-04,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,21,5.8,121.77
+2023-12-11,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-002,6,82.58,495.5
+2023-12-11,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,12,5.76,69.15
+2023-12-11,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,10,269.64,2696.36
+2023-12-11,Electronics,Roku Express HD Streaming Media Player,ELC-001,6,18.33,109.96
+2023-12-11,Food,Bananas (by the pound),FOD-003,27,0.68,18.38
+2023-12-11,Food,Coca-Cola Soda (12-pack Cans),FOD-001,28,5.51,154.39
+2023-12-11,Food,Great Value Large Eggs (1 Dozen),FOD-002,26,2.71,70.56
+2023-12-11,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,29,3.43,99.49
+2023-12-11,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,24,4.44,106.52
+2023-12-11,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,8,18.15,145.23
+2023-12-11,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,17,4.37,74.31
+2023-12-11,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,23,4.76,109.52
+2023-12-11,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,21,5.8,121.9
+2023-12-11,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,27,5.71,154.04
+2023-12-18,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-002,15,76.23,1143.43
+2023-12-18,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,16,5.41,86.49
+2023-12-18,Electronics,Roku Express HD Streaming Media Player,ELC-001,8,19.06,152.47
+2023-12-18,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,5,7.55,37.77
+2023-12-18,Food,Bananas (by the pound),FOD-003,33,0.73,24.2
+2023-12-18,Food,Great Value Large Eggs (1 Dozen),FOD-002,26,2.42,62.93
+2023-12-18,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,30,3.95,118.62
+2023-12-18,Food,Skippy Creamy Peanut Butter (40 oz),FOD-003,22,4.53,99.64
+2023-12-18,Pharmaceuticals,Advil Tablets (100 ct),PRM-002,9,5.07,45.62
+2023-12-18,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,16,18.01,288.09
+2023-12-18,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-003,14,3.16,44.19
+2023-12-18,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,16,15.74,251.85
+2023-12-18,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,27,5.88,158.72
+2023-12-25,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,17,54.98,934.62
+2023-12-25,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,12,5.4,64.79
+2023-12-25,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,20,4.6,91.93
+2023-12-25,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,15,4.68,70.2
+2023-12-25,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,17,3.03,51.58
+2023-12-25,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,11,5.87,64.62
+2023-12-25,Textiles,Men's Athletic Shorts,TXT-002,16,8.2,131.2
+2023-12-25,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,21,3.35,70.44
+2023-12-25,Textiles,Men's Fleece Hoodie,TXT-001,26,12.42,322.89
+2023-12-25,Textiles,Twin Size Sheet Set,TXT-001,14,9.42,131.81
+2023-12-25,Textiles,Women's Skinny Jeans,TXT-002,27,14.68,396.3
+2024-01-01,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,9,60.3,542.66
+2024-01-01,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,13,8.2,106.61
+2024-01-01,Food,Coca-Cola Soda (12-pack Cans),FOD-001,26,5.1,132.49
+2024-01-01,Food,Fresh Strawberries (1 lb),FOD-001,16,2.82,45.19
+2024-01-01,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,30,3.41,102.25
+2024-01-01,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,21,4.23,88.75
+2024-01-01,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,20,4.57,91.44
+2024-01-01,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,27,4.54,122.45
+2024-01-01,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-003,21,7.86,164.99
+2024-01-01,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,13,5.7,74.12
+2024-01-01,Textiles,Bath Towel Set (2-pack),TXT-001,17,8.68,147.53
+2024-01-01,Textiles,Men's Athletic Shorts,TXT-003,19,8.57,162.92
+2024-01-01,Textiles,Men's Fleece Hoodie,TXT-001,28,12.09,338.39
+2024-01-01,Textiles,Women's V-Neck T-Shirt,TXT-003,26,3.06,79.64
+2024-01-08,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,8,91.52,732.14
+2024-01-08,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,17,7.82,132.88
+2024-01-08,Food,Bananas (by the pound),FOD-002,27,0.73,19.84
+2024-01-08,Food,Great Value Large Eggs (1 Dozen),FOD-002,25,2.66,66.4
+2024-01-08,Textiles,Men's Athletic Shorts,TXT-002,26,8,208.01
+2024-01-08,Textiles,Men's Regular Fit Jeans,TXT-001,19,14.89,282.85
+2024-01-08,Textiles,Queen Size Comforter,TXT-002,31,26.69,827.37
+2024-01-15,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,13,5.35,69.54
+2024-01-15,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,16,20.42,326.66
+2024-01-15,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,13,256.69,3337.03
+2024-01-15,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,8,92.56,740.49
+2024-01-15,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-003,4,122.75,490.99
+2024-01-15,Food,Bananas (by the pound),FOD-003,31,0.77,23.8
+2024-01-15,Food,Fresh Strawberries (1 lb),FOD-001,20,3.05,61.01
+2024-01-15,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,16,1.34,21.4
+2024-01-15,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,28,3.33,93.24
+2024-01-15,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,27,8.88,239.65
+2024-01-15,Pharmaceuticals,Advil Tablets (100 ct),PRM-003,12,5.63,67.55
+2024-01-15,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,15,18.93,283.88
+2024-01-15,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,14,4.29,60.03
+2024-01-15,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,13,4.67,60.73
+2024-01-15,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,10,5.95,59.5
+2024-01-22,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,26,4.87,126.66
+2024-01-22,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,14,2.91,40.79
+2024-01-22,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,16,15.33,245.21
+2024-01-22,Textiles,Bath Towel Set (2-pack),TXT-001,17,8.59,146.09
+2024-01-22,Textiles,Kids' Graphic Tee,TXT-001,24,3,72.11
+2024-01-22,Textiles,Men's Fleece Hoodie,TXT-001,17,11.96,203.35
+2024-01-22,Textiles,Women's Skinny Jeans,TXT-003,12,14.99,179.87
+2024-01-29,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-003,12,20.1,241.15
+2024-01-29,Electronics,Roku Express HD Streaming Media Player,ELC-001,16,18.21,291.44
+2024-01-29,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,14,32.19,450.69
+2024-01-29,Food,Coca-Cola Soda (12-pack Cans),FOD-001,23,5.71,131.3
+2024-01-29,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-003,33,1.19,39.41
+2024-01-29,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,21,3.18,66.74
+2024-02-12,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,12,5.26,63.15
+2024-02-12,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,14,247,3458.03
+2024-02-12,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,9,81.18,730.62
+2024-02-12,Electronics,Roku Express HD Streaming Media Player,ELC-001,14,18.7,261.75
+2024-02-12,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,8,8.59,68.7
+2024-02-12,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,26,2.96,76.9
+2024-02-12,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,26,15.92,413.85
+2024-02-12,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,22,6.33,139.32
+2024-02-12,Textiles,Bath Towel Set (2-pack),TXT-001,18,7.97,143.38
+2024-02-12,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,26,3.22,83.69
+2024-02-12,Textiles,Men's Regular Fit Jeans,TXT-001,22,15.87,349.14
+2024-02-12,Textiles,Women's V-Neck T-Shirt,TXT-003,14,3.18,44.59
+2024-02-19,Food,Fresh Strawberries (1 lb),FOD-001,26,2.79,72.64
+2024-02-19,Food,Great Value Large Eggs (1 Dozen),FOD-003,21,2.68,56.2
+2024-02-19,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,26,3.82,99.31
+2024-02-19,Food,Skippy Creamy Peanut Butter (40 oz),FOD-003,35,4.24,148.37
+2024-02-19,Pharmaceuticals,Advil Tablets (100 ct),PRM-002,14,5.49,76.86
+2024-02-19,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,10,4.73,47.34
+2024-02-19,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,18,3.08,55.49
+2024-02-19,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,11,6.51,71.61
+2024-02-26,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,8,5.87,46.93
+2024-02-26,Electronics,Roku Express HD Streaming Media Player,ELC-001,9,19.7,177.3
+2024-02-26,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-002,7,134.21,939.49
+2024-02-26,Food,Coca-Cola Soda (12-pack Cans),FOD-001,19,5.03,95.61
+2024-02-26,Food,Fresh Strawberries (1 lb),FOD-001,26,3.13,81.48
+2024-02-26,Food,Great Value Large Eggs (1 Dozen),FOD-003,17,2.64,44.89
+2024-02-26,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,9,19.69,177.19
+2024-02-26,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,8,4.74,37.89
+2024-02-26,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-003,18,2.97,53.46
+2024-02-26,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,26,2.94,76.34
+2024-02-26,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,12,14.42,173.02
+2024-03-04,Pharmaceuticals,Advil Tablets (100 ct),PRM-003,25,5.23,130.81
+2024-03-04,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,18,4.57,82.18
+2024-03-04,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,8,5.57,44.55
+2024-03-04,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,22,3.83,84.35
+2024-03-04,Textiles,Men's Regular Fit Jeans,TXT-001,22,14.33,315.22
+2024-03-04,Textiles,Queen Size Comforter,TXT-003,16,26.87,429.92
+2024-03-04,Textiles,Twin Size Sheet Set,TXT-001,27,9.27,250.25
+2024-03-04,Textiles,Women's Skinny Jeans,TXT-003,26,15.73,408.94
+2024-03-11,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,16,53.96,863.4
+2024-03-11,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-003,17,124.2,2111.37
+2024-03-11,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-003,16,1.28,20.49
+2024-03-11,Food,Skippy Creamy Peanut Butter (40 oz),FOD-003,30,4.52,135.75
+2024-03-11,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,16,8.33,133.32
+2024-03-11,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,25,19.01,475.25
+2024-03-11,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,25,4.49,112.32
+2024-03-11,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,10,15.7,157.03
+2024-03-11,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,26,5.92,154.04
+2024-03-11,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,24,5.91,141.85
+2024-03-11,Textiles,Men's Fleece Hoodie,TXT-001,26,11.35,295.01
+2024-03-11,Textiles,Men's Regular Fit Jeans,TXT-001,20,15.31,306.22
+2024-03-11,Textiles,Queen Size Comforter,TXT-003,22,23.49,516.89
+2024-03-11,Textiles,Women's V-Neck T-Shirt,TXT-002,16,2.96,47.3
+2024-03-18,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,5,62.94,314.72
+2024-03-18,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-003,4,21.75,87.01
+2024-03-18,Electronics,Roku Express HD Streaming Media Player,ELC-001,10,18.19,181.88
+2024-03-18,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,18,37.79,680.26
+2024-03-18,Food,Coca-Cola Soda (12-pack Cans),FOD-001,21,5.51,115.65
+2024-03-18,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,21,4.47,93.83
+2024-03-18,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,31,8.91,276.18
+2024-03-18,Pharmaceuticals,Advil Tablets (100 ct),PRM-002,18,5.59,100.54
+2024-03-18,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,12,18.14,217.73
+2024-03-18,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,14,4.51,63.19
+2024-03-18,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,17,2.81,47.75
+2024-03-18,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-002,25,8.16,204.08
+2024-03-18,Textiles,Men's Fleece Hoodie,TXT-001,30,12.42,372.57
+2024-03-18,Textiles,Men's Regular Fit Jeans,TXT-001,16,14.28,228.42
+2024-03-25,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,10,4.94,49.44
+2024-03-25,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,23,13.55,311.59
+2024-03-25,Textiles,Bath Towel Set (2-pack),TXT-001,25,7.84,196.01
+2024-03-25,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,23,3.4,78.25
+2024-03-25,Textiles,Men's Regular Fit Jeans,TXT-001,26,13.55,352.26
+2024-03-25,Textiles,Twin Size Sheet Set,TXT-001,27,9.51,256.79
+2024-04-01,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,9,268.95,2420.58
+2024-04-01,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,16,79.26,1268.17
+2024-04-01,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,15,8.5,127.43
+2024-04-01,Food,Great Value Large Eggs (1 Dozen),FOD-002,33,2.44,80.47
+2024-04-01,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,16,4.49,71.85
+2024-04-01,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,20,3.79,75.79
+2024-04-01,Food,Skippy Creamy Peanut Butter (40 oz),FOD-003,16,4.85,77.6
+2024-04-01,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,12,18.7,224.43
+2024-04-01,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,17,2.92,49.69
+2024-04-01,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,9,5.61,50.45
+2024-04-08,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-002,7,74.67,522.72
+2024-04-08,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,16,64.22,1027.5
+2024-04-08,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,15,5.68,85.13
+2024-04-08,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,15,245.19,3677.88
+2024-04-08,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,14,32.08,449.05
+2024-04-08,Food,Bananas (by the pound),FOD-003,29,0.73,21.21
+2024-04-08,Food,Fresh Strawberries (1 lb),FOD-001,34,3.14,106.82
+2024-04-08,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,21,3.84,80.58
+2024-04-08,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,28,3.59,100.58
+2024-04-08,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,23,7.93,182.28
+2024-04-08,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,23,3.24,74.51
+2024-04-08,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,27,15.51,418.64
+2024-04-08,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,12,5.31,63.66
+2024-04-08,Textiles,Kids' Graphic Tee,TXT-001,19,2.57,48.86
+2024-04-08,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,25,3.75,93.73
+2024-04-08,Textiles,Women's V-Neck T-Shirt,TXT-002,15,3.5,52.5
+2024-04-15,Food,Fresh Strawberries (1 lb),FOD-001,36,2.72,97.75
+2024-04-15,Food,Skippy Creamy Peanut Butter (40 oz),FOD-003,18,4.75,85.57
+2024-04-15,Textiles,Bath Towel Set (2-pack),TXT-001,22,8.79,193.48
+2024-04-15,Textiles,Men's Fleece Hoodie,TXT-001,31,11.43,354.35
+2024-04-15,Textiles,Men's Regular Fit Jeans,TXT-001,15,15.73,236.02
+2024-04-15,Textiles,Queen Size Comforter,TXT-003,26,27.46,714.05
+2024-04-15,Textiles,Women's Skinny Jeans,TXT-002,20,14.04,280.78
+2024-04-22,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-002,12,85.99,1031.84
+2024-04-22,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,14,22.59,316.27
+2024-04-22,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,17,271.53,4616.05
+2024-04-22,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,31,3.48,107.81
+2024-04-22,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,25,3.83,95.63
+2024-04-22,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,28,3.78,105.86
+2024-04-22,Pharmaceuticals,Advil Tablets (100 ct),PRM-002,8,4.89,39.09
+2024-04-22,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,24,18.36,440.72
+2024-04-22,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,12,4.81,57.67
+2024-04-22,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,26,3.22,83.61
+2024-04-22,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,25,14.59,364.7
+2024-04-22,Textiles,Men's Regular Fit Jeans,TXT-001,15,15.15,227.27
+2024-04-22,Textiles,Queen Size Comforter,TXT-003,16,26.87,429.86
+2024-04-29,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-002,18,86.57,1558.23
+2024-04-29,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,5,60.5,302.49
+2024-04-29,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,18,81.13,1460.26
+2024-04-29,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-002,10,138.79,1387.87
+2024-04-29,Food,Coca-Cola Soda (12-pack Cans),FOD-001,29,5.41,157
+2024-04-29,Food,Great Value Large Eggs (1 Dozen),FOD-002,18,2.75,49.48
+2024-04-29,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,23,3.76,86.45
+2024-04-29,Pharmaceuticals,Advil Tablets (100 ct),PRM-002,24,5,120.09
+2024-04-29,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,14,17.8,249.15
+2024-04-29,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,18,4.33,77.95
+2024-04-29,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-002,27,7.95,214.75
+2024-04-29,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,25,3.42,85.59
+2024-04-29,Textiles,Men's Regular Fit Jeans,TXT-001,16,13.93,222.9
+2024-04-29,Textiles,Twin Size Sheet Set,TXT-001,19,10.67,202.7
+2024-04-29,Textiles,Women's V-Neck T-Shirt,TXT-002,19,3.13,59.48
+2024-05-06,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,13,62.99,818.88
+2024-05-06,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,9,5.66,50.96
+2024-05-06,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,13,78.11,1015.48
+2024-05-06,Electronics,Roku Express HD Streaming Media Player,ELC-001,17,19.57,332.61
+2024-05-06,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,9,8.13,73.15
+2024-05-06,Food,Bananas (by the pound),FOD-003,16,0.71,11.32
+2024-05-06,Food,Coca-Cola Soda (12-pack Cans),FOD-001,16,5.75,92.03
+2024-05-06,Food,Fresh Strawberries (1 lb),FOD-001,16,3.08,49.25
+2024-05-06,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,19,3.35,63.74
+2024-05-06,Food,Skippy Creamy Peanut Butter (40 oz),FOD-003,27,4.79,129.24
+2024-05-06,Textiles,Men's Athletic Shorts,TXT-002,27,7.59,204.89
+2024-05-06,Textiles,Men's Fleece Hoodie,TXT-001,19,12.22,232.15
+2024-05-06,Textiles,Men's Regular Fit Jeans,TXT-001,15,16.49,247.38
+2024-05-06,Textiles,Women's Skinny Jeans,TXT-003,23,13.29,305.69
+2024-05-13,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-002,9,84.19,757.74
+2024-05-13,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,16,5.37,85.94
+2024-05-13,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,18,22.98,413.58
+2024-05-13,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,9,87.07,783.64
+2024-05-13,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,17,8.33,141.64
+2024-05-13,Food,Fresh Strawberries (1 lb),FOD-001,35,3.12,109.11
+2024-05-13,Food,Great Value Large Eggs (1 Dozen),FOD-002,18,2.3,41.31
+2024-05-13,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,24,3.25,78.05
+2024-05-13,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-003,33,1.26,41.57
+2024-05-13,Food,Skippy Creamy Peanut Butter (40 oz),FOD-002,22,4.57,100.62
+2024-05-13,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,24,3.68,88.26
+2024-05-13,Textiles,Queen Size Comforter,TXT-003,17,23.55,400.3
+2024-05-13,Textiles,Women's Skinny Jeans,TXT-003,26,15.08,392.01
+2024-05-20,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,9,57.4,516.61
+2024-05-20,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,16,265.09,4241.38
+2024-05-20,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,15,7.62,114.28
+2024-05-20,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,12,2.71,32.49
+2024-05-20,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,8,3.21,25.72
+2024-05-20,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,22,5.9,129.74
+2024-05-20,Textiles,Kids' Graphic Tee,TXT-001,22,3.08,67.75
+2024-05-20,Textiles,Men's Athletic Shorts,TXT-003,13,7.59,98.71
+2024-05-20,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,20,3.17,63.37
+2024-05-20,Textiles,Twin Size Sheet Set,TXT-001,31,10.14,314.35
+2024-05-27,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,5,22.8,114
+2024-05-27,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-002,15,124.18,1862.68
+2024-05-27,Food,Bananas (by the pound),FOD-003,20,0.82,16.46
+2024-05-27,Food,Great Value Large Eggs (1 Dozen),FOD-002,30,2.4,72.15
+2024-05-27,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,10,16.36,163.59
+2024-05-27,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,27,5.93,159.99
+2024-05-27,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,8,5.57,44.53
+2024-05-27,Textiles,Kids' Graphic Tee,TXT-001,28,2.92,81.67
+2024-05-27,Textiles,Men's Fleece Hoodie,TXT-001,15,12.74,191.06
+2024-05-27,Textiles,Twin Size Sheet Set,TXT-001,23,10.44,240.01
+2024-05-27,Textiles,Women's V-Neck T-Shirt,TXT-002,29,3.25,94.27
+2024-06-03,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-003,11,72.53,797.87
+2024-06-03,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,14,60.57,847.97
+2024-06-03,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,10,5.17,51.71
+2024-06-03,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,15,246.52,3697.77
+2024-06-03,Food,Fresh Strawberries (1 lb),FOD-001,35,2.74,95.78
+2024-06-03,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,27,3.22,86.85
+2024-06-03,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,18,16.52,297.37
+2024-06-03,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,21,5.86,123.01
+2024-06-03,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,26,5.72,148.75
+2024-06-03,Textiles,Men's Fleece Hoodie,TXT-001,12,13.13,157.56
+2024-06-03,Textiles,Men's Regular Fit Jeans,TXT-001,23,15.26,351.03
+2024-06-03,Textiles,Twin Size Sheet Set,TXT-001,31,9.13,282.94
+2024-06-03,Textiles,Women's V-Neck T-Shirt,TXT-003,17,3.35,56.93
+2024-06-10,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,11,55.38,609.17
+2024-06-10,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,18,257.92,4642.64
+2024-06-10,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,13,92.14,1197.82
+2024-06-10,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,27,17.55,473.77
+2024-06-10,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,22,4.69,103.09
+2024-06-10,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,24,2.79,66.94
+2024-06-10,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,8,3.07,24.59
+2024-06-10,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,17,5.98,101.64
+2024-06-10,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,21,3.17,66.56
+2024-06-10,Textiles,Men's Fleece Hoodie,TXT-001,14,13.09,183.31
+2024-06-17,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-003,6,20.85,125.12
+2024-06-17,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,7,37.06,259.41
+2024-06-17,Food,Great Value Large Eggs (1 Dozen),FOD-002,36,2.41,86.77
+2024-06-17,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,33,8.74,288.53
+2024-06-24,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-003,5,22.94,114.71
+2024-06-24,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,12,82.8,993.65
+2024-06-24,Electronics,Roku Express HD Streaming Media Player,ELC-001,18,18.85,339.27
+2024-06-24,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,6,8.63,51.77
+2024-06-24,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,19,3.8,72.14
+2024-06-24,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,23,4.39,100.87
+2024-06-24,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,9,4.92,44.28
+2024-06-24,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,26,15.74,409.33
+2024-06-24,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,14,6.54,91.51
+2024-06-24,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,18,5.76,103.74
+2024-06-24,Textiles,Men's Regular Fit Jeans,TXT-001,27,13.57,366.43
+2024-06-24,Textiles,Queen Size Comforter,TXT-003,24,24.68,592.22
+2024-06-24,Textiles,Women's Skinny Jeans,TXT-002,22,14.68,322.91
+2024-07-01,Food,Bananas (by the pound),FOD-002,36,0.78,28.04
+2024-07-01,Food,Great Value Large Eggs (1 Dozen),FOD-002,30,2.31,69.43
+2024-07-01,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,31,3.33,103.15
+2024-07-01,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,28,4.06,113.72
+2024-07-01,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,9,4.47,40.23
+2024-07-01,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,27,3.1,83.73
+2024-07-01,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-003,26,8.34,216.74
+2024-07-08,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-003,13,76.96,1000.48
+2024-07-08,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,11,35.68,392.47
+2024-07-08,Food,Coca-Cola Soda (12-pack Cans),FOD-001,20,5.33,106.51
+2024-07-08,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,36,3.19,114.82
+2024-07-08,Food,Skippy Creamy Peanut Butter (40 oz),FOD-003,21,4.37,91.67
+2024-07-08,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,23,17.92,412.25
+2024-07-08,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,14,4.91,68.67
+2024-07-08,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,14,2.78,38.87
+2024-07-08,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,11,15.78,173.61
+2024-07-08,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,15,5.45,81.68
+2024-07-08,Textiles,Men's Athletic Shorts,TXT-003,17,8.71,148.06
+2024-07-08,Textiles,Women's V-Neck T-Shirt,TXT-002,27,2.92,78.91
+2024-07-15,Electronics,Roku Express HD Streaming Media Player,ELC-001,18,20.28,364.96
+2024-07-15,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,4,36.04,144.17
+2024-07-15,Food,Bananas (by the pound),FOD-003,23,0.7,16.02
+2024-07-15,Food,Coca-Cola Soda (12-pack Cans),FOD-001,30,5.54,166.2
+2024-07-15,Food,Great Value Large Eggs (1 Dozen),FOD-003,36,2.48,89.19
+2024-07-15,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,27,1.31,35.37
+2024-07-15,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,28,3.85,107.78
+2024-07-15,Pharmaceuticals,Advil Tablets (100 ct),PRM-003,19,4.72,89.68
+2024-07-15,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,15,4.06,60.83
+2024-07-15,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,26,2.74,71.11
+2024-07-15,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,27,5.74,155.05
+2024-07-15,Textiles,Bath Towel Set (2-pack),TXT-001,22,8.25,181.56
+2024-07-15,Textiles,Men's Athletic Shorts,TXT-003,29,7.46,216.27
+2024-07-15,Textiles,Men's Regular Fit Jeans,TXT-001,19,15.3,290.79
+2024-07-15,Textiles,Women's V-Neck T-Shirt,TXT-003,12,3.44,41.25
+2024-07-22,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-003,4,74.25,297
+2024-07-22,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,12,63.6,763.21
+2024-07-22,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-003,18,138.66,2495.79
+2024-07-22,Food,Great Value Large Eggs (1 Dozen),FOD-003,34,2.63,89.58
+2024-07-22,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,34,3.7,125.71
+2024-07-22,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-003,34,1.29,43.92
+2024-07-22,Food,Skippy Creamy Peanut Butter (40 oz),FOD-002,20,4.42,88.4
+2024-07-22,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,23,9.13,209.89
+2024-07-22,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,22,18.17,399.82
+2024-07-22,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,26,4.51,117.18
+2024-07-22,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,19,3.09,58.64
+2024-07-22,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-002,15,7.55,113.21
+2024-07-22,Textiles,Kids' Graphic Tee,TXT-001,24,2.59,62.16
+2024-07-22,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,18,3.81,68.57
+2024-07-22,Textiles,Men's Regular Fit Jeans,TXT-001,26,16.36,425.29
+2024-07-22,Textiles,Queen Size Comforter,TXT-003,25,24.8,620.07
+2024-07-29,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-003,11,73.79,811.73
+2024-07-29,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,18,247.05,4446.84
+2024-07-29,Electronics,Roku Express HD Streaming Media Player,ELC-001,13,20.74,269.65
+2024-07-29,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,14,8.11,113.5
+2024-07-29,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,11,37.76,415.34
+2024-07-29,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,13,18.22,236.89
+2024-07-29,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,11,4.96,54.53
+2024-07-29,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,16,3.11,49.82
+2024-07-29,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,25,5.59,139.79
+2024-07-29,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-002,13,7.86,102.24
+2024-07-29,Textiles,Bath Towel Set (2-pack),TXT-001,22,8.56,188.41
+2024-07-29,Textiles,Men's Athletic Shorts,TXT-002,18,7.69,138.46
+2024-07-29,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,23,3.29,75.72
+2024-07-29,Textiles,Men's Fleece Hoodie,TXT-001,14,10.85,151.92
+2024-07-29,Textiles,Queen Size Comforter,TXT-002,23,25.62,589.17
+2024-08-05,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,5,64.82,324.08
+2024-08-05,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,14,5.3,74.24
+2024-08-05,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,9,8.16,73.48
+2024-08-12,Food,Fresh Strawberries (1 lb),FOD-001,34,2.71,92.19
+2024-08-12,Food,Skippy Creamy Peanut Butter (40 oz),FOD-002,20,4.83,96.7
+2024-08-12,Textiles,Kids' Graphic Tee,TXT-001,28,3.03,84.74
+2024-08-12,Textiles,Men's Fleece Hoodie,TXT-001,27,11.56,312.24
+2024-08-12,Textiles,Queen Size Comforter,TXT-003,22,22.7,499.45
+2024-08-12,Textiles,Women's Skinny Jeans,TXT-002,13,14.93,194.13
+2024-08-12,Textiles,Women's V-Neck T-Shirt,TXT-003,20,3.17,63.35
+2024-08-19,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,16,258.25,4131.95
+2024-08-19,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-002,4,135.31,541.23
+2024-08-19,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-002,16,1.23,19.73
+2024-08-19,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,22,7.73,170.17
+2024-08-19,Pharmaceuticals,Advil Tablets (100 ct),PRM-002,19,4.75,90.2
+2024-08-19,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,11,4.27,46.96
+2024-08-19,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,8,5.03,40.22
+2024-08-19,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,10,5.9,59
+2024-08-19,Textiles,Bath Towel Set (2-pack),TXT-001,26,8.67,225.42
+2024-08-19,Textiles,Men's Athletic Shorts,TXT-003,25,8.33,208.29
+2024-08-19,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,23,3.65,84.03
+2024-08-19,Textiles,Men's Fleece Hoodie,TXT-001,27,11.48,309.85
+2024-08-19,Textiles,Twin Size Sheet Set,TXT-001,24,9.67,232.11
+2024-08-26,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,8,5.78,46.24
+2024-08-26,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,4,20.08,80.3
+2024-08-26,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,12,7.21,86.53
+2024-08-26,Food,Bananas (by the pound),FOD-002,30,0.68,20.3
+2024-08-26,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,26,4.32,112.45
+2024-08-26,Pharmaceuticals,Advil Tablets (100 ct),PRM-003,27,5.11,137.94
+2024-08-26,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,14,4.22,59.06
+2024-08-26,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-003,15,2.8,41.96
+2024-08-26,Textiles,Bath Towel Set (2-pack),TXT-001,27,8.17,220.56
+2024-08-26,Textiles,Men's Regular Fit Jeans,TXT-001,27,14.36,387.83
+2024-08-26,Textiles,Queen Size Comforter,TXT-002,26,23.42,609.04
+2024-08-26,Textiles,Twin Size Sheet Set,TXT-001,14,9.35,130.92
+2024-09-02,Food,Coca-Cola Soda (12-pack Cans),FOD-001,29,5.46,158.38
+2024-09-02,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,30,3.76,112.74
+2024-09-02,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-003,26,1.36,35.25
+2024-09-02,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,22,2.91,64.13
+2024-09-02,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,19,15,284.98
+2024-09-09,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,11,64.54,709.89
+2024-09-09,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,9,5.73,51.54
+2024-09-09,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-002,9,142,1277.98
+2024-09-09,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,10,34.55,345.46
+2024-09-09,Food,Coca-Cola Soda (12-pack Cans),FOD-001,29,5.49,159.2
+2024-09-09,Food,Fresh Strawberries (1 lb),FOD-001,36,2.8,100.63
+2024-09-09,Food,Great Value Large Eggs (1 Dozen),FOD-003,35,2.46,86.26
+2024-09-09,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,8,17.61,140.87
+2024-09-09,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,23,2.94,67.51
+2024-09-09,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,16,2.9,46.44
+2024-09-09,Textiles,Bath Towel Set (2-pack),TXT-001,25,8.47,211.66
+2024-09-09,Textiles,Kids' Graphic Tee,TXT-001,16,2.96,47.38
+2024-09-09,Textiles,Twin Size Sheet Set,TXT-001,16,9.8,156.78
+2024-09-16,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,9,5.81,52.29
+2024-09-16,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,15,22.41,336.13
+2024-09-16,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,17,90.43,1537.38
+2024-09-16,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-003,15,122.05,1830.81
+2024-09-16,Food,Coca-Cola Soda (12-pack Cans),FOD-001,24,5.73,137.59
+2024-09-16,Food,Great Value Large Eggs (1 Dozen),FOD-003,17,2.49,42.28
+2024-09-16,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,18,3.52,63.37
+2024-09-16,Food,Skippy Creamy Peanut Butter (40 oz),FOD-003,35,4.86,170.11
+2024-09-16,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,18,8.41,151.45
+2024-09-16,Textiles,Bath Towel Set (2-pack),TXT-001,16,7.79,124.66
+2024-09-16,Textiles,Men's Fleece Hoodie,TXT-001,25,11.39,284.77
+2024-09-16,Textiles,Women's Skinny Jeans,TXT-003,14,13.1,183.42
+2024-09-23,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,11,60.49,665.34
+2024-09-23,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,5,92.43,462.14
+2024-09-23,Electronics,Roku Express HD Streaming Media Player,ELC-001,11,21.09,232.02
+2024-09-23,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,13,7.91,102.84
+2024-09-23,Food,Bananas (by the pound),FOD-002,34,0.69,23.61
+2024-09-23,Food,Great Value Large Eggs (1 Dozen),FOD-002,19,2.28,43.25
+2024-09-23,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,33,3.48,114.97
+2024-09-23,Pharmaceuticals,Advil Tablets (100 ct),PRM-003,15,5.5,82.54
+2024-09-23,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,14,3.01,42.2
+2024-09-23,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,8,14.39,115.16
+2024-09-23,Textiles,Men's Athletic Shorts,TXT-003,22,7.98,175.46
+2024-09-23,Textiles,Men's Fleece Hoodie,TXT-001,29,11.15,323.37
+2024-09-30,Food,Coca-Cola Soda (12-pack Cans),FOD-001,19,5.79,109.99
+2024-09-30,Food,Great Value Large Eggs (1 Dozen),FOD-003,23,2.37,54.5
+2024-09-30,Pharmaceuticals,Advil Tablets (100 ct),PRM-003,10,5.11,51.09
+2024-09-30,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,24,4.42,106.19
+2024-09-30,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-002,23,7.84,180.34
+2024-09-30,Textiles,Bath Towel Set (2-pack),TXT-001,17,7.72,131.28
+2024-09-30,Textiles,Kids' Graphic Tee,TXT-001,16,2.6,41.68
+2024-09-30,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,21,3.38,70.91
+2024-09-30,Textiles,Men's Fleece Hoodie,TXT-001,27,10.95,295.74
+2024-09-30,Textiles,Twin Size Sheet Set,TXT-001,28,9.11,255.13
+2024-10-07,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,10,55.61,556.11
+2024-10-07,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,18,22.56,406.11
+2024-10-07,Food,Fresh Strawberries (1 lb),FOD-001,35,2.85,99.88
+2024-10-07,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,19,4.38,83.18
+2024-10-07,Food,Skippy Creamy Peanut Butter (40 oz),FOD-002,26,4.86,126.31
+2024-10-07,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,16,8.41,134.52
+2024-10-07,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,26,4.08,106.14
+2024-10-07,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,25,4.39,109.63
+2024-10-07,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-003,23,7.24,166.47
+2024-10-07,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,26,5.49,142.76
+2024-10-07,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,13,3.18,41.33
+2024-10-07,Textiles,Men's Regular Fit Jeans,TXT-001,16,16.36,261.81
+2024-10-14,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-003,11,24.13,265.44
+2024-10-14,Electronics,"HP 15.6"" Laptop (Intel Core i3, 8GB RAM, 256GB SSD)",ELC-001,15,244.43,3666.43
+2024-10-14,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,18,34.94,628.95
+2024-10-14,Food,Coca-Cola Soda (12-pack Cans),FOD-001,35,5.01,175.18
+2024-10-14,Food,Fresh Strawberries (1 lb),FOD-001,30,2.93,87.87
+2024-10-14,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,19,3.19,60.56
+2024-10-14,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,24,9.23,221.55
+2024-10-14,Pharmaceuticals,Advil Tablets (100 ct),PRM-003,19,5.16,98.08
+2024-10-14,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,14,19.39,271.49
+2024-10-14,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,14,2.82,39.48
+2024-10-14,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,14,3.01,42.09
+2024-10-14,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,26,5.93,154.16
+2024-10-21,Textiles,Men's Fleece Hoodie,TXT-001,13,12.96,168.43
+2024-10-21,Textiles,Twin Size Sheet Set,TXT-001,25,10.31,257.68
+2024-10-21,Textiles,Women's V-Neck T-Shirt,TXT-003,16,3.05,48.77
+2024-10-28,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,4,5.69,22.75
+2024-10-28,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-002,7,134.93,944.52
+2024-10-28,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,12,8.72,104.68
+2024-10-28,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,14,31.81,445.32
+2024-10-28,Food,"Great Value Milk (1 Gallon, 2%)",FOD-001,35,3.41,119.25
+2024-10-28,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,33,3.26,107.74
+2024-10-28,Food,Skippy Creamy Peanut Butter (40 oz),FOD-003,33,4.54,149.71
+2024-10-28,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,26,4.86,126.3
+2024-10-28,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,14,13.7,191.74
+2024-10-28,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,22,5.89,129.69
+2024-10-28,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,8,4.99,39.93
+2024-10-28,Textiles,Kids' Graphic Tee,TXT-001,26,3.01,78.18
+2024-10-28,Textiles,Queen Size Comforter,TXT-002,15,22.93,343.96
+2024-11-04,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,8,64.13,513.02
+2024-11-04,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,12,78.26,939.18
+2024-11-04,Food,Coca-Cola Soda (12-pack Cans),FOD-001,26,5.76,149.63
+2024-11-04,Food,Great Value Large Eggs (1 Dozen),FOD-003,23,2.54,58.39
+2024-11-04,Food,Skippy Creamy Peanut Butter (40 oz),FOD-003,33,4.89,161.48
+2024-11-04,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,26,16.7,434.26
+2024-11-04,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,27,2.9,78.43
+2024-11-04,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,24,6.5,156.05
+2024-11-04,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,20,5.04,100.8
+2024-11-04,Textiles,Bath Towel Set (2-pack),TXT-001,31,7.61,235.76
+2024-11-04,Textiles,Kids' Graphic Tee,TXT-001,27,2.9,78.26
+2024-11-04,Textiles,Men's Athletic Shorts,TXT-003,23,8.74,200.98
+2024-11-04,Textiles,Twin Size Sheet Set,TXT-001,23,10.53,242.3
+2024-11-11,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,5,5.18,25.89
+2024-11-11,Electronics,JBL Flip 6 Portable Bluetooth Speaker,ELC-001,5,80.81,404.04
+2024-11-11,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,4,7.23,28.9
+2024-11-11,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,12,35.97,431.61
+2024-11-11,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,14,3.13,43.82
+2024-11-11,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,23,5.57,128.18
+2024-11-18,Food,Great Value Large Eggs (1 Dozen),FOD-003,23,2.55,58.69
+2024-11-18,Food,Kellogg's Frosted Flakes Cereal (23 oz),FOD-001,17,4.1,69.69
+2024-11-18,Pharmaceuticals,Advil Tablets (100 ct),PRM-002,23,4.94,113.67
+2024-11-18,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,9,5.24,47.2
+2024-11-18,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-002,10,2.85,28.47
+2024-11-18,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,23,6.59,151.65
+2024-11-18,Textiles,Kids' Graphic Tee,TXT-001,13,2.8,36.4
+2024-11-18,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,31,3.56,110.45
+2024-11-18,Textiles,Twin Size Sheet Set,TXT-001,23,9.42,216.59
+2024-11-18,Textiles,Women's Skinny Jeans,TXT-003,31,14.77,457.89
+2024-11-25,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,16,61.37,981.91
+2024-11-25,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,11,21.98,241.81
+2024-11-25,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-002,5,121.28,606.38
+2024-11-25,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,15,38.35,575.27
+2024-11-25,Pharmaceuticals,Advil Tablets (100 ct),PRM-002,20,4.73,94.51
+2024-11-25,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,17,18.36,312.19
+2024-11-25,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,8,4.69,37.53
+2024-11-25,Pharmaceuticals,Flonase Allergy Relief (120 sprays),PRM-001,14,14.95,209.25
+2024-11-25,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-003,11,6.22,68.47
+2024-11-25,Textiles,Men's Basic Crewneck T-Shirt,TXT-001,29,3.61,104.62
+2024-11-25,Textiles,Men's Fleece Hoodie,TXT-001,20,12.21,244.11
+2024-11-25,Textiles,Men's Regular Fit Jeans,TXT-001,30,16.09,482.64
+2024-11-25,Textiles,Twin Size Sheet Set,TXT-001,28,9.89,276.89
+2024-11-25,Textiles,Women's V-Neck T-Shirt,TXT-002,26,3.06,79.45
+2024-12-02,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,9,63.96,575.68
+2024-12-02,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,16,5.18,82.96
+2024-12-02,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,8,23.67,189.39
+2024-12-02,Electronics,Roku Express HD Streaming Media Player,ELC-001,12,20.65,247.84
+2024-12-02,Electronics,"Samsung Galaxy Tab A8 10.5"" Tablet (32GB)",ELC-003,11,129.45,1423.92
+2024-12-02,Food,Bananas (by the pound),FOD-002,31,0.75,23.31
+2024-12-02,Food,Fresh Strawberries (1 lb),FOD-001,32,2.79,89.19
+2024-12-02,Food,Great Value Large Eggs (1 Dozen),FOD-003,36,2.43,87.51
+2024-12-02,Food,Skippy Creamy Peanut Butter (40 oz),FOD-002,24,4.42,105.98
+2024-12-02,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,34,7.93,269.62
+2024-12-02,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-003,23,2.74,63.02
+2024-12-02,Pharmaceuticals,Neosporin Original Ointment (1 oz),PRM-002,26,5.9,153.29
+2024-12-02,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-002,15,7.52,112.86
+2024-12-02,Textiles,Bath Towel Set (2-pack),TXT-001,20,7.9,157.96
+2024-12-02,Textiles,Men's Regular Fit Jeans,TXT-001,16,13.86,221.81
+2024-12-02,Textiles,Twin Size Sheet Set,TXT-001,23,9.95,228.83
+2024-12-02,Textiles,Women's V-Neck T-Shirt,TXT-003,14,2.92,40.9
+2024-12-09,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-002,16,81.23,1299.75
+2024-12-09,Electronics,SanDisk 64GB Cruzer Glide USB 2.0 Flash Drive,ELC-001,15,8.63,129.4
+2024-12-09,Food,Bananas (by the pound),FOD-002,24,0.77,18.46
+2024-12-09,Food,Great Value Large Eggs (1 Dozen),FOD-003,32,2.49,79.8
+2024-12-09,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-003,26,1.26,32.71
+2024-12-09,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,25,3.75,93.72
+2024-12-09,Food,Skippy Creamy Peanut Butter (40 oz),FOD-002,31,4.35,134.95
+2024-12-09,Pharmaceuticals,"Bayer Aspirin (325 mg, 100 ct)",PRM-001,20,4.75,95.04
+2024-12-09,Pharmaceuticals,CVS Health Ibuprofen (200 mg - 100 ct),PRM-003,13,2.84,36.98
+2024-12-09,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-003,23,8.44,194.05
+2024-12-09,Pharmaceuticals,Tylenol Extra Strength Caplets (100 ct),PRM-001,12,5.48,65.73
+2024-12-16,Electronics,Canon Pixma MG2522 All-in-One Printer,ELC-001,17,57.05,969.9
+2024-12-16,Electronics,Google Nest Mini (2nd Gen) Smart Speaker,ELC-002,9,24.08,216.7
+2024-12-16,Electronics,Sony WH-CH520 Wireless On-Ear Headphones,ELC-001,8,33.35,266.78
+2024-12-16,Food,Bananas (by the pound),FOD-002,27,0.78,21.11
+2024-12-16,Food,Kraft Macaroni & Cheese (7.25 oz Box),FOD-003,22,1.32,29.14
+2024-12-16,Food,Lay's Classic Potato Chips (Large Bag),FOD-001,19,3.66,69.49
+2024-12-23,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-003,4,72.15,288.61
+2024-12-23,Electronics,Energizer Max AA Batteries (8-pack),ELC-001,17,5.56,94.45
+2024-12-23,Pharmaceuticals,Allegra 24 Hour Allergy (60 ct),PRM-001,25,17.43,435.73
+2024-12-23,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,19,2.85,54.1
+2024-12-23,Pharmaceuticals,NyQuil Cold & Flu Liquid (12 oz),PRM-003,16,8.69,139.07
+2024-12-30,Electronics,Apple AirPods (2nd Gen) with Charging Case,ELC-003,10,74.9,749.03
+2024-12-30,Electronics,Roku Express HD Streaming Media Player,ELC-001,13,20.87,271.28
+2024-12-30,Food,Coca-Cola Soda (12-pack Cans),FOD-001,22,5.55,122.01
+2024-12-30,Food,Fresh Strawberries (1 lb),FOD-001,33,3.05,100.67
+2024-12-30,Food,Skippy Creamy Peanut Butter (40 oz),FOD-002,21,4.78,100.28
+2024-12-30,Food,Tyson Boneless Skinless Chicken Breasts (2.5 lbs),FOD-001,21,7.81,163.91
+2024-12-30,Pharmaceuticals,"Band-Aid Brand Adhesive Bandages (Assorted, 100 ct)",PRM-001,12,4.76,57.07
+2024-12-30,Pharmaceuticals,Colgate Total Toothpaste (6 oz),PRM-001,14,2.72,38.14
+2024-12-30,Textiles,Bath Towel Set (2-pack),TXT-001,27,8.15,220.12
+2024-12-30,Textiles,Men's Athletic Shorts,TXT-002,16,7.49,119.84
+2024-12-30,Textiles,Queen Size Comforter,TXT-003,18,23.83,428.91
+2024-12-30,Textiles,Twin Size Sheet Set,TXT-001,13,9.08,118.07
+2024-12-30,Textiles,Women's Skinny Jeans,TXT-003,25,14.17,354.3

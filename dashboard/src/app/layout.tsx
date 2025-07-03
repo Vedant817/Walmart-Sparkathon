@@ -1,10 +1,8 @@
-// app/layout.tsx
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Providers from './providers';
 
-// Load fonts with CSS variables
 const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-geist-sans",
@@ -31,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="antialiased" suppressHydrationWarning>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

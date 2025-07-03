@@ -1,20 +1,20 @@
-import React from 'react'
-import Sidebar from '@/components/customer/Sidebar'
-import { CartProvider } from '@/contexts/CartContext'
+import React from 'react';
+import Sidebar from '@/components/customer/Sidebar';
+import { CartProvider } from '@/contexts/CartContext';
 
 export default function CustomerLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode
+  children: React.ReactNode;
 }) {
-    return (
-        <CartProvider>
-            <div className="min-h-screen bg-gray-50">
-                <Sidebar />
-                <div className="min-h-screen overflow-y-auto">
-                    {children}
-                </div>
-            </div>
-        </CartProvider>
-    )
+  return (
+    <CartProvider>
+      <div className="min-h-screen bg-gray-50">
+        <Sidebar />
+        <div className="min-h-screen overflow-y-auto">
+          {children}
+        </div>
+      </div>
+    </CartProvider>
+  );
 }

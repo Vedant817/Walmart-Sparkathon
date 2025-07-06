@@ -1,47 +1,35 @@
-import mongoose from 'mongoose';
+import { MongoClient, Db } from 'mongodb';
 
 const MONGO_DB_URL = process.env.MONGO_DB_URL || '';
+const DB_NAME = 'Walmart';
+
 if (!MONGO_DB_URL) {
-    throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
+  throw new Error('Please define the MONGO_DB_URL environment variable inside .env.local');
 }
 
 declare global {
-    var mongoose: {
-        conn: mongoose.Mongoose | null;
-        promise: Promise<mongoose.Mongoose> | null;
-    };
+  var _mongoClientPromise: Promise<MongoClient> | undefined;
 }
 
-let cached = global.mongoose;
-if (!cached) {
-    cached = global.mongoose = { conn: null, promise: null };
+let cachedClient: Promise<MongoClient>;
+
+if (process.env.NODE_ENV === 'development') {
+  if (!global._mongoClientPromise) {
+    global._mongoClientPromise = new MongoClient(MONGO_DB_URL).connect();
+  }
+  cachedClient = global._mongoClientPromise;
+} else {
+  cachedClient = new MongoClient(MONGO_DB_URL).connect();
 }
 
-async function dbConnect() {
-    if (cached.conn) {
-        return cached.conn;
-    }
-
-    if (!cached.promise) {
-        const opts = {
-            bufferCommands: false,
-            dbName: 'Walmart'
-        };
-
-        cached.promise = mongoose.connect(MONGO_DB_URL, opts).then((mongoose) => {
-            console.log('Database connected successfully');
-            return mongoose;
-        }).catch((error) => {
-            console.error('Database connection error:', error);
-            throw error;
-        });
-    }
-    cached.conn = await cached.promise;
-    return cached.conn;
+async function dbConnect(): Promise<Db> {
+  const client = await cachedClient;
+  return client.db(DB_NAME);
 }
 
-export const getCollection = (collectionName: string) => {
-    return mongoose.connection.collection(collectionName);
-};
+export async function getCollection(collectionName: string) {
+  const db = await dbConnect();
+  return db.collection(collectionName);
+}
 
 export default dbConnect;

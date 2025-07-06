@@ -1,16 +1,15 @@
 import mongoose from 'mongoose';
 
+const MONGO_DB_URL = process.env.MONGO_DB_URL || '';
+if (!MONGO_DB_URL) {
+    throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
+}
+
 declare global {
     var mongoose: {
         conn: mongoose.Mongoose | null;
         promise: Promise<mongoose.Mongoose> | null;
     };
-}
-
-const MONGO_DB_URL = process.env.MONGO_DB_URL || '';
-
-if (!MONGO_DB_URL) {
-    throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
 }
 
 let cached = global.mongoose;
@@ -40,5 +39,9 @@ async function dbConnect() {
     cached.conn = await cached.promise;
     return cached.conn;
 }
+
+export const getCollection = (collectionName: string) => {
+    return mongoose.connection.collection(collectionName);
+};
 
 export default dbConnect;

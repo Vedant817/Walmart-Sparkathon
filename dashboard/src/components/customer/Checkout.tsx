@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Alert, AlertDescription } from '@/components/ui/alert'
-import { DeliveryAddress, Product } from '@/types'
+import { Product } from '@/types'
 
 declare global {
   interface Window {
@@ -54,7 +54,7 @@ const Checkout = () => {
   const [cart, setCart] = useState<{ [key: string]: number }>({})
   const [loading, setLoading] = useState(true)
   const [selectedDeliveryMode, setSelectedDeliveryMode] = useState('normal')
-  const [deliveryAddress, setDeliveryAddress] = useState<DeliveryAddress>({
+  const [deliveryAddress, setDeliveryAddress] = useState({
     fullName: '',
     phone: null,
     addressLine1: '',
@@ -132,56 +132,54 @@ const Checkout = () => {
 
   const handlePlaceOrder = async () => {
     if (!isAddressValid()) {
-      alert('Please fill in all required address fields.')
-      return
+      alert('Please fill in all required address fields.');
+      return;
     }
 
     if (getTotalItems() === 0) {
-      alert('Your cart is empty.')
-      return
+      alert('Your cart is empty.');
+      return;
     }
 
-    setOrderPlacing(true)
+    setOrderPlacing(true);
 
     try {
       const orderData = {
-        items: getCartItems().filter((item): item is { product: Product; quantity: number } => item !== null).map(({ product, quantity }) => ({
+        cart: getCartItems().filter((item): item is { product: Product; quantity: number } => item !== null).map(({ product, quantity }) => ({
           productId: product.id,
           name: product.name,
           price: product.price,
           quantity
         })),
-        deliveryAddress,
-        deliveryMode: getSelectedDeliveryMode(),
-        subtotal: getSubtotal(),
-        deliveryCost: getSelectedDeliveryMode().cost,
-        totalPrice: getTotalPrice(),
-        orderDate: new Date().toISOString()
-      }
+        customerInfo: {
+          id: 'cus_' + Math.random().toString(36).substring(2, 15),
+          address: deliveryAddress
+        }
+      };
 
-      const response = await fetch('/api/customer/orders', {
+      const response = await fetch('/api/customer/checkout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(orderData)
-      })
+      });
 
       if (response.ok) {
-        setOrderSuccess(true)
+        setOrderSuccess(true);
         if (typeof window !== 'undefined' && window.updateCart) {
-          window.updateCart({})
+          window.updateCart({});
         }
       } else {
-        throw new Error('Failed to place order')
+        throw new Error('Failed to place order');
       }
     } catch (error) {
-      console.error('Error placing order:', error)
-      alert('Failed to place order. Please try again.')
+      console.error('Error placing order:', error);
+      alert('Failed to place order. Please try again.');
     } finally {
-      setOrderPlacing(false)
+      setOrderPlacing(false);
     }
-  }
+  };
 
   if (loading) {
     return (

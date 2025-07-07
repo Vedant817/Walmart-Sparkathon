@@ -11,7 +11,7 @@
   "dependencies": {
     "@clerk/nextjs": "^6.22.0",
     "@langchain/core": "^0.3.61",
-    "@langchain/openai": "^0.5.15",
+    "@langchain/openai": "^0.5.18",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-separator": "^1.1.7",

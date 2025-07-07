@@ -6,8 +6,7 @@ const navLinks = [
   { href: '/dashboard/customer', label: 'Products', icon: '🏠' },
   { href: '/dashboard/customer/cart', label: 'Cart', icon: '🛒' },
   { href: '/dashboard/customer/orders', label: 'My Orders', icon: '📦' },
-  { href: '/dashboard/customer/query', label: 'Support Chat', icon: '💬' },
-  { href: '/dashboard/customer/settings', label: 'Settings', icon: '⚙️' },
+  { href: '/dashboard/customer/query', label: 'Support Chat', icon: '💬' }
 ];
 
 const NavItem = ({ href, label, icon }: { href: string; label: string; icon: string }) => (

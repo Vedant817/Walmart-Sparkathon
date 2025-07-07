@@ -1,8 +1,6 @@
 import NextAuth, { NextAuthOptions, DefaultSession } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import dbConnect from '@/lib/mongodb';
-import User from '@/models/User';
-import type { IUser } from "@/models/User"
+import { getCollection } from '@/lib/mongodb';
 import bcrypt from 'bcrypt';
 import { Types } from 'mongoose';
 
@@ -38,13 +36,13 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials) {
-        await dbConnect();
-
         if (!credentials?.email || !credentials.password) {
           return null;
         }
 
-        const user = await User.findOne({ email: credentials.email }).lean<IUser>();
+        const usersCollection = await getCollection('users');
+        const user = await usersCollection.findOne({ email: credentials.email });
+        console.log(user)
 
         if (!user || !user.password) {
           return null;

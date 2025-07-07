@@ -1,5 +1,5 @@
 'use client';
-import { Bell, Home, LineChart, Package, ShoppingCart } from "lucide-react";
+import { Bell, MapPinPlusInside , LineChart, Package, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -9,7 +9,7 @@ const navLinks = [
   { href: '/dashboard/supplier/orders/current', label: 'Current Orders', icon: ShoppingCart },
   { href: '/dashboard/supplier/orders/past', label: 'Past Orders', icon: LineChart },
   { href: '/dashboard/supplier/alerts', label: 'Alerts', icon: Bell },
-  { href: '/dashboard/supplier/supply-map', label: 'Supply Map', icon: Home },
+  { href: '/dashboard/supplier/supply-map', label: 'Supply Map', icon: MapPinPlusInside },
 ];
 
 const NavItem = ({
@@ -44,6 +44,11 @@ const NavItem = ({
 
 export default function SupplierSidebar() {
   const pathname = usePathname();
+
+  if (!pathname) {
+    return null;
+  }
+
   const isSupplierPath = pathname.startsWith("/dashboard/supplier");
 
   if (!isSupplierPath) {

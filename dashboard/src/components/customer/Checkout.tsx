@@ -176,6 +176,7 @@ const Checkout = () => {
 
       if (response.ok) {
         setOrderSuccess(true);
+        setCart({}); // Clear the cart
         if (typeof window !== 'undefined' && window.updateCart) {
           window.updateCart({});
         }

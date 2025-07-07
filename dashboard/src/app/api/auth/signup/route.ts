@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCollection } from '@/lib/mongodb';
+import bcrypt from 'bcrypt';
 
 export async function POST(req: NextRequest) {
   try {
@@ -17,10 +18,13 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'User already exists' }, { status: 409 });
     }
 
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
     const result = await usersCollection.insertOne({
       name,
       email,
-      password,
+      password: hashedPassword,
       role,
       createdAt: new Date()
     });

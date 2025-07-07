@@ -49,7 +49,10 @@ const deliveryModes: DeliveryMode[] = [
   }
 ]
 
+import { useSession } from 'next-auth/react';
+
 const Checkout = () => {
+  const { data: session } = useSession();
   const [products, setProducts] = useState<Product[]>([])
   const [cart, setCart] = useState<{ [key: string]: number }>({})
   const [loading, setLoading] = useState(true)
@@ -131,6 +134,11 @@ const Checkout = () => {
   }
 
   const handlePlaceOrder = async () => {
+    if (!session) {
+      alert('Please sign in to place an order.');
+      return;
+    }
+
     if (!isAddressValid()) {
       alert('Please fill in all required address fields.');
       return;
@@ -153,6 +161,7 @@ const Checkout = () => {
         })),
         customerInfo: {
           id: 'cus_' + Math.random().toString(36).substring(2, 15),
+          email: session.user?.email,
           address: deliveryAddress
         }
       };

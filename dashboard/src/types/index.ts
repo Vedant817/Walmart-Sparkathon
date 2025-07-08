@@ -72,3 +72,16 @@ export interface TrackingInfo {
   timestamp: string
   location?: string
 }
+
+export interface Alert {
+  id: string;
+  type: 'payment' | 'dispatch' | 'stock' | 'production' | 'route';
+  message: string;
+  timestamp: string;
+  reason?: string;
+  contactInfo?: {
+    name: string;
+    email: string;
+    phone: string;
+  };
+}

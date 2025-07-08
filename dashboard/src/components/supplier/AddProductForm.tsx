@@ -28,13 +28,28 @@ export default function AddProductForm({ onClose, onSubmit }: ProductFormProps) 
     setProduct(prev => ({ ...prev, [name]: type === 'number' ? Number(value) : value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(product);
+    try {
+      const response = await fetch('/api/supplier/products', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(product),
+      });
+      if (!response.ok) {
+        throw new Error('Failed to add product');
+      }
+      const result = await response.json();
+      onSubmit({ ...product, _id: result.insertedId });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
-    <div className="fixed inset-0 bg-opacity-50 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
       <Card className="w-full max-w-lg border-2 border-gray-300 shadow-2xl">
         <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle>Add New Product</CardTitle>

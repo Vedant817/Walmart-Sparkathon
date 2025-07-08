@@ -32,3 +32,15 @@ export async function GET(req: NextRequest) {
         return NextResponse.json({ error: 'Failed to load products' }, { status: 500 });
     }
 }
+
+export async function POST(req: NextRequest) {
+    try {
+        const product = await req.json();
+        const collection = await getCollection('electronics');
+        const result = await collection.insertOne(product);
+        return NextResponse.json({ message: 'Product added successfully', insertedId: result.insertedId }, { status: 201 });
+    } catch (error) {
+        console.error('Error adding product to MongoDB:', error);
+        return NextResponse.json({ error: 'Failed to add product' }, { status: 500 });
+    }
+}

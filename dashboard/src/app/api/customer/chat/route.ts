@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { getCollection } from "@/lib/mongodb";
-import { BUSINESS_LOCATIONS } from "@/lib/locations";
+import { BUSINESS_LOCATIONS } from "@/constants/locations";
 import { ObjectId } from "mongodb";
 
 const storeIds = BUSINESS_LOCATIONS.filter(

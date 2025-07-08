@@ -49,7 +49,7 @@ export default function AddProductForm({ onClose, onSubmit }: ProductFormProps) 
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 bg-opacity-50 z-50 flex items-center justify-center">
       <Card className="w-full max-w-lg border-2 border-gray-300 shadow-2xl">
         <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle>Add New Product</CardTitle>

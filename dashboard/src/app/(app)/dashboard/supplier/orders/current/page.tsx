@@ -2,6 +2,8 @@
 import { useState, useMemo } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { BUSINESS_LOCATIONS } from "@/constants/locations";
 
 const mockProducts = [
   { "Item Name": "Laptop", "Unit Cost ($)": 1200 },
@@ -23,13 +25,33 @@ const generateRandomOrder = (id: number, isCurrent: boolean) => {
     totalCost += product["Unit Cost ($)"] * quantity;
   }
 
+  const statusOptions = isCurrent ? ['Processing', 'Shipped', 'Out for Delivery'] : ['Delivered', 'Cancelled'];
+  const status = statusOptions[Math.floor(Math.random() * statusOptions.length)];
+
+  let location = 'N/A';
+  let vehicleNo = 'N/A';
+
+  if (status === 'Processing') {
+    location = 'Warehouse';
+  } else if (status === 'Shipped' || status === 'Out for Delivery') {
+    const randomStore = BUSINESS_LOCATIONS.filter(loc => loc.type === 'store')[Math.floor(Math.random() * BUSINESS_LOCATIONS.filter(loc => loc.type === 'store').length)];
+    location = `In Transit to ${randomStore.title}`;
+    vehicleNo = `TRK-${Math.floor(Math.random() * 900) + 100}`;
+  } else if (status === 'Delivered') {
+    location = `Delivered to ${products[0].name}`;
+  } else if (status === 'Cancelled') {
+    location = 'N/A';
+  }
+
   return {
     id: `ORD-${id}`,
     recipient: `store-${Math.floor(Math.random() * 3) + 1}`,
     products,
     totalCost: totalCost.toFixed(2),
-    status: isCurrent ? (['Processing', 'Shipped', 'Out for Delivery'])[Math.floor(Math.random() * 3)] : (['Delivered', 'Cancelled'])[Math.floor(Math.random() * 2)],
+    status,
     date: new Date(Date.now() - Math.floor(Math.random() * 10) * 24 * 60 * 60 * 1000),
+    location,
+    vehicleNo,
   };
 };
 const mockCurrentOrders = Array.from({ length: 5 }, (_, i) => generateRandomOrder(i + 1, true));
@@ -57,45 +79,58 @@ export default function CurrentOrdersPage() {
           <CardTitle>Orders in Progress</CardTitle>
         </CardHeader>
         <CardContent>
-          <table className="w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
-              <tr>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Order ID</th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Recipient</th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Products</th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total Cost</th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {sortedOrders.map((order) => (
-                <tr key={order.id}>
-                  <td className="px-6 py-4 whitespace-nowrap">{order.id}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">{order.date.toLocaleDateString()}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">{order.recipient}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <ul>
-                      {order.products.map(p => <li key={p.name}>{p.name} (x{p.quantity})</li>)}
-                    </ul>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">${order.totalCost}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <Select value={order.status} onValueChange={(value) => handleStatusChange(order.id, value)}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select status" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="Processing">Processing</SelectItem>
-                        <SelectItem value="Shipped">Shipped</SelectItem>
-                        <SelectItem value="Out for Delivery">Out for Delivery</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </td>
+          <ScrollArea className="w-full whitespace-nowrap h-[550px]">
+            <table className="w-full min-w-max">
+              <thead>
+                <tr className="border-b">
+                  <th className="text-left p-2 min-w-[100px]">Order ID</th>
+                  <th className="text-left p-2 min-w-[100px]">Date</th>
+                  <th className="text-left p-2 min-w-[100px]">Recipient</th>
+                  <th className="text-left p-2 min-w-[150px]">Products</th>
+                  <th className="text-left p-2 min-w-[100px]">Total Cost</th>
+                  <th className="text-left p-2 min-w-[120px]">Status</th>
+                  <th className="text-left p-2 min-w-[200px]">Location</th>
+                  <th className="text-left p-2 min-w-[100px]">Vehicle No.</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {sortedOrders.map((order) => (
+                  <tr key={order.id} className="border-b hover:bg-gray-100 cursor-pointer">
+                    <td className="p-2">{order.id}</td>
+                    <td className="p-2">{order.date.toLocaleDateString()}</td>
+                    <td className="p-2">{order.recipient}</td>
+                    <td className="p-2">
+                      {order.products.map((product, index) => (
+                        <div key={index} className="text-sm">
+                          {product.name} (x{product.quantity})
+                        </div>
+                      ))}
+                    </td>
+                    <td className="p-2">${order.totalCost}</td>
+                    <td className="p-2">
+                      <Select
+                        value={order.status}
+                        onValueChange={(value) => handleStatusChange(order.id, value)}
+                      >
+                        <SelectTrigger className="w-full">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="Processing">Processing</SelectItem>
+                          <SelectItem value="Shipped">Shipped</SelectItem>
+                          <SelectItem value="Out for Delivery">Out for Delivery</SelectItem>
+                          <SelectItem value="Delivered">Delivered</SelectItem>
+                          <SelectItem value="Cancelled">Cancelled</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </td>
+                    <td className="p-2">{order.location}</td>
+                    <td className="p-2">{order.vehicleNo}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </ScrollArea>
         </CardContent>
       </Card>
     </div>

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCollection } from '@/lib/mongodb';
 import { ObjectId } from 'mongodb';
-import { BUSINESS_LOCATIONS } from '@/lib/locations';
+import { BUSINESS_LOCATIONS } from '@/constants/locations';
 
 const storeLocations: { [key: string]: { lat: number; lon: number } } = BUSINESS_LOCATIONS.filter(loc => loc.type === 'store').reduce((acc, store) => {
   acc[store.id] = { lat: store.coords[0], lon: store.coords[1] };

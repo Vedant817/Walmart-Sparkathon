@@ -1,8 +1,9 @@
 'use client';
-import { Bell, MapPinPlusInside , LineChart, Package, ShoppingCart } from "lucide-react";
+import { Bell, LogOut, MapPinPlusInside , LineChart, Package, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { signOut } from "next-auth/react";
 
 const navLinks = [
   { href: '/dashboard/supplier', label: 'Products', icon: Package },
@@ -16,31 +17,55 @@ const NavItem = ({
   href,
   label,
   icon: Icon,
-  isActive
+  isActive,
+  onClick,
 }: {
-  href: string;
+  href?: string;
   label: string;
   icon: React.ComponentType<{ className?: string }>;
-  isActive: boolean;
-}) => (
-  <li>
-    <Link
-      href={href}
-      className={cn(
-        "flex items-center gap-3 p-3 rounded-lg transition-colors border-b border-gray-100 hover:bg-gray-50",
-        isActive
-          ? "bg-blue-50 text-blue-700 border-blue-200"
-          : "text-gray-700 hover:text-gray-900"
-      )}
-    >
-      <Icon className={cn(
-        "h-5 w-5",
-        isActive ? "text-blue-600" : "text-gray-500"
-      )} />
+  isActive?: boolean;
+  onClick?: () => void;
+}) => {
+  const content = (
+    <>
+      <Icon
+        className={cn(
+          'h-5 w-5',
+          isActive ? 'text-blue-600' : 'text-gray-500'
+        )}
+      />
       <span className="text-sm font-medium">{label}</span>
-    </Link>
-  </li>
-);
+    </>
+  );
+
+  const commonClasses =
+    'flex items-center gap-3 p-3 rounded-lg transition-colors border-b border-gray-100 hover:bg-gray-50 w-full';
+
+  return (
+    <li>
+      {href ? (
+        <Link
+          href={href}
+          className={cn(
+            commonClasses,
+            isActive
+              ? 'bg-blue-50 text-blue-700 border-blue-200'
+              : 'text-gray-700 hover:text-gray-900'
+          )}
+        >
+          {content}
+        </Link>
+      ) : (
+        <button
+          onClick={onClick}
+          className={cn(commonClasses, 'text-gray-700 hover:text-gray-900')}
+        >
+          {content}
+        </button>
+      )}
+    </li>
+  );
+};
 
 export default function SupplierSidebar() {
   const pathname = usePathname();
@@ -63,7 +88,7 @@ export default function SupplierSidebar() {
   };
 
   return (
-    <aside className="fixed left-0 top-0 z-10 h-screen w-64 overflow-y-auto bg-white p-4 shadow-lg border-r border-gray-200">
+    <aside className="fixed left-0 top-0 z-10 flex h-screen w-64 flex-col overflow-y-auto bg-white p-4 shadow-lg border-r border-gray-200">
       <div className="mb-6">
         <div className="flex items-center gap-2 mb-2">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-white">
@@ -75,7 +100,7 @@ export default function SupplierSidebar() {
           </div>
         </div>
       </div>
-      <nav>
+      <nav className="flex-grow">
         <ul className="space-y-1">
           {navLinks.map((link) => (
             <NavItem
@@ -88,6 +113,13 @@ export default function SupplierSidebar() {
           ))}
         </ul>
       </nav>
+      <div className="mt-auto">
+        <NavItem
+          label="Logout"
+          icon={LogOut}
+          onClick={() => signOut({ callbackUrl: '/' })}
+        />
+      </div>
     </aside>
   );
 }

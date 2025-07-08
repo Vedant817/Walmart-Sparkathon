@@ -1,3 +1,4 @@
+// app/signin/page.tsx
 'use client';
 import { useState } from 'react';
 import { signIn, getSession } from 'next-auth/react';
@@ -8,29 +9,44 @@ export default function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+    setIsLoading(true);
 
-    const result = await signIn('credentials', {
-      redirect: false,
-      email,
-      password,
-    });
+    try {
+      const result = await signIn('credentials', {
+        redirect: false,
+        email,
+        password,
+      });
 
-    if (result?.error) {
-      setError(result.error);
-    } else {
-      const session = await getSession();
-      const role = session?.user?.role;
+      if (result?.error) {
+        setError('Invalid email or password');
+        console.error('Sign in error:', result.error);
+      } else if (result?.ok) {
+        // Wait a moment for the session to be established
+        await new Promise(resolve => setTimeout(resolve, 100));
 
-      if (role) {
-        router.push(`/dashboard/${role}`);
+        const session = await getSession();
+        const role = session?.user?.role;
+
+        if (role) {
+          router.push(`/dashboard/${role}`);
+        } else {
+          setError('Role not found. Please contact support.');
+        }
       } else {
-        setError('Role not found. Please contact support.');
+        setError('An unexpected error occurred');
       }
+    } catch (error) {
+      console.error('Sign in error:', error);
+      setError('An error occurred during sign in');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -45,8 +61,9 @@ export default function SignIn() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded mt-1"
+              className="w-full p-2 border border-gray-300 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
+              disabled={isLoading}
             />
           </div>
           <div>
@@ -55,20 +72,22 @@ export default function SignIn() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded mt-1"
+              className="w-full p-2 border border-gray-300 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
+              disabled={isLoading}
             />
           </div>
           {error && <p className="text-red-500 text-sm">{error}</p>}
           <button
             type="submit"
-            className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded"
+            disabled={isLoading}
+            className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-bold rounded transition-colors"
           >
-            Sign In
+            {isLoading ? 'Signing In...' : 'Sign In'}
           </button>
         </form>
         <p className="text-sm text-center">
-          Don&apos;t have an account? <Link href="/signup" className="text-blue-500">Sign up</Link>
+          Don&apos;t have an account? <Link href="/signup" className="text-blue-500 hover:underline">Sign up</Link>
         </p>
       </div>
     </div>

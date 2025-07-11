@@ -6,8 +6,15 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Search, Filter, RefreshCw, Package, Clock, Truck, CheckCircle } from 'lucide-react';
+import { Search, Filter, RefreshCw, Package, Clock, Truck, CheckCircle, X } from 'lucide-react';
 import { toast } from 'react-hot-toast';
+
+interface Product {
+  productId: string;
+  name: string;
+  price: number;
+  quantity: number;
+}
 
 interface StoreOrder {
   _id: string;
@@ -16,18 +23,21 @@ interface StoreOrder {
   time: string;
   transaction_id: string;
   customer_id: string;
-  product_name: string;
-  quantity: number;
-  unit_price: number;
-  total_price: number;
-  sub_total: number;
+  products: Product[];
   total_amount: number;
   status: 'pending' | 'packed' | 'out_for_delivery' | 'delivered';
   customer_info?: {
     name: string;
     email: string;
     phone: string;
-    address: Record<string, unknown>;
+    address: {
+      addressLine1: string;
+      addressLine2: string;
+      city: string;
+      state: string;
+      zipCode: string;
+      country: string;
+    };
   };
 }
 
@@ -45,12 +55,74 @@ const statusColors = {
   delivered: 'bg-green-100 text-green-800 border-green-200'
 };
 
+function OrderDetailsModal({ order, onClose }: { order: StoreOrder; onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+      <div className="bg-white rounded-lg shadow-xl p-8 max-w-2xl w-full">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-bold">Order Details</h2>
+          <Button variant="ghost" size="icon" onClick={onClose} className='cursor-pointer hover:bg-red-500 hover:text-white'>
+            <X className="h-6 w-6" />
+          </Button>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 className="font-semibold text-lg mb-2">Customer Information</h3>
+            <p><strong>Name:</strong> {order.customer_info?.name}</p>
+            <p><strong>Email:</strong> {order.customer_info?.email}</p>
+            <p><strong>Phone:</strong> {order.customer_info?.phone}</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-lg mb-2">Shipping Address</h3>
+            <p>{order.customer_info?.address.addressLine1}</p>
+            {order.customer_info?.address.addressLine2 && <p>{order.customer_info?.address.addressLine2}</p>}
+            <p>{order.customer_info?.address.city}, {order.customer_info?.address.state} {order.customer_info?.address.zipCode}</p>
+            <p>{order.customer_info?.address.country}</p>
+          </div>
+        </div>
+        <div className="mt-6">
+          <h3 className="font-semibold text-lg mb-2">Products</h3>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Product</TableHead>
+                <TableHead>Quantity</TableHead>
+                <TableHead>Price</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {order.products.map(p => (
+                <TableRow key={p.productId}>
+                  <TableCell>{p.name}</TableCell>
+                  <TableCell>{p.quantity}</TableCell>
+                  <TableCell>{formatCurrency(p.price)}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+        <div className="mt-6 text-right">
+          <p className="text-xl font-bold">Total: {formatCurrency(order.total_amount)}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function formatCurrency(amount: number) {
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR'
+  }).format(amount);
+}
+
 export default function ActiveOrdersPage() {
   const [orders, setOrders] = useState<StoreOrder[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
   const [updating, setUpdating] = useState<string | null>(null);
+  const [selectedOrder, setSelectedOrder] = useState<StoreOrder | null>(null);
 
   const fetchOrders = useCallback(async () => {
     try {
@@ -110,13 +182,6 @@ export default function ActiveOrdersPage() {
   useEffect(() => {
     fetchOrders();
   }, [fetchOrders]);
-
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR'
-    }).format(amount);
-  };
 
   const formatDate = (date: string, time: string) => {
     const dateTime = new Date(`${date}T${time}`);
@@ -199,11 +264,8 @@ export default function ActiveOrdersPage() {
                   <TableRow>
                     <TableHead>Order ID</TableHead>
                     <TableHead>Date & Time</TableHead>
-                    <TableHead>Transaction ID</TableHead>
                     <TableHead>Customer</TableHead>
-                    <TableHead>Product</TableHead>
-                    <TableHead>Quantity</TableHead>
-                    <TableHead>Unit Price</TableHead>
+                    <TableHead>Products</TableHead>
                     <TableHead>Total Amount</TableHead>
                     <TableHead>Status</TableHead>
                     <TableHead>Actions</TableHead>
@@ -211,15 +273,12 @@ export default function ActiveOrdersPage() {
                 </TableHeader>
                 <TableBody>
                   {orders.map((order) => (
-                    <TableRow key={order._id}>
+                    <TableRow key={order._id} onClick={() => setSelectedOrder(order)} className="cursor-pointer">
                       <TableCell className="font-medium">
                         #{order.orderId.slice(-8)}
                       </TableCell>
                       <TableCell>
                         {formatDate(order.date, order.time)}
-                      </TableCell>
-                      <TableCell className="font-mono text-sm">
-                        {order.transaction_id}
                       </TableCell>
                       <TableCell>
                         <div>
@@ -228,12 +287,12 @@ export default function ActiveOrdersPage() {
                         </div>
                       </TableCell>
                       <TableCell>
-                        <div className="max-w-xs whitespace-normal break-words" title={order.product_name}>
-                          {order.product_name}
-                        </div>
+                        <ul className="list-disc list-inside">
+                          {order.products.map(p => (
+                            <li key={p.productId}>{p.name} (x{p.quantity})</li>
+                          ))}
+                        </ul>
                       </TableCell>
-                      <TableCell>{order.quantity}</TableCell>
-                      <TableCell>{formatCurrency(order.unit_price)}</TableCell>
                       <TableCell className="font-semibold">
                         {formatCurrency(order.total_amount)}
                       </TableCell>
@@ -268,6 +327,7 @@ export default function ActiveOrdersPage() {
           )}
         </CardContent>
       </Card>
+      {selectedOrder && <OrderDetailsModal order={selectedOrder} onClose={() => setSelectedOrder(null)} />}
     </div>
   );
 }

@@ -1,5 +1,4 @@
 'use client';
-
 import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -96,7 +95,7 @@ export default function ActiveOrdersPage() {
 
       if (data.success) {
         toast.success('Order status updated successfully');
-        fetchOrders(); // Refresh the orders
+        fetchOrders();
       } else {
         toast.error(data.error || 'Failed to update order status');
       }
@@ -131,7 +130,7 @@ export default function ActiveOrdersPage() {
   };
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="p-6 py-2 space-y-6">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Active Orders</h1>
@@ -143,7 +142,6 @@ export default function ActiveOrdersPage() {
         </Button>
       </div>
 
-      {/* Filters */}
       <Card>
         <CardContent className="p-4">
           <div className="flex flex-col sm:flex-row gap-4">
@@ -177,7 +175,6 @@ export default function ActiveOrdersPage() {
         </CardContent>
       </Card>
 
-      {/* Orders Table */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -231,7 +228,7 @@ export default function ActiveOrdersPage() {
                         </div>
                       </TableCell>
                       <TableCell>
-                        <div className="max-w-xs truncate" title={order.product_name}>
+                        <div className="max-w-xs whitespace-normal break-words" title={order.product_name}>
                           {order.product_name}
                         </div>
                       </TableCell>

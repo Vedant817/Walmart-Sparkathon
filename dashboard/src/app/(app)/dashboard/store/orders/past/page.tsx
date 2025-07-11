@@ -1,5 +1,4 @@
 'use client';
-
 import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -10,27 +9,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Search, Filter, RefreshCw, Archive, CheckCircle, Package2 } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 
-interface StoreOrder {
-  _id: string;
-  orderId: string;
-  date: string;
-  time: string;
-  transaction_id: string;
-  customer_id: string;
-  product_name: string;
-  quantity: number;
-  unit_price: number;
-  total_price: number;
-  sub_total: number;
-  total_amount: number;
-  status: 'fulfilled' | 'delivered';
-  customer_info?: {
-    name: string;
-    email: string;
-    phone: string;
-    address: Record<string, unknown>;
-  };
-}
+import { PastOrder } from '@/types';
 
 const statusIcons = {
   fulfilled: <Package2 className="w-4 h-4" />,
@@ -43,7 +22,7 @@ const statusColors = {
 };
 
 export default function PastOrdersPage() {
-  const [orders, setOrders] = useState<StoreOrder[]>([]);
+  const [orders, setOrders] = useState<PastOrder[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
@@ -62,7 +41,7 @@ export default function PastOrdersPage() {
         ...(statusFilter && { status: statusFilter })
       });
 
-      const response = await fetch(`/api/store/orders?${params}`);
+      const response = await fetch(`/api/store/orders/past?${params}`);
       const data = await response.json();
 
       if (data.success) {
@@ -110,7 +89,7 @@ export default function PastOrdersPage() {
   };
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="p-6 pt-2 space-y-6">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Past Orders</h1>
@@ -122,7 +101,6 @@ export default function PastOrdersPage() {
         </Button>
       </div>
 
-      {/* Filters */}
       <Card>
         <CardContent className="p-4">
           <div className="flex flex-col sm:flex-row gap-4">
@@ -154,7 +132,6 @@ export default function PastOrdersPage() {
         </CardContent>
       </Card>
 
-      {/* Orders Table */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -193,29 +170,29 @@ export default function PastOrdersPage() {
                     {orders.map((order) => (
                       <TableRow key={order._id}>
                         <TableCell className="font-medium">
-                          #{order.orderId.slice(-8)}
+                          #{order.Transaction_ID.slice(-8)}
                         </TableCell>
                         <TableCell>
-                          {formatDate(order.date, order.time)}
+                          {formatDate(order.Date, order.Time)}
                         </TableCell>
                         <TableCell className="font-mono text-sm">
-                          {order.transaction_id}
+                          {order.Transaction_ID}
                         </TableCell>
                         <TableCell>
                           <div>
-                            <div className="font-medium">{order.customer_info?.name || 'Unknown'}</div>
-                            <div className="text-sm text-gray-500">{order.customer_id}</div>
+                            <div className="font-medium">{order.Customer_ID || 'Unknown'}</div>
+                            <div className="text-sm text-gray-500">{order.Customer_ID}</div>
                           </div>
                         </TableCell>
                         <TableCell>
-                          <div className="max-w-xs truncate" title={order.product_name}>
-                            {order.product_name}
+                          <div className="max-w-xs whitespace-normal break-words" title={order.Product_Name}>
+                            {order.Product_Name}
                           </div>
                         </TableCell>
-                        <TableCell>{order.quantity}</TableCell>
-                        <TableCell>{formatCurrency(order.unit_price)}</TableCell>
+                        <TableCell>{order.Quantity}</TableCell>
+                        <TableCell>{formatCurrency(order.Unit_Price)}</TableCell>
                         <TableCell className="font-semibold">
-                          {formatCurrency(order.total_amount)}
+                          {formatCurrency(order.Total_Amount)}
                         </TableCell>
                         <TableCell>
                           <Badge className={`${statusColors[order.status]} gap-1`}>
@@ -229,7 +206,6 @@ export default function PastOrdersPage() {
                 </Table>
               </div>
 
-              {/* Pagination */}
               {totalPages > 1 && (
                 <div className="flex items-center justify-between mt-4">
                   <div className="text-sm text-gray-500">

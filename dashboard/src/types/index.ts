@@ -94,3 +94,77 @@ export interface InventoryItem {
   Total_inventory_value: number;
   reorder_point: number;
 }
+
+export interface ActiveOrderProduct {
+  productId: string;
+  name: string;
+  price: number;
+  category: string;
+  description: string;
+  image: string;
+  stock: number;
+  company?: string;
+  sku?: string;
+  weight?: number;
+  storageConditions?: string;
+  quantity: number;
+}
+
+export interface ActiveOrder {
+  _id: string;
+  orderId: string;
+  date: string;
+  time: string;
+  transaction_id: string;
+  customer_id: string;
+  product_name: string;
+  quantity: number;
+  unit_price: number;
+  total_price: number;
+  sub_total: number;
+  products: ActiveOrderProduct[];
+  total_amount: number;
+  status: 'pending' | 'packed' | 'out_for_delivery' | 'delivered';
+  customer_info?: {
+    name: string;
+    email: string;
+    phone: string;
+    address: {
+      addressLine1: string;
+      addressLine2: string;
+      city: string;
+      state: string;
+      zipCode: string;
+      country: string;
+    };
+  };
+}
+
+export interface PastOrder {
+  _id: string;
+  Date: string;
+  Time: string;
+  Store_ID: string;
+  Transaction_ID: string;
+  Customer_ID: string;
+  Customer_Type: string;
+  Category: string;
+  Product_Name: string;
+  Quantity: number;
+  Unit_Cost: number;
+  Unit_Price: number;
+  Discount_Rate: number;
+  Discount_Amount: number;
+  Subtotal: number;
+  Tax_Amount: number;
+  Total_Amount: number;
+  Gross_Profit: number;
+  Profit_Margin_Percent: number;
+  Payment_Method: string;
+  Day_of_Week: string;
+  Month: string;
+  Hour_of_Day: number;
+  Transaction_Total: number;
+  Items_Per_Transaction: number;
+  status: 'fulfilled' | 'delivered';
+}

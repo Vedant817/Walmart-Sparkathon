@@ -9,37 +9,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Search, Filter, RefreshCw, Package, Clock, Truck, CheckCircle, X } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 
-interface Product {
-  productId: string;
-  name: string;
-  price: number;
-  quantity: number;
-}
-
-interface StoreOrder {
-  _id: string;
-  orderId: string;
-  date: string;
-  time: string;
-  transaction_id: string;
-  customer_id: string;
-  products: Product[];
-  total_amount: number;
-  status: 'pending' | 'packed' | 'out_for_delivery' | 'delivered';
-  customer_info?: {
-    name: string;
-    email: string;
-    phone: string;
-    address: {
-      addressLine1: string;
-      addressLine2: string;
-      city: string;
-      state: string;
-      zipCode: string;
-      country: string;
-    };
-  };
-}
+import { ActiveOrder } from '@/types';
 
 const statusIcons = {
   pending: <Clock className="w-4 h-4" />,
@@ -55,7 +25,7 @@ const statusColors = {
   delivered: 'bg-green-100 text-green-800 border-green-200'
 };
 
-function OrderDetailsModal({ order, onClose }: { order: StoreOrder; onClose: () => void }) {
+function OrderDetailsModal({ order, onClose }: { order: ActiveOrder; onClose: () => void }) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
       <div className="bg-white rounded-lg shadow-xl p-8 max-w-2xl w-full">
@@ -117,12 +87,12 @@ function formatCurrency(amount: number) {
 }
 
 export default function ActiveOrdersPage() {
-  const [orders, setOrders] = useState<StoreOrder[]>([]);
+  const [orders, setOrders] = useState<ActiveOrder[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
   const [updating, setUpdating] = useState<string | null>(null);
-  const [selectedOrder, setSelectedOrder] = useState<StoreOrder | null>(null);
+  const [selectedOrder, setSelectedOrder] = useState<ActiveOrder | null>(null);
 
   const fetchOrders = useCallback(async () => {
     try {

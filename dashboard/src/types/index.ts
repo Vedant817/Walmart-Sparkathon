@@ -85,3 +85,12 @@ export interface Alert {
     phone: string;
   };
 }
+export interface InventoryItem {
+  _id: string;
+  category: string;
+  Product_Name: string;
+  Quantity_in_stock: number;
+  Unit_Cost: number;
+  Total_inventory_value: number;
+  reorder_point: number;
+}

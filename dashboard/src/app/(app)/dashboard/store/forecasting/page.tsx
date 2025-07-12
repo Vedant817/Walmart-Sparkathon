@@ -1,12 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 import { useState, useEffect } from 'react';
-import { TrendingUp, AlertCircle, Package, BarChart3, ShoppingCart, Info, Star, Clock, DollarSign, Target, Activity, Bot, CheckCircle, Settings, Plus, Minus, Send } from 'lucide-react';
+import { TrendingUp, AlertCircle, Package, BarChart3, ShoppingCart, Info, Star, DollarSign, Target, Activity, Bot, CheckCircle, Plus, Minus, BotMessageSquare } from 'lucide-react';
 import { ForecastingData, ProductRecommendation, ForecastingMetrics } from '@/types';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts';
 
-// Custom scrollbar styles
 const customScrollbarStyles = `
   .custom-scrollbar::-webkit-scrollbar {
     width: 6px;
@@ -24,7 +24,6 @@ const customScrollbarStyles = `
   }
 `;
 
-// Supplier mapping based on categories
 const CATEGORY_SUPPLIERS = {
   'Food': 'FreshCorp Suppliers',
   'Electronics': 'TechWorld Distributors',
@@ -40,8 +39,6 @@ export default function ForecastingPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [selectedProduct, setSelectedProduct] = useState<ForecastingData | null>(null);
-  
-  // Smart Agent state
   const [showAgentModal, setShowAgentModal] = useState(false);
   const [selectedItems, setSelectedItems] = useState<Record<string, number>>({});
   const [isOrdering, setIsOrdering] = useState(false);
@@ -135,14 +132,12 @@ export default function ForecastingPage() {
     },
   ] : [];
 
-  // Function to toggle selection in Smart Agent
   const handleItemToggle = (productName: string) => {
     setSelectedItems(prev => {
       if (prev[productName]) {
         const { [productName]: removed, ...rest } = prev;
         return rest;
       } else {
-        // AI-predicted quantity based on demand score and market trend
         const product = recommendations.find(r => r.productName === productName);
         const aiPredictedQty = product ? Math.max(1, Math.round((product.demandScore + product.marketTrend) * 50)) : 1;
         return { ...prev, [productName]: aiPredictedQty };
@@ -150,7 +145,6 @@ export default function ForecastingPage() {
     });
   };
 
-  // Smart Agent functions
   const handleQuantityChange = (productName: string, change: number) => {
     setSelectedItems(prev => {
       const currentQty = prev[productName] || 0;
@@ -166,8 +160,7 @@ export default function ForecastingPage() {
   const handleSmartOrder = async () => {
     setIsOrdering(true);
     
-    // Group orders by category/supplier
-    const ordersBySupplier: Record<string, { supplier: string, items: Array<{ product: ProductRecommendation, quantity: number }> }> = {};
+    const ordersBySupplier: Record<string, { supplier: string, items: Array<{ productName: string, category: string, quantity: number, unitPrice: number, supplier: string }> }> = {};
     
     Object.entries(selectedItems).forEach(([productName, quantity]) => {
       const product = recommendations.find(r => r.productName === productName);
@@ -176,41 +169,45 @@ export default function ForecastingPage() {
         if (!ordersBySupplier[supplier]) {
           ordersBySupplier[supplier] = { supplier, items: [] };
         }
-        ordersBySupplier[supplier].items.push({ product, quantity });
+        ordersBySupplier[supplier].items.push({
+          productName: product.productName,
+          category: product.category,
+          quantity,
+          unitPrice: product.potentialRevenue,
+          supplier
+        });
       }
     });
 
-    // Simulate API calls to different suppliers
     try {
-      const orderPromises = Object.values(ordersBySupplier).map(async (order) => {
-        // Simulate order creation
-        await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-        
-        const orderData = {
-          supplier: order.supplier,
-          items: order.items,
-          orderId: `ORD-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-          status: 'placed',
-          estimatedDelivery: new Date(Date.now() + Math.random() * 7 * 24 * 60 * 60 * 1000).toISOString(),
-          totalValue: order.items.reduce((sum, item) => sum + (item.product.potentialRevenue * item.quantity), 0)
-        };
-        
-        // In a real app, this would be an API call to create the order
-        // await fetch('/api/orders/create', { method: 'POST', body: JSON.stringify(orderData) });
-        
-        return orderData;
+      const ordersData = Object.values(ordersBySupplier).map(order => ({
+        supplier: order.supplier,
+        items: order.items,
+        totalValue: order.items.reduce((sum, item) => sum + (item.unitPrice * item.quantity), 0)
+      }));
+      
+      const response = await fetch('/api/store/shipments', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ orders: ordersData }),
       });
       
-      await Promise.all(orderPromises);
-      setOrderComplete(true);
+      const result = await response.json();
       
-      // Clear selections after successful order
-      setTimeout(() => {
-        setSelectedItems({});
-        setShowAgentModal(false);
-        setOrderComplete(false);
-        setIsOrdering(false);
-      }, 3000);
+      if (result.success) {
+        setOrderComplete(true);
+        
+        setTimeout(() => {
+          setSelectedItems({});
+          setShowAgentModal(false);
+          setOrderComplete(false);
+          setIsOrdering(false);
+        }, 3000);
+      } else {
+        throw new Error(result.error || 'Failed to create orders');
+      }
     } catch (error) {
       console.error('Order failed:', error);
       setIsOrdering(false);
@@ -249,8 +246,7 @@ export default function ForecastingPage() {
     <>
       <style dangerouslySetInnerHTML={{ __html: customScrollbarStyles }} />
       <div className="min-h-screen bg-gray-50">
-        <div className="p-6 max-w-7xl mx-auto">
-        {/* Header Section */}
+        <div className="p-6 pt-0 pl-4 max-w-7xl mx-auto">
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <div className="p-2 bg-blue-100 rounded-lg">
@@ -263,7 +259,6 @@ export default function ForecastingPage() {
           </div>
         </div>
 
-        {/* Key Metrics Dashboard */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
@@ -318,11 +313,10 @@ export default function ForecastingPage() {
           </Card>
         </div>
 
-        {/* Product Forecasts and Analysis */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="lg:col-span-2">
-            <Card className="border-0 shadow-lg h-fit">
-              <CardHeader className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-t-lg pb-4">
+            <Card className="border-0 shadow-lg h-full">
+              <CardHeader className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-t-lg p-2 px-4">
                 <CardTitle className="text-xl font-bold text-gray-900 flex items-center gap-2">
                   <Package className="h-5 w-5 text-blue-600" />
                   Product Forecasts
@@ -330,7 +324,7 @@ export default function ForecastingPage() {
                 <CardDescription className="text-gray-600">Click on any product to view detailed analysis</CardDescription>
               </CardHeader>
               <CardContent className="p-0">
-                <div className="h-[600px] overflow-y-auto custom-scrollbar">
+                <div className="h-[750px] overflow-y-auto custom-scrollbar">
                   <div className="p-6 space-y-4">
                     {forecasts.length === 0 ? (
                       <div className="text-center py-12">
@@ -420,7 +414,7 @@ export default function ForecastingPage() {
           </div>
 
           <Card className="border-0 shadow-lg">
-            <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-t-lg">
+            <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-t-lg p-2 px-4">
               <CardTitle className="text-xl font-bold text-gray-900 flex items-center gap-2">
                 <Target className="h-5 w-5 text-purple-600" />
                 Factor Analysis
@@ -429,7 +423,7 @@ export default function ForecastingPage() {
                 {selectedProduct ? `Analyzing ${selectedProduct.productName}` : 'Select a product to view detailed factor analysis'}
               </CardDescription>
             </CardHeader>
-            <CardContent className="p-6">
+            <CardContent className="p-4">
               {selectedProduct ? (
                 <div>
                   <div className="bg-white rounded-lg border border-gray-100 p-4 mb-6">
@@ -488,9 +482,8 @@ export default function ForecastingPage() {
           </Card>
       </div>
 
-        {/* Demand vs Stock Analysis */}
         <Card className="mb-8 border-0 shadow-lg">
-          <CardHeader className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-t-lg pb-4">
+          <CardHeader className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-t-lg p-2 px-4">
             <CardTitle className="text-xl font-bold text-gray-900 flex items-center gap-2">
               <BarChart3 className="h-5 w-5 text-green-600" />
               Demand vs Stock Analysis
@@ -500,7 +493,6 @@ export default function ForecastingPage() {
             </CardDescription>
           </CardHeader>
           <CardContent className="p-6">
-            {/* Summary Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
                 <div className="flex items-center justify-between">
@@ -537,7 +529,6 @@ export default function ForecastingPage() {
               </div>
             </div>
 
-            {/* Chart */}
             <div className="bg-white rounded-lg border border-gray-100 p-4">
               <ResponsiveContainer width="100%" height={400}>
                 <BarChart 
@@ -605,7 +596,6 @@ export default function ForecastingPage() {
               </ResponsiveContainer>
             </div>
 
-            {/* Analysis Insights */}
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
@@ -634,7 +624,7 @@ export default function ForecastingPage() {
         </Card>
 
       <Card className="border-0 shadow-lg">
-        <CardHeader className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-t-lg">
+        <CardHeader className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-t-lg p-2 px-4">
           <div className="flex items-center justify-between">
             <div>
               <CardTitle className="text-xl font-bold text-gray-900 flex items-center gap-2">
@@ -647,7 +637,7 @@ export default function ForecastingPage() {
             </div>
             <button
               onClick={() => setShowAgentModal(true)}
-              className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-md hover:shadow-lg"
+              className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer"
             >
               <Bot className="h-5 w-5" />
               Smart Agent
@@ -706,14 +696,13 @@ export default function ForecastingPage() {
         </CardContent>
       </Card>
 
-      {/* Smart Agent Modal */}
       {showAgentModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div className="fixed inset-0 backdrop-blur-sm bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden">
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-6 text-white">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-white bg-opacity-20 rounded-lg">
+                  <div className="p-2 bg-white bg-opacity-20 rounded-lg text-black">
                     <Bot className="h-6 w-6" />
                   </div>
                   <div>
@@ -723,7 +712,7 @@ export default function ForecastingPage() {
                 </div>
                 <button
                   onClick={() => setShowAgentModal(false)}
-                  className="p-2 hover:bg-white hover:bg-opacity-20 rounded-lg transition-colors"
+                  className="p-2 hover:bg-opacity-20 rounded-lg transition-colors hover:bg-red-500 hover:text-white cursor-pointer"
                   disabled={isOrdering}
                 >
                   <Plus className="h-5 w-5 rotate-45" />
@@ -731,7 +720,7 @@ export default function ForecastingPage() {
               </div>
             </div>
             
-            <div className="p-6 max-h-96 overflow-y-auto">
+            <div className="p-6 h-116 overflow-y-auto">
               {orderComplete ? (
                 <div className="text-center py-8">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -747,14 +736,14 @@ export default function ForecastingPage() {
                 <>
                   <div className="mb-6">
                     <h3 className="text-lg font-bold text-gray-900 mb-4">Select Products for Order</h3>
-                    <div className="space-y-3 max-h-64 overflow-y-auto">
+                    <div className="space-y-3 h-full overflow-y-auto">
                       {recommendations.map((rec) => {
                         const aiPredictedQty = Math.max(1, Math.round((rec.demandScore + rec.marketTrend) * 50));
                         const supplier = CATEGORY_SUPPLIERS[rec.category as keyof typeof CATEGORY_SUPPLIERS] || 'General Suppliers';
                         const isSelected = !!selectedItems[rec.productName];
                         
                         return (
-                          <div key={rec.productName} className={`p-4 border rounded-lg transition-all duration-200 ${
+                          <div key={rec.productName} className={`p-4 cursor-pointer border rounded-lg transition-all duration-200 ${
                             isSelected ? 'border-blue-300 bg-blue-50' : 'border-gray-200 hover:border-gray-300'
                           }`}>
                             <div className="flex items-start gap-3">
@@ -764,7 +753,7 @@ export default function ForecastingPage() {
                                 onChange={() => handleItemToggle(rec.productName)}
                                 className="mt-1 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                               />
-                              <div className="flex-1 min-w-0">
+                              <div className="flex-1 min-w-0 cursor-pointer">
                                 <div className="flex justify-between items-start mb-2">
                                   <div>
                                     <h4 className="font-semibold text-gray-900">{rec.productName}</h4>
@@ -862,7 +851,7 @@ export default function ForecastingPage() {
                 <div className="flex gap-3">
                   <button
                     onClick={() => setSelectedItems({})}
-                    className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors font-medium"
+                    className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors font-medium cursor-pointer"
                     disabled={isOrdering}
                   >
                     Clear All
@@ -870,7 +859,7 @@ export default function ForecastingPage() {
                   <button
                     onClick={handleSmartOrder}
                     disabled={isOrdering}
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 cursor-pointer"
                   >
                     {isOrdering ? (
                       <>
@@ -879,7 +868,7 @@ export default function ForecastingPage() {
                       </>
                     ) : (
                       <>
-                        <Send className="h-4 w-4" />
+                        <BotMessageSquare  className="h-4 w-4" />
                         Place Orders
                       </>
                     )}

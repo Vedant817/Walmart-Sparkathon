@@ -21,7 +21,7 @@ const navLinks = [
   { href: '/dashboard/store/orders/past', label: 'Past Orders', icon: LineChart },
   { href: '/dashboard/store/insights', label: 'Insights', icon: BarChart },
   { href: '/dashboard/store/forecasting', label: 'Demand Forecasting', icon: TrendingUp },
-  { href: '/dashboard/store/suppliers', label: 'Suppliers', icon: Users },
+  // { href: '/dashboard/store/suppliers', label: 'Suppliers', icon: Users },
   { href: '/dashboard/store/shipment-tracking', label: 'Supplier Shipments', icon: Truck },
   { href: '/dashboard/store/delivery-tracking', label: 'Delivery Tracking', icon: MapPin },
 ];

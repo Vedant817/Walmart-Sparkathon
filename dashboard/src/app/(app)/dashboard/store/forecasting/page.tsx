@@ -130,7 +130,6 @@ export default function ForecastingPage() {
         <p className="text-gray-600">AI-powered predictions to optimize inventory and scale your business</p>
       </div>
 
-      {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">

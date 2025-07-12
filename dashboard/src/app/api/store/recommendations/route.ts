@@ -1,10 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getCollection } from '@/lib/mongodb';
 import { ProductRecommendation } from '@/types';
 
 // Generate product recommendations based on market trends
 async function generateRecommendations(): Promise<ProductRecommendation[]> {
-  // Simulated trending products that the store doesn't currently sell
   const trendingProducts = [
     {
       productName: 'Wireless Earbuds Pro',

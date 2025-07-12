@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCollection } from '@/lib/mongodb';
-import { ForecastingData, ProductRecommendation } from '@/types';
+import { ForecastingData } from '@/types';
 
 interface ProductSalesData {
   productName: string;
@@ -10,7 +10,6 @@ interface ProductSalesData {
   avgPrice: number;
 }
 
-// Simulate social media trends (in real implementation, this would fetch from social media APIs)
 function getSocialMediaTrend(productName: string): number {
   const trends: Record<string, number> = {
     'electronics': 0.8,
@@ -21,7 +20,6 @@ function getSocialMediaTrend(productName: string): number {
   return trends[productName.toLowerCase()] || Math.random() * 0.6 + 0.2;
 }
 
-// Simulate weather impact (in real implementation, this would fetch from weather APIs)
 function getClimaticFactor(month: string): number {
   const seasonalFactors: Record<string, number> = {
     'January': 0.6,
@@ -35,26 +33,21 @@ function getClimaticFactor(month: string): number {
     'September': 0.8,
     'October': 0.75,
     'November': 0.7,
-    'December': 0.95, // Holiday season boost
+    'December': 0.95,
   };
   return seasonalFactors[month] || 0.7;
 }
 
-// Calculate product forecasts based on real data
 async function calculateForecasts(): Promise<ForecastingData[]> {
   try {
-    // Fetch inventory data
     const inventoryCollection = await getCollection('store_1_inventory');
     const inventoryData = await inventoryCollection.find({}).toArray();
     
-    // Fetch sales history
     const salesCollection = await getCollection('store_1_sale');
     const salesData = await salesCollection.find({}).toArray();
     
-    // Group sales by product
     const productSalesMap = new Map<string, ProductSalesData>();
     
-    // Initialize with inventory data
     inventoryData.forEach((item: any) => {
       productSalesMap.set(item.Product_Name, {
         productName: item.Product_Name,
@@ -65,7 +58,6 @@ async function calculateForecasts(): Promise<ForecastingData[]> {
       });
     });
     
-    // Process sales data
     salesData.forEach((sale: any) => {
       const productData = productSalesMap.get(sale.Product_Name);
       if (productData) {
@@ -77,29 +69,24 @@ async function calculateForecasts(): Promise<ForecastingData[]> {
       }
     });
     
-    // Calculate forecasts for each product
     const forecasts: ForecastingData[] = [];
     const currentMonth = new Date().toLocaleString('default', { month: 'long' });
     
     productSalesMap.forEach((productData) => {
-      // Calculate average daily sales from last 30 days
       const recentSales = productData.salesHistory.slice(-30);
       const totalQuantity = recentSales.reduce((sum, sale) => sum + sale.quantity, 0);
       const avgDailySales = recentSales.length > 0 ? totalQuantity / recentSales.length : 0;
       
-      // Calculate sales trend (comparing last 15 days to previous 15 days)
       const firstHalf = recentSales.slice(0, 15).reduce((sum, sale) => sum + sale.quantity, 0);
       const secondHalf = recentSales.slice(15).reduce((sum, sale) => sum + sale.quantity, 0);
       const salesTrendFactor = secondHalf > 0 ? (secondHalf - firstHalf) / firstHalf : 0;
       
-      // Get other factors
       const socialMediaTrend = getSocialMediaTrend(productData.category);
       const climaticFactor = getClimaticFactor(currentMonth);
-      const areaFactor = 0.8 + Math.random() * 0.4; // Simulated area demand factor
+      const areaFactor = 0.8 + Math.random() * 0.4;
       const seasonalityFactor = climaticFactor;
       const competitionFactor = 0.3 + Math.random() * 0.4;
       
-      // Calculate predicted demand (next 30 days)
       const baseDemand = avgDailySales * 30;
       const trendAdjustment = baseDemand * salesTrendFactor * 0.5;
       const socialMediaBoost = baseDemand * socialMediaTrend * 0.3;
@@ -110,14 +97,11 @@ async function calculateForecasts(): Promise<ForecastingData[]> {
         baseDemand + trendAdjustment + socialMediaBoost + seasonalAdjustment + areaAdjustment
       );
       
-      // Calculate stockout risk
       const daysOfStock = avgDailySales > 0 ? productData.currentStock / avgDailySales : Infinity;
       const stockoutRisk = daysOfStock < 7 ? 'high' : daysOfStock < 15 ? 'medium' : 'low';
       
-      // Calculate confidence based on data availability
       const confidence = Math.min(0.95, 0.5 + (recentSales.length / 60));
       
-      // Generate recommendations
       const recommendations: string[] = [];
       if (stockoutRisk === 'high') {
         recommendations.push('Urgent: Reorder immediately to avoid stockout');
@@ -162,7 +146,6 @@ async function calculateForecasts(): Promise<ForecastingData[]> {
       } as ForecastingData);
     });
     
-    // Sort by stockout risk (high risk first)
     forecasts.sort((a, b) => {
       const riskOrder = { high: 0, medium: 1, low: 2 };
       return riskOrder[a.stockoutRisk] - riskOrder[b.stockoutRisk];
@@ -171,7 +154,6 @@ async function calculateForecasts(): Promise<ForecastingData[]> {
     return forecasts;
   } catch (error) {
     console.error('Error calculating forecasts:', error);
-    // Return sample data as fallback
     return [
       {
         productName: 'Sample Product A',

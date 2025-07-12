@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 import {
   BarChart,
@@ -9,6 +10,7 @@ import {
   TrendingUp,
   Truck,
   Users,
+  Bot
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -23,6 +25,7 @@ const navLinks = [
   { href: '/dashboard/store/forecasting', label: 'Demand Forecasting', icon: TrendingUp },
   // { href: '/dashboard/store/suppliers', label: 'Suppliers', icon: Users },
   { href: '/dashboard/store/shipment-tracking', label: 'Supplier Shipments', icon: Truck },
+  { href: '/dashboard/store/fleet-management', label: 'Fleet Management', icon: Bot },
   { href: '/dashboard/store/delivery-tracking', label: 'Delivery Tracking', icon: MapPin },
 ];
 

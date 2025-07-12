@@ -168,3 +168,61 @@ export interface PastOrder {
   Items_Per_Transaction: number;
   status: 'fulfilled' | 'delivered';
 }
+
+export interface ForecastingData {
+  productName: string;
+  currentStock: number;
+  averageDailySales: number;
+  predictedDemand: number;
+  confidence: number;
+  recommendations: string[];
+  category: string;
+  seasonalTrend: 'increasing' | 'decreasing' | 'stable';
+  stockoutRisk: 'low' | 'medium' | 'high';
+  suggestedOrderQuantity: number;
+  predictedRevenue: number;
+  factors: {
+    salesTrend: number;
+    socialMediaTrend: number;
+    climaticFactor: number;
+    areaFactor: number;
+    seasonalityFactor: number;
+    competitionFactor: number;
+  };
+}
+
+export interface ForecastingMetrics {
+  totalProducts: number;
+  highRiskProducts: number;
+  predictedRevenue: number;
+  stockoutRisk: number;
+  averageConfidence: number;
+  topGrowthProducts: string[];
+  topRiskProducts: string[];
+}
+
+export interface ProductRecommendation {
+  productName: string;
+  reason: string;
+  potentialRevenue: number;
+  category: string;
+  priority: 'high' | 'medium' | 'low';
+  marketTrend: number;
+  demandScore: number;
+}
+
+export interface ClimateData {
+  temperature: number;
+  humidity: number;
+  season: 'spring' | 'summer' | 'autumn' | 'winter';
+  weatherCondition: string;
+  impact: number;
+}
+
+export interface SocialMediaTrend {
+  product: string;
+  mentions: number;
+  sentiment: number;
+  trendingScore: number;
+  platform: string;
+}

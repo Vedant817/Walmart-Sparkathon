@@ -125,6 +125,7 @@ export interface ActiveOrder {
   products: ActiveOrderProduct[];
   total_amount: number;
   status: 'pending' | 'packed' | 'out_for_delivery' | 'delivered';
+  vehicleAssignment?: VehicleAssignment;
   customer_info?: {
     name: string;
     email: string;
@@ -225,4 +226,37 @@ export interface SocialMediaTrend {
   sentiment: number;
   trendingScore: number;
   platform: string;
+}
+
+export interface Vehicle {
+  id: string;
+  name: string;
+  type: 'drone' | 'robot' | 'vehicle';
+  status: 'active' | 'idle' | 'maintenance' | 'charging';
+  battery?: number;
+  location: string;
+  currentDelivery?: string;
+  deliveriesCompleted: number;
+  lastMaintenance: string;
+  capacity?: number;
+  currentLoad?: number;
+}
+
+export interface VehicleAssignment {
+  orderId: string;
+  vehicleId: string;
+  vehicleName: string;
+  vehicleType: 'drone' | 'robot' | 'vehicle';
+  assignedAt: string;
+  estimatedDeliveryTime?: string;
+  status: 'assigned' | 'in_transit' | 'delivered' | 'failed';
+}
+
+export interface OrderForAssignment {
+  orderId: string;
+  customerLocation: string;
+  priority: 'normal' | 'urgent';
+  weight?: number;
+  estimatedDistance?: number;
+  deliveryType?: 'same_day' | 'next_day' | 'standard';
 }

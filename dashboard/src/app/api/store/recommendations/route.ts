@@ -8,7 +8,7 @@ async function generateRecommendations(): Promise<ProductRecommendation[]> {
       productName: 'Wireless Earbuds Pro',
       category: 'Electronics',
       reason: 'High demand in electronics category, trending on social media',
-      potentialRevenue: 79.99, // Realistic price for wireless earbuds
+      potentialRevenue: 59.99,
       priority: 'high' as const,
       marketTrend: 0.92,
       demandScore: 0.88,
@@ -17,7 +17,7 @@ async function generateRecommendations(): Promise<ProductRecommendation[]> {
       productName: 'Organic Green Tea Set',
       category: 'Food',
       reason: 'Health-conscious trend, growing market segment',
-      potentialRevenue: 24.99, // Realistic price for tea set
+      potentialRevenue: 15.99,
       priority: 'medium' as const,
       marketTrend: 0.78,
       demandScore: 0.72,
@@ -26,7 +26,7 @@ async function generateRecommendations(): Promise<ProductRecommendation[]> {
       productName: 'Smart Home Security Camera',
       category: 'Electronics',
       reason: 'Rising demand for home security, competitive pricing available',
-      potentialRevenue: 149.99, // Realistic price for security camera
+      potentialRevenue: 89.99,
       priority: 'high' as const,
       marketTrend: 0.85,
       demandScore: 0.90,
@@ -35,7 +35,7 @@ async function generateRecommendations(): Promise<ProductRecommendation[]> {
       productName: 'Eco-Friendly Water Bottles',
       category: 'Home & Garden',
       reason: 'Environmental awareness driving demand, high profit margins',
-      potentialRevenue: 19.99, // Realistic price for water bottle
+      potentialRevenue: 12.99,
       priority: 'medium' as const,
       marketTrend: 0.73,
       demandScore: 0.68,
@@ -44,7 +44,7 @@ async function generateRecommendations(): Promise<ProductRecommendation[]> {
       productName: 'Premium Yoga Mat Collection',
       category: 'Sports',
       reason: 'Fitness trend continues, complementary to existing products',
-      potentialRevenue: 49.99, // Realistic price for yoga mat
+      potentialRevenue: 29.99,
       priority: 'low' as const,
       marketTrend: 0.65,
       demandScore: 0.60,
@@ -53,7 +53,7 @@ async function generateRecommendations(): Promise<ProductRecommendation[]> {
       productName: 'Vitamin D3 Supplements',
       category: 'Pharmaceuticals',
       reason: 'Health awareness post-pandemic, seasonal demand increase',
-      potentialRevenue: 16.99, // Realistic price for vitamins
+      potentialRevenue: 14.99,
       priority: 'medium' as const,
       marketTrend: 0.71,
       demandScore: 0.75,
@@ -62,7 +62,7 @@ async function generateRecommendations(): Promise<ProductRecommendation[]> {
       productName: 'Cotton Bath Towel Set',
       category: 'Textiles',
       reason: 'Home improvement trend, essential household item with steady demand',
-      potentialRevenue: 34.99, // Realistic price for towel set
+      potentialRevenue: 24.99,
       priority: 'low' as const,
       marketTrend: 0.58,
       demandScore: 0.62,
@@ -71,10 +71,28 @@ async function generateRecommendations(): Promise<ProductRecommendation[]> {
       productName: 'Instant Oatmeal Variety Pack',
       category: 'Food',
       reason: 'Quick breakfast trend, health-conscious consumers',
-      potentialRevenue: 12.99, // Realistic price for oatmeal pack
+      potentialRevenue: 8.99,
       priority: 'medium' as const,
       marketTrend: 0.66,
       demandScore: 0.69,
+    },
+    {
+      productName: 'Bluetooth Portable Speaker',
+      category: 'Electronics',
+      reason: 'Popular for outdoor activities and events, good margins',
+      potentialRevenue: 39.99,
+      priority: 'high' as const,
+      marketTrend: 0.81,
+      demandScore: 0.79,
+    },
+    {
+      productName: 'Organic Coffee Beans',
+      category: 'Food',
+      reason: 'Premium coffee trend, high customer loyalty',
+      potentialRevenue: 18.99,
+      priority: 'medium' as const,
+      marketTrend: 0.74,
+      demandScore: 0.71,
     },
   ];
 

@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextRequest, NextResponse } from 'next/server';
 import { getCollection } from '@/lib/mongodb';
 import { ForecastingData } from '@/types';
+import { WithId, Document } from 'mongodb';
 
 interface ProductSalesData {
   productName: string;
@@ -8,6 +10,20 @@ interface ProductSalesData {
   currentStock: number;
   salesHistory: { date: string; quantity: number; revenue: number }[];
   avgPrice: number;
+}
+
+interface InventoryDocument extends Document {
+  Product_Name: string;
+  Category: string;
+  Quantity_in_Stock?: number;
+  Unit_Cost?: number;
+}
+
+interface SaleDocument extends Document {
+  Product_Name: string;
+  Date: string;
+  Quantity?: number;
+  Total_Amount?: number;
 }
 
 function getSocialMediaTrend(productName: string): number {
@@ -48,23 +64,25 @@ async function calculateForecasts(): Promise<ForecastingData[]> {
     
     const productSalesMap = new Map<string, ProductSalesData>();
     
-    inventoryData.forEach((item: any) => {
-      productSalesMap.set(item.Product_Name, {
-        productName: item.Product_Name,
-        category: item.Category,
-        currentStock: item.Quantity_in_Stock || 0,
+    inventoryData.forEach((item) => {
+      const inventoryItem = item as WithId<InventoryDocument>;
+      productSalesMap.set(inventoryItem.Product_Name, {
+        productName: inventoryItem.Product_Name,
+        category: inventoryItem.Category,
+        currentStock: inventoryItem.Quantity_in_Stock || 0,
         salesHistory: [],
-        avgPrice: item.Unit_Cost || 0,
+        avgPrice: inventoryItem.Unit_Cost || 0,
       });
     });
     
-    salesData.forEach((sale: any) => {
-      const productData = productSalesMap.get(sale.Product_Name);
+    salesData.forEach((sale) => {
+      const saleDocument = sale as WithId<SaleDocument>;
+      const productData = productSalesMap.get(saleDocument.Product_Name);
       if (productData) {
         productData.salesHistory.push({
-          date: sale.Date,
-          quantity: sale.Quantity || 0,
-          revenue: sale.Total_Amount || 0,
+          date: saleDocument.Date,
+          quantity: saleDocument.Quantity || 0,
+          revenue: saleDocument.Total_Amount || 0,
         });
       }
     });

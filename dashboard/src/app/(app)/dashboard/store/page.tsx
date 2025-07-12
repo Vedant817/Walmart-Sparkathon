@@ -19,101 +19,101 @@ const ITEMS_PER_PAGE = 12;
 
 // Orders Overview Component
 function OrdersOverview() {
-  const [orderStats, setOrderStats] = useState({
-    activeOrders: 0,
-    pastOrders: 0,
-    totalRevenue: 0,
-    pendingOrders: 0
-  });
+    const [orderStats, setOrderStats] = useState({
+        activeOrders: 0,
+        pastOrders: 0,
+        totalRevenue: 0,
+        pendingOrders: 0
+    });
 
-  useEffect(() => {
-    const fetchOrderStats = async () => {
-      try {
-        // Fetch active orders count
-        const activeResponse = await fetch('/api/store/orders?type=active&limit=1');
-        const activeData = await activeResponse.json();
-        
-        // Fetch past orders count
-        const pastResponse = await fetch('/api/store/orders?type=past&limit=1');
-        const pastData = await pastResponse.json();
-        
-        if (activeData.success && pastData.success) {
-          setOrderStats({
-            activeOrders: activeData.total || 0,
-            pastOrders: pastData.total || 0,
-            totalRevenue: (pastData.total || 0) * 2500, // Estimated average
-            pendingOrders: activeData.total || 0
-          });
-        }
-      } catch (error) {
-        console.error('Error fetching order stats:', error);
-      }
-    };
+    useEffect(() => {
+        const fetchOrderStats = async () => {
+            try {
+                // Fetch active orders count
+                const activeResponse = await fetch('/api/store/orders?type=active&limit=1');
+                const activeData = await activeResponse.json();
 
-    fetchOrderStats();
-  }, []);
+                // Fetch past orders count
+                const pastResponse = await fetch('/api/store/orders?type=past&limit=1');
+                const pastData = await pastResponse.json();
 
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-      <Link href="/dashboard/store/orders/active">
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Active Orders</CardTitle>
-            <ShoppingCart className="h-4 w-4 text-blue-600" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-blue-600">{orderStats.activeOrders}</div>
-            <p className="text-xs text-muted-foreground">
-              Orders in progress
-            </p>
-          </CardContent>
-        </Card>
-      </Link>
-      
-      <Link href="/dashboard/store/orders/past">
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Completed Orders</CardTitle>
-            <Archive className="h-4 w-4 text-green-600" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-green-600">{orderStats.pastOrders}</div>
-            <p className="text-xs text-muted-foreground">
-              Successfully fulfilled
-            </p>
-          </CardContent>
-        </Card>
-      </Link>
-      
-      <Card>
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
-          <DollarSign className="h-4 w-4 text-purple-600" />
-        </CardHeader>
-        <CardContent>
-          <div className="text-2xl font-bold text-purple-600">
-            ₹{orderStats.totalRevenue.toLocaleString()}
-          </div>
-          <p className="text-xs text-muted-foreground">
-            From completed orders
-          </p>
-        </CardContent>
-      </Card>
-      
-      <Card>
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Pending Orders</CardTitle>
-          <TrendingUp className="h-4 w-4 text-orange-600" />
-        </CardHeader>
-        <CardContent>
-          <div className="text-2xl font-bold text-orange-600">{orderStats.pendingOrders}</div>
-          <p className="text-xs text-muted-foreground">
-            Awaiting processing
-          </p>
-        </CardContent>
-      </Card>
-    </div>
-  );
+                if (activeData.success && pastData.success) {
+                    setOrderStats({
+                        activeOrders: activeData.total || 0,
+                        pastOrders: pastData.total || 0,
+                        totalRevenue: (pastData.total || 0) * 2500, // Estimated average
+                        pendingOrders: activeData.total || 0
+                    });
+                }
+            } catch (error) {
+                console.error('Error fetching order stats:', error);
+            }
+        };
+
+        fetchOrderStats();
+    }, []);
+
+    return (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <Link href="/dashboard/store/orders/active">
+                <Card className="hover:shadow-md transition-shadow cursor-pointer">
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                        <CardTitle className="text-sm font-medium">Active Orders</CardTitle>
+                        <ShoppingCart className="h-4 w-4 text-blue-600" />
+                    </CardHeader>
+                    <CardContent>
+                        <div className="text-2xl font-bold text-blue-600">{orderStats.activeOrders}</div>
+                        <p className="text-xs text-muted-foreground">
+                            Orders in progress
+                        </p>
+                    </CardContent>
+                </Card>
+            </Link>
+
+            <Link href="/dashboard/store/orders/past">
+                <Card className="hover:shadow-md transition-shadow cursor-pointer">
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                        <CardTitle className="text-sm font-medium">Completed Orders</CardTitle>
+                        <Archive className="h-4 w-4 text-green-600" />
+                    </CardHeader>
+                    <CardContent>
+                        <div className="text-2xl font-bold text-green-600">{orderStats.pastOrders}</div>
+                        <p className="text-xs text-muted-foreground">
+                            Successfully fulfilled
+                        </p>
+                    </CardContent>
+                </Card>
+            </Link>
+
+            <Card>
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                    <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
+                    <DollarSign className="h-4 w-4 text-purple-600" />
+                </CardHeader>
+                <CardContent>
+                    <div className="text-2xl font-bold text-purple-600">
+                        ₹{orderStats.totalRevenue.toLocaleString()}
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                        From completed orders
+                    </p>
+                </CardContent>
+            </Card>
+
+            <Card>
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                    <CardTitle className="text-sm font-medium">Pending Orders</CardTitle>
+                    <TrendingUp className="h-4 w-4 text-orange-600" />
+                </CardHeader>
+                <CardContent>
+                    <div className="text-2xl font-bold text-orange-600">{orderStats.pendingOrders}</div>
+                    <p className="text-xs text-muted-foreground">
+                        Awaiting processing
+                    </p>
+                </CardContent>
+            </Card>
+        </div>
+    );
 }
 
 export default function CurrentInventoryPage() {
@@ -229,14 +229,12 @@ export default function CurrentInventoryPage() {
 
     return (
         <div className="p-4 pt-2">
-            {/* Orders Overview Section */}
-            <OrdersOverview />
-            
             <div className="flex items-center mb-4">
                 <Package className="w-8 h-8 mr-3" />
                 <h1 className="text-2xl font-bold">Current Inventory</h1>
             </div>
 
+            <OrdersOverview />
             <div className="mb-2">
                 <div className="relative max-w-md">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />

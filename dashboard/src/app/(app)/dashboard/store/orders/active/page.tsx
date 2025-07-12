@@ -80,9 +80,9 @@ function OrderDetailsModal({ order, onClose }: { order: ActiveOrder; onClose: ()
 }
 
 function formatCurrency(amount: number) {
-  return new Intl.NumberFormat('en-IN', {
+  return new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'INR'
+    currency: 'USD'
   }).format(amount);
 }
 

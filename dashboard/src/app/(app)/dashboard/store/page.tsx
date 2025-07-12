@@ -92,7 +92,7 @@ function OrdersOverview() {
                 </CardHeader>
                 <CardContent>
                     <div className="text-2xl font-bold text-purple-600">
-                        ₹{orderStats.totalRevenue.toLocaleString()}
+                        ${orderStats.totalRevenue.toLocaleString()}
                     </div>
                     <p className="text-xs text-muted-foreground">
                         From completed orders

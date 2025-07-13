@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 import React, { useState, useEffect, useMemo } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -6,8 +7,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Search, Filter, RefreshCw, Package, MapPin, Truck, CheckCircle, Drone, Bot, Navigation, Phone, Eye, ChevronLeft, ChevronRight, X, AlertTriangle, Route, Zap } from 'lucide-react';
+import { Search, Filter, RefreshCw, Package, MapPin, Truck, CheckCircle, Drone, Bot, Navigation, Phone, Eye, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { toast } from 'react-hot-toast';
+import DeliveryRouteMap from '@/components/delivery/DeliveryRouteMap';
 
 interface DeliveryOrder {
   _id: string;
@@ -253,177 +255,15 @@ const generateRandomDeliveryOrder = (id: number): DeliveryOrder => {
       currentLocation: orderStatus === 'out_for_delivery' 
         ? `En route to ${selectedAddress.area}` 
         : selectedAddress.area,
-      estimatedDistance: Math.floor(Math.random() * 15) + 2 // 2-16 km from MG Road
+      estimatedDistance: Math.floor(Math.random() * 15) + 2 
     },
     trackingInfo,
-    routeInfo
+    routeInfo: {
+      ...routeInfo,
+      routeType: routeInfo?.routeType === "alternate" ? "alternate" : "normal"
+    }
   };
 };
-
-function RouteMapComponent({ routeInfo, order }: { routeInfo: any; order: DeliveryOrder }) {
-  const mapRef = React.useRef<HTMLDivElement>(null);
-  
-  const calculateBounds = () => {
-    const lats = routeInfo.waypoints.map((wp: any) => wp.lat);
-    const lngs = routeInfo.waypoints.map((wp: any) => wp.lng);
-    return {
-      minLat: Math.min(...lats) - 0.002,
-      maxLat: Math.max(...lats) + 0.002,
-      minLng: Math.min(...lngs) - 0.002,
-      maxLng: Math.max(...lngs) + 0.002
-    };
-  };
-  
-  const bounds = calculateBounds();
-  const centerLat = (bounds.minLat + bounds.maxLat) / 2;
-  const centerLng = (bounds.minLng + bounds.maxLng) / 2;
-  
-  return (
-    <div className="p-4 bg-slate-50 rounded-lg">
-      <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
-        <Route className="w-5 h-5 text-slate-600" />
-        Delivery Route Optimization
-      </h3>
-      
-      {routeInfo.routeType === 'alternate' && (
-        <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-          <div className="flex items-center gap-2">
-            <AlertTriangle className="w-4 h-4 text-yellow-600" />
-            <span className="font-medium text-yellow-800">Alternative Route Selected</span>
-          </div>
-          <p className="text-sm text-yellow-700 mt-1">
-            <strong>Reason:</strong> {routeInfo.issueReason}
-          </p>
-        </div>
-      )}
-      
-      {routeInfo.routeType === 'normal' && (
-        <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg">
-          <div className="flex items-center gap-2">
-            <Zap className="w-4 h-4 text-green-600" />
-            <span className="font-medium text-green-800">Optimal Route Active</span>
-          </div>
-          <p className="text-sm text-green-700 mt-1">
-            Using the fastest and most efficient path to destination.
-          </p>
-        </div>
-      )}
-      
-      <div 
-        ref={mapRef} 
-        className="w-full h-64 bg-gradient-to-br from-blue-50 to-green-50 rounded-lg border-2 border-gray-200 relative overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(45deg, #f0f9ff 25%, transparent 25%), linear-gradient(-45deg, #f0f9ff 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f0f9ff 75%), linear-gradient(-45deg, transparent 75%, #f0f9ff 75%)`,
-          backgroundSize: '20px 20px',
-          backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px'
-        }}
-      >
-        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 250">
-          <path
-            d={routeInfo.routeType === 'alternate' 
-              ? "M 50 200 Q 120 150 180 180 Q 250 120 350 50" 
-              : "M 50 200 L 180 140 L 350 50"
-            }
-            stroke={routeInfo.routeType === 'alternate' ? '#f59e0b' : '#10b981'}
-            strokeWidth="3"
-            fill="none"
-            strokeDasharray={routeInfo.routeType === 'alternate' ? '8,4' : 'none'}
-          />
-          
-          <circle cx="50" cy="200" r="8" fill="#3b82f6" stroke="white" strokeWidth="2" />
-          <text x="50" y="220" textAnchor="middle" className="text-xs" fill="#374151">Store</text>
-          
-          <circle cx="350" cy="50" r="8" fill="#ef4444" stroke="white" strokeWidth="2" />
-          <text x="350" y="40" textAnchor="middle" className="text-xs" fill="#374151">Destination</text>
-          
-          <g>
-            {order.status === 'out_for_delivery' && (
-              <>
-                <circle 
-                  cx={routeInfo.routeType === 'alternate' ? '180' : '150'} 
-                  cy={routeInfo.routeType === 'alternate' ? '180' : '160'} 
-                  r="6" 
-                  fill="#8b5cf6" 
-                  stroke="white" 
-                  strokeWidth="2"
-                >
-                  <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite" />
-                </circle>
-                <text 
-                  x={routeInfo.routeType === 'alternate' ? '180' : '150'} 
-                  y={routeInfo.routeType === 'alternate' ? '200' : '180'} 
-                  textAnchor="middle" 
-                  className="text-xs" 
-                  fill="#374151"
-                >
-                  {order.vehicleAssignment.vehicleType === 'drone' ? '🚁' : order.vehicleAssignment.vehicleType === 'robot' ? '🤖' : '🚐'}
-                </text>
-              </>
-            )}
-          </g>
-          
-          {routeInfo.routeType === 'alternate' && (
-            <>
-              <circle cx="120" cy="160" r="4" fill="#ef4444" />
-              <text x="120" y="150" textAnchor="middle" className="text-xs" fill="#dc2626">⚠️</text>
-            </>
-          )}
-        </svg>
-        
-        <div className="absolute bottom-2 left-2 bg-white p-2 rounded shadow-sm text-xs">
-          <div className="flex items-center gap-1 mb-1">
-            <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-            <span>Store</span>
-          </div>
-          <div className="flex items-center gap-1 mb-1">
-            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-            <span>Destination</span>
-          </div>
-          {order.status === 'out_for_delivery' && (
-            <div className="flex items-center gap-1">
-              <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-              <span>Vehicle</span>
-            </div>
-          )}
-        </div>
-      </div>
-      
-      <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
-        <div className="space-y-2">
-          <p><strong>Distance:</strong> {routeInfo.distance.toFixed(1)} km</p>
-          <p><strong>Est. Time:</strong> {Math.round(routeInfo.estimatedTime)} mins</p>
-        </div>
-        <div className="space-y-2">
-          <p><strong>Route Type:</strong> 
-            <Badge className={`ml-2 ${routeInfo.routeType === 'alternate' ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800'}`}>
-              {routeInfo.routeType === 'alternate' ? 'Alternative' : 'Optimal'}
-            </Badge>
-          </p>
-          <p><strong>Waypoints:</strong> {routeInfo.waypoints.length}</p>
-        </div>
-      </div>
-      
-      <div className="mt-4">
-        <h4 className="font-medium mb-2">Route Waypoints:</h4>
-        <div className="space-y-1 text-sm">
-          {routeInfo.waypoints.map((waypoint: any, index: number) => (
-            <div key={index} className="flex items-center gap-2">
-              <div className={`w-2 h-2 rounded-full ${
-                index === 0 ? 'bg-blue-500' : 
-                index === routeInfo.waypoints.length - 1 ? 'bg-red-500' : 
-                'bg-gray-400'
-              }`}></div>
-              <span className="text-gray-700">{waypoint.name}</span>
-              {index === Math.floor(routeInfo.waypoints.length / 2) && order.status === 'out_for_delivery' && (
-                <Badge variant="outline" className="text-xs">Current</Badge>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function OrderDetailsModal({ order, onClose }: { order: DeliveryOrder; onClose: () => void }) {
   return (
@@ -525,7 +365,27 @@ function OrderDetailsModal({ order, onClose }: { order: DeliveryOrder; onClose: 
         </div>
         
         <div className="mt-6">
-          <RouteMapComponent routeInfo={order.routeInfo} order={order} />
+          <DeliveryRouteMap 
+            storeLocation={{ 
+              lat: 12.9716, 
+              lng: 77.5946, 
+              name: 'MG Road Store' 
+            }}
+            destinationLocation={{
+              lat: order.routeInfo.waypoints[order.routeInfo.waypoints.length - 1].lat,
+              lng: order.routeInfo.waypoints[order.routeInfo.waypoints.length - 1].lng,
+              name: order.customer_info.address.addressLine1
+            }}
+            vehicleLocation={order.status === 'out_for_delivery' ? {
+              lat: order.routeInfo.waypoints[Math.floor(order.routeInfo.waypoints.length / 2)].lat,
+              lng: order.routeInfo.waypoints[Math.floor(order.routeInfo.waypoints.length / 2)].lng,
+              name: order.vehicleAssignment.currentLocation || 'In Transit'
+            } : undefined}
+            routeType={order.routeInfo.routeType}
+            alternateReason={order.routeInfo.issueReason}
+            vehicleType={order.vehicleAssignment.vehicleType}
+            className="h-96"
+          />
         </div>
         
         <div className="mt-6">

@@ -19,14 +19,15 @@ const getRelevantProductImage = (productName: string, category: string, productI
   const name = productName.toLowerCase();
   
   // Product-specific keywords with relevant images
-  const productKeywords: Record<string, string> = {
+const productKeywords: Record<string, string> = {
     // Electronics
     'phone': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop',
     'smartphone': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop',
     'laptop': 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop',
     'computer': 'https://images.unsplash.com/photo-1547082299-de196ea013d6?w=400&h=300&fit=crop',
     'headphone': 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop',
-    'earphone': 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop',
+    'wireless mouse': 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=400&h=300&fit=crop',
+    'usb flash drive': 'https://images.unsplash.com/photo-1513521774188-663bf4b4f6db?w=400&h=300&fit=crop',
     'camera': 'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=400&h=300&fit=crop',
     'watch': 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop',
     'tablet': 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=300&fit=crop',
@@ -40,6 +41,7 @@ const getRelevantProductImage = (productName: string, category: string, productI
     'bag': 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop',
     'jacket': 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=300&fit=crop',
     'jeans': 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=300&fit=crop',
+    'winter jacket': 'https://images.unsplash.com/photo-1561641064-7c54909f9a97?w=400&h=300&fit=crop',
     'hat': 'https://images.unsplash.com/photo-1521369909029-2afed882baee?w=400&h=300&fit=crop',
     
     // Books
@@ -60,6 +62,7 @@ const getRelevantProductImage = (productName: string, category: string, productI
     'bread': 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop',
     'milk': 'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&h=300&fit=crop',
     'fruit': 'https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=400&h=300&fit=crop',
+    'chicken breast': 'https://images.unsplash.com/photo-1600891965538-494e271ab4a4?w=400&h=300&fit=crop',
     'vegetable': 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop',
     'cheese': 'https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&h=300&fit=crop',
     

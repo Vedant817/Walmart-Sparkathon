@@ -355,10 +355,6 @@ export default function ActiveOrdersPage() {
             <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
             Refresh
           </Button>
-          <Button onClick={testShowModal} variant="outline" className="gap-2">
-            <Package className="w-4 h-4" />
-            Test Modal
-          </Button>
         </div>
       </div>
 

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getCollection } from '@/lib/mongodb';
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { authOptions } from '@/lib/auth';
 import { BUSINESS_LOCATIONS } from '@/constants/locations';
 
 export async function GET() {

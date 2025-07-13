@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { DollarSign, ShoppingCart, Users, Star, Truck, Building, X } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
+
 const stores = [
     {
         id: 1,
@@ -196,6 +197,8 @@ export default function ManagerDashboard() {
 
     return (
         <div className="space-y-8">
+            {/* Header with Logout Button */}
+            
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                 <Card>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -395,10 +398,10 @@ export default function ManagerDashboard() {
                                         <h3 className="font-semibold text-lg mb-4 text-gray-800 dark:text-gray-200">Category Sales Breakdown</h3>
                                         <ResponsiveContainer width="100%" height={250}>
                                             <PieChart>
-                                                <Pie 
-                                                    data={selectedStore.categoryBreakdown} 
-                                                    cx="50%" 
-                                                    cy="50%" 
+                                                <Pie
+                                                    data={selectedStore.categoryBreakdown}
+                                                    cx="50%"
+                                                    cy="50%"
                                                     labelLine={false}
                                                     label={({ name, percent }) => `${name} ${percent !== undefined ? (percent * 100).toFixed(0) : "0"}%`}
                                                     outerRadius={90}

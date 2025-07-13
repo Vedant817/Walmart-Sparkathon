@@ -253,7 +253,7 @@ export default function Home() {
   }, [handleSmoothScroll, handleScroll, animateCounter]);
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-white">
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/20 transition-all duration-300">
         <nav className="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
           <div className="flex items-center gap-3">
@@ -351,7 +351,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map(feature => (
-              <div key={feature.title} className={`animate-on-scroll group bg-white p-8 rounded-2xl shadow-lg border hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ${feature.popular ? 'bg-blue-50 border-2 border-blue-200' : 'border-gray-100'}`}>
+              <div key={feature.title} className={`relative animate-on-scroll group bg-white p-8 rounded-2xl shadow-lg border hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ${feature.popular ? 'bg-blue-50 border-2 border-blue-200' : 'border-gray-100'}`}>
                 {feature.popular && (
                   <div className="absolute -top-3 -right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
                     Most Popular

@@ -251,10 +251,8 @@ const Page: React.FC = () => {
               </div>
             </div>
 
-            <div className="animate-on-scroll group bg-blue-50 p-8 rounded-2xl shadow-lg border-2 border-blue-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative">
-              <div className="absolute -top-3 -right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                Most Popular
-              </div>
+            <div className="animate-on-scroll group bg-white p-8 rounded-2xl shadow-lg  hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative">
+             
               <div className="text-center mb-6">
                 <i className="fas fa-boxes text-6xl text-blue-600 mb-4" aria-hidden="true"></i>
               </div>

@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getCollection } from '@/lib/mongodb';
 import { BUSINESS_LOCATIONS } from '@/constants/locations';
 import { ObjectId } from 'mongodb';
-import { ActiveOrder } from '@/types';
+import { ActiveOrder, OrderForAssignment, VehicleAssignment } from '@/types';
+import { vehicleAssignmentService } from '@/lib/vehicleAssignment';
 
 export async function GET(request: NextRequest) {
   try {
@@ -51,7 +52,8 @@ export async function GET(request: NextRequest) {
               phone: order.shippingAddress?.phone || '',
               address: order.shippingAddress
             },
-            products: products
+            products: products,
+            vehicleAssignment: order.vehicleAssignment
           } as ActiveOrder;
         });
         allOrders.push(...transformedOrders);
@@ -122,6 +124,7 @@ export async function PATCH(request: NextRequest) {
 
     let updated = false;
     let orderToMove: ActiveOrder | null = null;
+    let vehicleAssignmentInfo: VehicleAssignment | null = null; // Track vehicle assignment for response
 
     for (const collectionName of storeCollectionNames) {
       try {
@@ -148,6 +151,128 @@ export async function PATCH(request: NextRequest) {
 
           if (result.modifiedCount > 0) {
             updated = true;
+            // Trigger vehicle assignment when order is marked as packed
+            if (status === 'packed') {
+              console.log(`[Order Update] Order ${order.orderId} marked as packed, triggering vehicle assignment...`);
+              try {
+                const orderForAssignment: OrderForAssignment = {
+                  orderId: order.orderId?.toString() || order._id.toString(),
+                  customerLocation: order.shippingAddress?.city || 'Unknown Location',
+                  priority: 'normal', // Could be determined based on order details
+                  weight: order.products?.reduce((total: number, product: { weight?: number }) => total + (product.weight || 1), 0) || 1,
+                  deliveryType: 'standard'
+                };
+
+                console.log(`[Order Update] Assignment request:`, orderForAssignment);
+                const assignmentResult = await vehicleAssignmentService.assignVehicleToOrder(orderForAssignment);
+                console.log(`[Order Update] Assignment result:`, assignmentResult);
+                
+                if (assignmentResult.success && assignmentResult.assignedVehicle) {
+                  // Update the order with vehicle assignment information
+                  await collection.updateOne(
+                    { _id: order._id },
+                    {
+                      $set: {
+                        vehicleAssignment: {
+                          orderId: orderForAssignment.orderId,
+                          vehicleId: assignmentResult.assignedVehicle.id,
+                          vehicleName: assignmentResult.assignedVehicle.name,
+                          vehicleType: assignmentResult.assignedVehicle.type,
+                          assignedAt: new Date().toISOString(),
+                          status: 'assigned'
+                        }
+                      }
+                    }
+                  );
+                  
+                  vehicleAssignmentInfo = {
+                    orderId: orderForAssignment.orderId,
+                    vehicleId: assignmentResult.assignedVehicle.id,
+                    vehicleName: assignmentResult.assignedVehicle.name,
+                    vehicleType: assignmentResult.assignedVehicle.type,
+                    assignedAt: new Date().toISOString(),
+                    status: 'assigned' as const
+                  };
+                  
+                  console.log(`[Order Update] Vehicle ${assignmentResult.assignedVehicle.name} assigned to order ${orderForAssignment.orderId}`);
+                } else {
+                  console.warn(`[Order Update] Failed to assign vehicle to order ${orderForAssignment.orderId}: ${assignmentResult.message}`);
+                }
+              } catch (assignmentError) {
+                console.error('[Order Update] Vehicle assignment error:', assignmentError);
+              }
+            }
+            
+            if (status === 'delivered' && order.vehicleAssignment) {
+              console.log(`[Order Update] Order ${order.orderId} delivered, releasing vehicle ${order.vehicleAssignment.vehicleId}...`);
+              try {
+                const response = await fetch('/api/store/fleet', {
+                  method: 'PATCH',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    vehicleId: order.vehicleAssignment.vehicleId,
+                    updates: {
+                      status: 'idle',
+                      currentDelivery: undefined,
+                      currentLoad: 0,
+                      deliveriesCompleted: (order.vehicleAssignment.deliveriesCompleted || 0) + 1
+                    }
+                  })
+                });
+                
+                if (response.ok) {
+                  console.log(`[Order Update] Vehicle ${order.vehicleAssignment.vehicleId} released and set to idle`);
+                } else {
+                  console.warn(`[Order Update] Failed to release vehicle ${order.vehicleAssignment.vehicleId}`);
+                }
+              } catch (releaseError) {
+                console.error('[Order Update] Vehicle release error:', releaseError);
+              }
+            }
+            
+            if (status === 'pending' && order.vehicleAssignment) {
+              console.log(`[Order Update] Order ${order.orderId} changed to pending, releasing assigned vehicle ${order.vehicleAssignment.vehicleId}...`);
+              try {
+                const response = await fetch('/api/store/fleet', {
+                  method: 'PATCH',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    vehicleId: order.vehicleAssignment.vehicleId,
+                    updates: {
+                      status: 'idle',
+                      currentDelivery: undefined,
+                      currentLoad: Math.max((order.vehicleAssignment.currentLoad || 1) - 1, 0)
+                    }
+                  })
+                });
+                
+                if (response.ok) {
+                  console.log(`[Order Update] Vehicle ${order.vehicleAssignment.vehicleId} released and set to idle`);
+                  
+                  await collection.updateOne(
+                    { _id: order._id },
+                    {
+                      $unset: {
+                        vehicleAssignment: 1
+                      },
+                      $set: {
+                        updatedAt: new Date()
+                      }
+                    }
+                  );
+                  console.log(`[Order Update] Vehicle assignment removed from order ${order.orderId}`);
+                } else {
+                  console.warn(`[Order Update] Failed to release vehicle ${order.vehicleAssignment.vehicleId}`);
+                }
+              } catch (releaseError) {
+                console.error('[Order Update] Vehicle release error:', releaseError);
+              }
+            }
+            
             if (status === 'delivered') {
               const orderDate = new Date(order.orderDate || order.createdAt || Date.now());
               const transactionId = `TXN${order.orderId?.toString().slice(-8) || Math.random().toString(36).substr(2, 8)}`;
@@ -174,7 +299,8 @@ export async function PATCH(request: NextRequest) {
                   phone: order.shippingAddress?.phone || '',
                   address: order.shippingAddress
                 },
-                products: products
+                products: products,
+            vehicleAssignment: order.vehicleAssignment
               };
               await collection.deleteOne({ _id: order._id });
             }
@@ -195,7 +321,20 @@ export async function PATCH(request: NextRequest) {
         };
         await salesCollection.insertOne(orderForSale);
       }
-      return NextResponse.json({ success: true, message: 'Order status updated successfully' });
+      const response: {
+        success: boolean;
+        message: string;
+        vehicleAssignment?: VehicleAssignment;
+      } = { 
+        success: true, 
+        message: 'Order status updated successfully' 
+      };
+      
+      if (vehicleAssignmentInfo) {
+        response.vehicleAssignment = vehicleAssignmentInfo;
+      }
+      
+      return NextResponse.json(response);
     } else {
       return NextResponse.json(
         { success: false, error: 'Order not found' },

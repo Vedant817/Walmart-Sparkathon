@@ -174,51 +174,5 @@ export async function PATCH(request: NextRequest) {
     }
 }
 
-export async function updateVehicleStatus(vehicleId: string, status: Vehicle['status'], currentDelivery?: string) {
-    try {
-        const vehicleIndex = fleetDataStore.findIndex(v => v.id === vehicleId);
-        if (vehicleIndex !== -1) {
-            fleetDataStore[vehicleIndex] = {
-                ...fleetDataStore[vehicleIndex],
-                status,
-                currentDelivery: status === 'active' ? currentDelivery : undefined,
-                currentLoad: status === 'active'
-                    ? (fleetDataStore[vehicleIndex].currentLoad || 0) + 1
-                    : Math.max((fleetDataStore[vehicleIndex].currentLoad || 1) - 1, 0)
-            };
-
-            console.log(`[Fleet Management] Vehicle ${vehicleId} status updated to ${status}`);
-            return true;
-        }
-        return false;
-    } catch (error) {
-        console.error('Error updating vehicle status:', error);
-        return false;
-    }
-}
-
-export function getFleetDataStore() {
-    return fleetDataStore;
-}
-
-export async function releaseVehicle(vehicleId: string) {
-    try {
-        const vehicleIndex = fleetDataStore.findIndex(v => v.id === vehicleId);
-        if (vehicleIndex !== -1) {
-            fleetDataStore[vehicleIndex] = {
-                ...fleetDataStore[vehicleIndex],
-                status: 'idle',
-                currentDelivery: undefined,
-                currentLoad: Math.max((fleetDataStore[vehicleIndex].currentLoad || 1) - 1, 0),
-                deliveriesCompleted: fleetDataStore[vehicleIndex].deliveriesCompleted + 1
-            };
-
-            console.log(`[Fleet Management] Vehicle ${vehicleId} released and set to idle`);
-            return true;
-        }
-        return false;
-    } catch (error) {
-        console.error('Error releasing vehicle:', error);
-        return false;
-    }
-}
+// Note: If fleet management utilities are needed in other files,
+// they should be implemented in a separate utility file like @/lib/fleet.ts

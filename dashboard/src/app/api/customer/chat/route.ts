@@ -6,7 +6,7 @@ import { InMemoryChatMessageHistory } from "@langchain/core/chat_history";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { v4 as uuidv4 } from "uuid";
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 import { getCollection } from "@/lib/mongodb";
 import { BUSINESS_LOCATIONS } from "@/constants/locations";
 import { ObjectId } from "mongodb";

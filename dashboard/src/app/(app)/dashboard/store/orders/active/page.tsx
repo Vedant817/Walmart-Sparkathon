@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Search, Filter, RefreshCw, Package, Clock, Truck, CheckCircle, X } from 'lucide-react';
+import { Search, Filter, RefreshCw, Package, Clock, Truck, CheckCircle, X, Drone, Bot } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 
 import { ActiveOrder } from '@/types';
@@ -24,6 +24,121 @@ const statusColors = {
   out_for_delivery: 'bg-purple-100 text-purple-800 border-purple-200',
   delivered: 'bg-green-100 text-green-800 border-green-200'
 };
+
+const getVehicleIcon = (type: string) => {
+  switch (type) {
+    case 'drone': return <Drone className="w-4 h-4" />;
+    case 'robot': return <Bot className="w-4 h-4" />;
+    case 'vehicle': return <Truck className="w-4 h-4" />;
+    default: return <Package className="w-4 h-4" />;
+  }
+};
+
+function VehicleAssignmentModal({ vehicleInfo, onClose }: { 
+  vehicleInfo: { vehicleName: string; vehicleType: string; orderId: string }; 
+  onClose: () => void 
+}) {
+  const [timeLeft, setTimeLeft] = useState(5);
+  const [isAutoClosing, setIsAutoClosing] = useState(true);
+
+  useEffect(() => {
+    if (!isAutoClosing) return;
+
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          onClose();
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [onClose, isAutoClosing]);
+
+  const handleManualClose = () => {
+    setIsAutoClosing(false);
+    onClose();
+  };
+
+  const handleStayOpen = () => {
+    setIsAutoClosing(false);
+    setTimeLeft(0);
+  };
+
+  const isVehicleRelease = vehicleInfo.vehicleName === 'Vehicle Released';
+  
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+      <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full relative">
+        {isAutoClosing && timeLeft > 0 && (
+          <div className="absolute top-4 right-16 bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
+            Auto-closing in {timeLeft}s
+          </div>
+        )}
+        
+        <div className="flex justify-between items-center mb-4">
+          <h2 className={`text-2xl font-bold ${isVehicleRelease ? 'text-orange-600' : 'text-green-600'}`}>
+            {isVehicleRelease ? 'Vehicle Released!' : 'Vehicle Assigned!'}
+          </h2>
+          <Button variant="ghost" size="icon" onClick={handleManualClose} className='cursor-pointer hover:bg-red-500 hover:text-white'>
+            <X className="h-6 w-6" />
+          </Button>
+        </div>
+        
+        <div className="text-center">
+          <div className="mb-4 flex justify-center">
+            <div className={`p-4 rounded-full ${isVehicleRelease ? 'bg-orange-100' : 'bg-green-100'}`}>
+              {isVehicleRelease ? <Truck className="w-4 h-4" /> : getVehicleIcon(vehicleInfo.vehicleType)}
+            </div>
+          </div>
+          
+          {isVehicleRelease ? (
+            <>
+              <h3 className="text-lg font-semibold mb-2">Order #{vehicleInfo.orderId.slice(-8)} status changed to pending</h3>
+              <div className="p-4 bg-orange-50 rounded-lg border border-orange-200">
+                <p className="text-xl font-bold text-orange-800">Vehicle assignment removed</p>
+                <p className="text-sm text-gray-600">Vehicle returned to fleet</p>
+              </div>
+              <p className="mt-4 text-sm text-gray-600">
+                The assigned vehicle has been released and is now available for other orders.
+              </p>
+            </>
+          ) : (
+            <>
+              <h3 className="text-lg font-semibold mb-2">Order #{vehicleInfo.orderId.slice(-8)} has been assigned to:</h3>
+              <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <p className="text-xl font-bold text-blue-800">{vehicleInfo.vehicleName}</p>
+                <p className="text-sm text-gray-600 capitalize">({vehicleInfo.vehicleType})</p>
+              </div>
+              <p className="mt-4 text-sm text-gray-600">
+                The vehicle will begin delivery preparation shortly.
+              </p>
+            </>
+          )}
+          
+          <div className="flex gap-2 mt-6">
+            {isAutoClosing && timeLeft > 0 ? (
+              <>
+                <Button onClick={handleStayOpen} variant="outline" className="flex-1">
+                  Keep Open
+                </Button>
+                <Button onClick={handleManualClose} className="flex-1">
+                  Got it! ({timeLeft}s)
+                </Button>
+              </>
+            ) : (
+              <Button onClick={handleManualClose} className="w-full">
+                Got it!
+              </Button>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function OrderDetailsModal({ order, onClose }: { order: ActiveOrder; onClose: () => void }) {
   return (
@@ -50,6 +165,30 @@ function OrderDetailsModal({ order, onClose }: { order: ActiveOrder; onClose: ()
             <p>{order.customer_info?.address.country}</p>
           </div>
         </div>
+
+        {order.vehicleAssignment && (
+          <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+            <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
+              <Truck className="w-5 h-5 text-blue-600" />
+              Assigned Vehicle
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <p><strong>Vehicle:</strong> {order.vehicleAssignment.vehicleName}</p>
+                <p><strong>Type:</strong> {order.vehicleAssignment.vehicleType.charAt(0).toUpperCase() + order.vehicleAssignment.vehicleType.slice(1)}</p>
+              </div>
+              <div>
+                <p><strong>Assigned At:</strong> {new Date(order.vehicleAssignment.assignedAt).toLocaleString('en-US')}</p>
+                <p><strong>Status:</strong> 
+                  <Badge className="ml-2 bg-green-100 text-green-800">
+                    {order.vehicleAssignment.status.charAt(0).toUpperCase() + order.vehicleAssignment.status.slice(1)}
+                  </Badge>
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+        
         <div className="mt-6">
           <h3 className="font-semibold text-lg mb-2">Products</h3>
           <Table>
@@ -93,6 +232,11 @@ export default function ActiveOrdersPage() {
   const [statusFilter, setStatusFilter] = useState('');
   const [updating, setUpdating] = useState<string | null>(null);
   const [selectedOrder, setSelectedOrder] = useState<ActiveOrder | null>(null);
+  const [vehicleAssignmentModal, setVehicleAssignmentModal] = useState<{
+    vehicleName: string;
+    vehicleType: string;
+    orderId: string;
+  } | null>(null);
 
   const fetchOrders = useCallback(async () => {
     try {
@@ -122,6 +266,8 @@ export default function ActiveOrdersPage() {
   const updateOrderStatus = async (orderId: string, newStatus: string) => {
     try {
       setUpdating(orderId);
+      console.log(`[DEBUG] Updating order ${orderId} to status: ${newStatus}`);
+      
       const response = await fetch('/api/store/orders', {
         method: 'PATCH',
         headers: {
@@ -134,9 +280,33 @@ export default function ActiveOrdersPage() {
       });
 
       const data = await response.json();
+      console.log(`[DEBUG] API Response:`, data);
 
       if (data.success) {
         toast.success('Order status updated successfully');
+        
+        if (newStatus === 'packed') {
+          console.log(`[DEBUG] Order marked as packed, showing vehicle assignment modal`);
+          
+          const vehicleInfo = data.vehicleAssignment || {
+            vehicleName: 'SkyDelivery Alpha',
+            vehicleType: 'drone'
+          };
+          
+          setVehicleAssignmentModal({
+            vehicleName: vehicleInfo.vehicleName,
+            vehicleType: vehicleInfo.vehicleType,
+            orderId: orderId
+          });
+        } else if (newStatus === 'pending') {
+          console.log(`[DEBUG] Order changed to pending, showing vehicle release modal`);
+          setVehicleAssignmentModal({
+            vehicleName: 'Vehicle Released',
+            vehicleType: 'vehicle',
+            orderId: orderId
+          });
+        }
+        
         fetchOrders();
       } else {
         toast.error(data.error || 'Failed to update order status');
@@ -148,6 +318,15 @@ export default function ActiveOrdersPage() {
       setUpdating(null);
     }
   };
+  
+  const testShowModal = () => {
+    console.log('[DEBUG] Forcing modal to show for testing');
+    setVehicleAssignmentModal({
+      vehicleName: 'Test Vehicle Beta',
+      vehicleType: 'robot',
+      orderId: 'TEST12345'
+    });
+  };
 
   useEffect(() => {
     fetchOrders();
@@ -155,7 +334,7 @@ export default function ActiveOrdersPage() {
 
   const formatDate = (date: string, time: string) => {
     const dateTime = new Date(`${date}T${time}`);
-    return dateTime.toLocaleString('en-IN', {
+    return dateTime.toLocaleString('en-US', {
       day: '2-digit',
       month: 'short',
       year: 'numeric',
@@ -171,10 +350,16 @@ export default function ActiveOrdersPage() {
           <h1 className="text-3xl font-bold text-gray-900">Active Orders</h1>
           <p className="text-gray-600 mt-1">Manage current orders and update their status</p>
         </div>
-        <Button onClick={fetchOrders} disabled={loading} className="gap-2">
-          <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
-          Refresh
-        </Button>
+        <div className="flex gap-2">
+          <Button onClick={fetchOrders} disabled={loading} className="gap-2">
+            <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
+            Refresh
+          </Button>
+          <Button onClick={testShowModal} variant="outline" className="gap-2">
+            <Package className="w-4 h-4" />
+            Test Modal
+          </Button>
+        </div>
       </div>
 
       <Card>
@@ -297,7 +482,14 @@ export default function ActiveOrdersPage() {
           )}
         </CardContent>
       </Card>
+      
       {selectedOrder && <OrderDetailsModal order={selectedOrder} onClose={() => setSelectedOrder(null)} />}
+      {vehicleAssignmentModal && (
+        <VehicleAssignmentModal 
+          vehicleInfo={vehicleAssignmentModal} 
+          onClose={() => setVehicleAssignmentModal(null)} 
+        />
+      )}
     </div>
   );
 }

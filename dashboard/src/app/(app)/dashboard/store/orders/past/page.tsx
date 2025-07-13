@@ -73,7 +73,7 @@ export default function PastOrdersPage() {
 
   const formatDate = (date: string, time: string) => {
     const dateTime = new Date(`${date}T${time}`);
-    return dateTime.toLocaleString('en-IN', {
+    return dateTime.toLocaleString('en-US', {
       day: '2-digit',
       month: 'short',
       year: 'numeric',

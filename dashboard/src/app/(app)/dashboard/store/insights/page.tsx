@@ -361,7 +361,7 @@ export default function InsightsPage() {
   };
 
   const formatNumber = (num: number) => {
-    return new Intl.NumberFormat('en-IN').format(num);
+    return new Intl.NumberFormat('en-US').format(num);
   };
 
   if (loading) {

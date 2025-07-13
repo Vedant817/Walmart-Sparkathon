@@ -9,10 +9,6 @@ interface ObserverOptions {
   rootMargin: string;
 }
 
-interface StatElement extends HTMLElement {
-  textContent: string | null;
-}
-
 const Page: React.FC = () => {
   // Enhanced counter animation with proper typing
   const animateCounter = useCallback((element: HTMLElement, target: number): void => {
